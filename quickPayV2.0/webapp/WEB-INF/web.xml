@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- Spring ApplicationContext配置文件的路径?,可使用通配符，多个路径用?1,号分隔 此参数用于后面的Spring-Context 
+		loader -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:spring/*.xml
+		</param-value>
+	</context-param>
+	<context-param>  
+        <param-name>webAppRootKey</param-name>  
+        <param-value>webapp.root</param-value>  
+  </context-param>
+	<!-- 默认i18n资源文件 -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>i18n/messages</param-value>
+	</context-param>
+	<!-- 常量文件的路径 -->
+	<context-param>
+		<param-name>sysconstDirLocation</param-name>
+		<param-value>/WEB-INF/sysxml/sysconst</param-value>
+	</context-param>
+	<!-- <context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>6000</param-value>
+	</context-param> -->
+	
+	<!-- 服务器缓存类型 -->
+	<context-param>
+		<param-name>cacheType</param-name>
+		<param-value>ehcache</param-value>
+	</context-param>
+	<!-- 注明 Character Encoding filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<!-- XSS过滤器 -->
+	<filter>
+	    <filter-name>XssFilter</filter-name>
+	    <filter-class>
+	        com.picc.common.filter.XssFilter
+	    </filter-class>
+	    <init-param>
+	    <param-name>ignoreKey</param-name>
+	    <param-value>/stu/stunews/add.do,/stu/stunews/update.do</param-value> 
+	    </init-param> 
+	</filter>
+
+	<!--Hibernate Open Session in View Filter -->
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+		<init-param>
+			<param-name>sessionFactoryBeanName</param-name>
+			<param-value>sessionFactory</param-value>
+		</init-param>
+	</filter>
+	<!-- hibernateFilter位置放在此处是为解决延迟加载和事务提交的问题 -->
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>*.dwr</url-pattern>
+	</filter-mapping>
+	<!-- 让hibernate open session in view的荣光也照耀xfire -->
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>/service/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>/webservice/*</url-pattern>
+	</filter-mapping>
+	<!-- 页面元素的GZIP压缩 Filter -->
+	<filter> <filter-name>compressFilter</filter-name> 
+		<filter-class>ins.framework.web.CompressFilter</filter-class> <init-param> 
+		<param-name>ignoreKey</param-name> <param-value>.vbs</param-value> 
+		</init-param> 
+	</filter> 
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<!-- <filter>
+		<filter-name>SessionFilter</filter-name>
+		<filter-class>com.picc.common.web.SessionFilter</filter-class>
+	</filter> -->
+	<filter>
+		<filter-name>CacheFilter</filter-name>
+		<filter-class>ins.framework.web.CacheFilter</filter-class>
+		<init-param>
+			<param-name>expireTime</param-name>
+			<param-value>-1</param-value>
+		</init-param>
+	</filter>
+	<!-- <filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping> -->
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.gif</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.jpg</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.vbs</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+	    <filter-name>XssFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- session init -->
+	<!-- <filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/*Servlet</url-pattern>
+	</filter-mapping> -->
+	<!-- 页面元素的GZIP压缩 Filter，减少网络带宽  -->
+	<filter-mapping> 
+		<filter-name>compressFilter</filter-name> 
+		<url-pattern>/*</url-pattern> 
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/struts/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<!-- 日志 -->
+	<!-- <listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener> -->
+
+	<!--Spring ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.util.IntrospectorCleanupListener
+		</listener-class>
+	</listener>
+
+	<!-- cacheManager 服务端缓存 -->
+	<listener>
+		<listener-class>ins.framework.cache.CacheManagerInitListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.picc.common.StartupListener</listener-class>
+	</listener>
+
+	
+	<!-- requestCombo 合并组件 -->
+	<servlet>
+		<servlet-name>RequestComboServlet</servlet-name>
+		<servlet-class>ins.platform.requestcombo.RequestComboServlet</servlet-class>
+		<!-- <init-param>
+			<description>允许访问的URL前缀，避免源码泄漏风险</description>
+			<param-name>validPrefix</param-name>
+			<param-value>/widgets/</param-value>
+		</init-param> -->
+		<init-param>
+			<description>是否开启服务端对js文件混淆压缩</description>
+			<param-name>isCompress</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>charset</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>expireTime</param-name>
+			<param-value>30000</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestComboServlet</servlet-name>
+		<url-pattern>/requestCombo</url-pattern>
+	</servlet-mapping>
+	
+	<!--axis 需要引入的 Servlet -->         
+	<servlet>
+	<servlet-name>axis</servlet-name>                
+	<servlet-class>
+	org.apache.axis.transport.http.AxisServlet
+	</servlet-class>                 
+	<load-on-startup>4</load-on-startup>         
+	</servlet>         
+	<servlet-mapping>                 
+	<servlet-name>axis</servlet-name>
+	<url-pattern>/services/*</url-pattern>         
+	</servlet-mapping>          
+	<!--axis 的 Web Service 的 Web 发布路径 --> 
+	
+	<!-- DWR servlet,生产环境应该Debug为false -->
+	   <servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>crossDomainSessionSecurity</param-name>
+			<!--要改成false，否则会出现Session Error的错误 ，允许跨域访问-->
+			<param-value>false</param-value>
+		</init-param>
+		<!--使用polling和comet的方式-->
+		<init-param>
+			<param-name>pollAndCometEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<!-- comet方式-->
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<!--  每隔N毫秒检查浏览器是否活跃-->
+		<init-param>
+			<param-name>maxWaitAfterWrite</param-name>
+			<param-value>100</param-value>
+		</init-param>
+		<init-param>
+			<param-name>initApplicationScopeCreatorsAtStartup</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.directwebremoting.event.ScriptSessionListener</param-name>
+			<param-value>com.picc.common.web.ScriptSessionManagerServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>dwr-init</servlet-name>
+		<servlet-class>com.picc.common.web.ScriptSessionManagerServlet</servlet-class>
+		<!--  注意：本servlet的load-on-startup数值一定要高于DwrServlet，即本Servlet对象的创建要在DwrServlet之后-->
+		 <load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dwr-init</servlet-name>
+		<url-pattern>/dwrinit/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>  
+	
+	
+	<!-- java webservice -->
+	<!-- <servlet> 
+                <servlet-name>WSServlet</servlet-name> 
+                <servlet-class> com.picc.ifm.web.WSServlet</servlet-class> 
+                <load-on-startup>3</load-on-startup> 
+    </servlet> 
+    <servlet-mapping> 
+                <servlet-name>WSServlet</servlet-name> 
+                <url-pattern>/servlet/WSServlet</url-pattern> 
+    </servlet-mapping>  -->
+	<!-- java webservice -->
+	
+	<servlet>
+		<servlet-name>CXFService</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CXFService</servlet-name>
+		<url-pattern>/webservice/*</url-pattern>
+	</servlet-mapping> 
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<!-- 默认首页定义 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- Error Page定义 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/pages/Error.jsp</location>
+	</error-page>
+	<!-- <error-page> <error-code>404</error-code> <location>/common/404.jsp</location> 
+		</error-page> <error-page> <error-code>403</error-code> <location>/common/403.jsp</location> 
+		</error-page> <error-page> <exception-type>ins.framework.exception.DataVerifyException</exception-type> 
+		<location>/common/error.jsp</location> </error-page> -->
+		
+	<resource-ref>     
+		<res-ref-name>szsms</res-ref-name>    
+		<res-type>javax.sql.DataSource</res-type>    
+		<res-auth>Container</res-auth> 
+  	</resource-ref> 
+  	
+  	<resource-ref>     
+		<res-ref-name>zbsms</res-ref-name>    
+		<res-type>javax.sql.DataSource</res-type>    
+		<res-auth>Container</res-auth> 
+  	</resource-ref>
+  	
+</web-app>
+

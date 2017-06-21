@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qpticpicture" extends="default" namespace="/qp/qpticpicture">
+
+		<action name="query" class="com.picc.qp.web.QpTICPictureAction" method="query"/>
+
+		<action name="delete" class="com.picc.qp.web.QpTICPictureAction" method="delete"/>
+		<!-- 准备批量图片上传 -->
+		<action name="prepareUploadPic" class="com.picc.qp.web.QpTICPictureAction" method="prepareUploadPic">
+		<result name="success">
+/pages/qp/qpticpicture/image-upload/UploadPic.jsp
+			</result>
+		</action>
+		
+		<!-- 批量图片上传 -->
+		<action name="doUpload" class="com.picc.qp.web.QpTICPictureAction" method="doUpload">
+		</action>
+			<!-- 生成照片组 -->
+			<action name="createSurveyGroup" class="com.picc.qp.web.QpTICPictureAction" method="createSurveyGroup">
+		</action>
+		
+		<!-- 删除图片 -->
+		<action name="deleteQpTICPicture" class="com.picc.qp.web.QpTICPictureAction" method="deleteQpTICPicture"></action>
+		
+		
+		<!-- 更新图片fileName -->
+		<action name="prepareUpdateFileName" class="com.picc.qp.web.QpTICPictureAction" method="prepareUpdateFileName">
+			<result name="success">
+				/pages/qp/qpticpicture/updateFilename.jsp
+			</result>
+		</action>
+		
+		<action name="updatePicFileName" class="com.picc.qp.web.QpTICPictureAction" method="updatePicFileName"></action>
+		<!-- END更新图片fileName -->
+		
+		<action name="prepareQuery" class="com.picc.qp.web.QpTICPictureAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpticpicture/QpTICPictureQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTICPictureAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qpticpicture/QpTICPictureEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTICPictureAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qpticpicture/QpTICPictureEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.qp.web.QpTICPictureAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTICPictureAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+	</package>
+</struts>

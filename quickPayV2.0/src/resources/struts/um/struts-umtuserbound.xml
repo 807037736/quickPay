@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtuserbound" extends="default" namespace="/um/umtuserbound">
+		<action name="addUmTUserBound" class="com.picc.um.web.UmTUserBoundAction" method="addUmTUserBound"/>
+		
+		<action name="delete" class="com.picc.um.web.UmTUserBoundAction" method="delete"/>
+		
+		<action name="update" class="com.picc.um.web.UmTUserBoundAction" method="update"/>
+		
+		<action name="queryWX" class="com.picc.um.web.UmTUserBoundAction" method="queryWX"/>
+		
+		<action name="queryCK" class="com.picc.um.web.UmTUserBoundAction" method="queryCK"/>
+		
+		<action name="prepareQueryWX" class="com.picc.um.web.UmTUserBoundAction" method="prepareQueryWX">
+			<result name="success">
+				/pages/um/umtuserbound/UmTUserBoundQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQueryCK" class="com.picc.um.web.UmTUserBoundAction" method="prepareQueryCK">
+			<result name="success">
+				/pages/um/umtuserbound/UmTUserBound.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserBoundAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtuserbound/UmTUserBound.jsp
+			</result>
+		</action>
+		
+		
+		<action name="add" class="com.picc.um.web.UmTUserBoundAction" method="add">
+			<result name="success">/pages/um/umtuserbound/UmTUserBoundQuery.jsp</result>
+		</action>
+		
+	</package>
+</struts>

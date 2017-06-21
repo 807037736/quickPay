@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ifm>
+	<!--下载WebService连接超时设置时间 -->
+	<connectouttime>5000</connectouttime>
+	
+	<!-- 下载WebService读取超时设置时间 -->
+	<readouttime>5000</readouttime>
+	
+	<!-- 调用WebService连接超时时间 -->
+	<callconnectionouttime>5000</callconnectionouttime>
+	
+	<!-- 调用WebService接受数据超时时间 -->
+	<callreceiveouttime>60000</callreceiveouttime>
+	
+	<!--  系统初始化时是否创建WebService Client连接 -->
+	<createclientonstart>false</createclientonstart>
+
+</ifm>
+

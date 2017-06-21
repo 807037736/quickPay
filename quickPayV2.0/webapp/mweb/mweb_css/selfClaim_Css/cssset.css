@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*
+ * css reset
+ * Author: Jiny;
+ * Time 2014/08/12
+ */
+html,body{
+	-webkit-text-size-adjust:none;
+	text-size-adjust:none;
+}
+html,body,h1,h2,h3,h4,h5,h6,p,br,form,input,button,textarea,select,fieldset,legend,blockquote,ul,ol,li,dl,dt,dd,pre,table,caption,tr,td,th,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,audio,video{display:block;}
+body{font:14px Arial "Microsoft YaHei"; background: #f6f6f6;}
+html,body{width:100%;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+a{color:#585858;text-decoration:none;}
+textarea,select,input,button{vertical-align:middle;font-size:100%;}
+address,cite,code,em,var,abbr,acronym,i,dfn{font-style:normal;}
+input[type=text],input[type=password],input[type=email],input[type=search],textarea{-webkit-appearance:none;appearance:none;}
+input[type=text]:focus,input[type=password]:focus,input[type=email]:focus,input[type=search]:focus,textarea:focus{color:#353535;}
+textarea{resize:none;}
+i{display:inline-block;}/*用于修饰性小图标*/
+table{border-collapse:collapse;border-spacing: 0px;}
+ol,ul,li{list-style:none outside none;}
+img,fieldset{border:none;}
+legend{display:none;}
+input[type="text"],input[type="time"],input[type="date"],input[type="datetime"],input[type="email"],input[type="password"],input[type=search],textarea{border:none;background:none;}
+mark{background:#ff0;} /* 高亮显示 */
+input { outline: none; }

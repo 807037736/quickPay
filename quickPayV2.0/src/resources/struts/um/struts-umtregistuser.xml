@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtregistuser" extends="default" namespace="/um/umtregistuser">
+
+		<action name="query" class="com.picc.um.web.UmTRegistuserAction" method="query"/>
+		<action name="checkMobile" class="com.picc.um.web.UmTRegistuserAction" method="checkMobile"/>
+		<action name="checkLicenseno" class="com.picc.um.web.UmTRegistuserAction" method="checkLicenseno"/>
+
+		<action name="delete" class="com.picc.um.web.UmTRegistuserAction" method="delete"/>
+		<action name="delBangding" class="com.picc.um.web.UmTRegistuserAction" method="delBangding"/>
+		<action name="preBangding" class="com.picc.um.web.UmTRegistuserAction" method="preBangding">
+			<result name="success">
+				/pages/um/umtregistuser/registuserExtPre.jsp
+			</result>
+		</action>
+		<action name="preEdit" class="com.picc.um.web.UmTRegistuserAction" method="preEdit">
+			<result name="success">
+				/pages/um/umtregistuser/registuserUpdate.jsp
+			</result>
+		</action>
+		<action name="edit" class="com.picc.um.web.UmTRegistuserAction" method="edit">
+			<result name="success">/pages/bangdingSuccess.jsp</result>
+			
+			<!-- <result name="success">
+				/pages/um/umtregistuser/person.jsp
+			</result> -->
+		</action>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTRegistuserAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtregistuser/UmTRegistuserQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTRegistuserAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtregistuser/UmTRegistuserEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTRegistuserAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtregistuser/UmTRegistuserEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTRegistuserAction" method="add">
+			<result name="success">/pages/bangdingSuccess.jsp</result>
+		</action>
+		
+		<!--校验车牌号且电话  -->
+		<action name="check" class="com.picc.um.web.UmTRegistuserAction" method="check">
+		</action>
+		
+		<action name="bangding" class="com.picc.um.web.UmTRegistuserAction" method="bangding">
+			<result name="success">/pages/bangdingSuccess.jsp</result>
+			<!-- <result name="success">/pages/um/umtregistuser/person.jsp</result> -->
+		</action>
+		<action name="update" class="com.picc.um.web.UmTRegistuserAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTRegistuserAction" method="view">
+			<result name="success">
+				/pages/um/umtregistuser/UmTRegistuserEdit.jsp
+			</result>
+		</action>
+		<!-- 注册struts配置已移至struts-wxRegist.xml -->
+		<!-- <action name="personCenter" class="com.picc.um.web.UmTRegistuserAction" method="personCenter">
+			<result name="success">
+				/pages/um/umtregistuser/personCenter.jsp
+			</result>
+			<result name="zhuce">
+				/pages/um/umtregistuser/registuser.jsp
+			</result>
+		</action> -->
+		
+		
+		<!-- 登陆 -->
+		<action name="login" class="com.picc.um.web.UmTRegistuserAction" method="login" />
+		
+		<action name="hpvReportView" class="com.picc.um.web.UmTRegistuserAction" method="hpvReportView">
+			<result name="success">
+				/pages/um/umtregistuser/hpvReportView.jsp
+			</result>
+		</action>
+		
+		<action name="hpvReportDeal" class="com.picc.um.web.UmTRegistuserAction" method="hpvReportDeal">
+			<result name="success">
+				/pages/um/umtregistuser/hpvReportDeal.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="weixin/regist" extends="default" namespace="/weixin/regist">
+		<!-- 自定义登录拦截器 -->
+		<interceptors>
+			<interceptor name="weixinLoginInterceptor" class="com.picc.qp.interceptor.WeixinLoginInterceptor">
+			</interceptor>
+		</interceptors>
+		
+		<action name="checkOpenId" class="com.picc.qp.weixinweb.WXRegistAction" method="checkOpenId" />
+		
+		<action name="personCenter" class="com.picc.qp.weixinweb.WXRegistAction" method="personCenter">
+			<result name="success">
+				/pages/qp/weixin/updateWxUser.jsp
+			</result>
+			<result name="zhuce">
+				/pages/qp/weixin/wxregist.jsp
+			</result>
+		</action>
+		
+		<action name="myQrcode" class="com.picc.qp.weixinweb.WXRegistAction" method="myQrcode">
+			<result name="success">
+				/pages/qp/weixin/myQrcode.jsp
+			</result>
+			<result name="zhuce">
+				/pages/qp/weixin/wxregist.jsp
+			</result>
+		</action>
+		
+		<action name="getInfo" class="com.picc.qp.weixinweb.WXRegistAction" method="getInfo"/>
+		
+		<action name="sendCode" class="com.picc.qp.weixinweb.WXRegistAction" method="sendCode" />
+		
+		<action name="wxRegist" class="com.picc.qp.weixinweb.WXRegistAction" method="wxRegist" />
+		
+		<action name="update" class="com.picc.qp.weixinweb.WXRegistAction" method="update" />
+		
+	</package>
+</struts>

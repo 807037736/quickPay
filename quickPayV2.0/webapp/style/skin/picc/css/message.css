@@ -1,0 +1,387 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding:0;
+	margin:0;
+}
+.session {
+	width:97%;
+	margin:0 auto;
+	background:#F3F3F3;
+	border-radius:3px;
+	height:350px;
+	font-size: 16px;
+	background:url(../images/bd.png) repeat scroll;
+}
+.sessionBar {
+	width:100px;
+	background:#FAEBEB;
+	min-height:350px;
+	float:left
+}
+.sessionOne {
+	height:45px;
+	border-bottom:1px solid #fff;
+	line-height:45px;
+	padding-left:9px;
+	cursor:pointer;
+}
+.current {
+	background-color:#F3F3F3;
+	font-weight: bold;
+}
+.sessionReply {
+	background:#C1DD19;
+	border-radius: 10px;
+	padding: 15px;
+	float:right;
+	width: 450px;
+	margin: 5px 18px 5px 30px;
+	border:1px solid #fff;
+	min-height:30px;
+	font-size:14px;
+	position:relative;
+ *position:inherit
+}
+.sessionQuiz {
+	background:#FAEBEB;
+	border-radius: 10px;
+	padding: 15px;
+	float:left;
+	width: 450px;
+	margin:5px 30px 5px 18px;
+	border:1px solid #fff;
+	line-height: 25px;
+	min-height:35px;
+	font-size:14px;
+	position:relative;
+}
+.sessionBox {
+	width:98%;
+	background:url(../images/background.jpg) repeat scroll;
+	margin:0 auto
+}
+.arrow {
+	background:url(../images/png.png) no-repeat scroll;
+	width:15px;
+	height:22px;
+	display:inline-block;
+	position:absolute;
+	right: -13px;
+	top: 19px;
+}
+.arrowL {
+	background:url(../images/arrowL.png) no-repeat scroll;
+	width:15px;
+	height:22px;
+	display:inline-block;
+	position:absolute;
+	left:-15px;
+	top:19px;
+}
+.sessionOne sup {
+	display:none;
+}
+.msg sup {
+	background: none repeat scroll 0 0 #FF0000;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 12px;
+	height: 13px;
+	line-height: 13px;
+	margin-left: 2px;
+	text-align: center;
+	width: 13px;
+}
+.clientPic {
+	float:left;
+	margin-left: 20px;
+	margin-top: 8px;
+}
+.myselfPic {
+	float:right;
+	margin-right:20px;
+	margin-top:8px
+}
+.clientPic img, .myselfPic img {
+	width:56px;
+	height:56px;
+}
+.clientBox {
+}
+.messageText {
+	text-align:center;
+	margin-top:30px;
+}
+.messageArea {
+	height: 100px;
+	width: 600px;
+	padding:5px;
+	border:1px solid #CCC;
+}
+.messageBtn {
+	margin-top: 20px;
+}
+.messageUp {
+	width:90px;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	color:#fff;
+	display:inline-block;
+	background:#C20000;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.messageNo {
+	width:90px;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	color:#222;
+	display:inline-block;
+	background:#E5E5E5;
+	margin-right:20px;
+	font-weight:bold;
+	display:none
+}
+.sessionQuiz img {
+	margin-left: 85px;
+}
+.messageText {
+	background:url("../images/bd.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	width:800px;
+	margin:0 auto;
+}
+.sessionTop {
+	width:800px;
+	margin:0 auto;
+	background:url("../images/bd.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background:#FAEBEB;
+	border-bottom:1px solid #fff;
+	font-size:14px;
+	text-align:right;
+	border-left:1px solid #fff;
+}
+.sessionYes {
+	background:url(../images/yes.png) no-repeat left center scroll;
+	padding-left: 15px;
+	padding-right: 10px;
+	color:#222
+}
+.sessionNo {
+	background:url(../images/no.png) no-repeat left center scroll;
+	padding:0 15px;
+	color:#222
+}
+.busy {
+	position:relative
+}
+.myselfPic.busy span {
+	background: url("../images/no.png") no-repeat scroll;
+	bottom: 0;
+	display: inline-block;
+	height: 13px;
+	position: absolute;
+	right: -1px;
+	width: 12px;
+}
+.myselfPic span {
+	display:none;
+}
+.sessionPeople, .sessionState {
+	float:right
+}
+.sessionPeople {
+	position:relative;
+}
+.sessionPeople img {
+	width:40px;
+	height:40px;
+	padding: 5px 10px;
+}
+.sessionState {
+	margin-top:20px
+}
+.onLine span {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background:url(../images/yes.png) no-repeat scroll;
+	position:absolute;
+	bottom: 7px;
+	right:12px;
+}
+.hurry span {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background:url(../images/no.png) no-repeat scroll;
+	position:absolute;
+	bottom: 7px;
+	right:12px;
+}
+/*对话框代码*/
+.wx-msg {
+}
+.wx-msg .wx-msg-list {
+	border-bottom:1px solid #DCDCDC;
+	overflow:hidden;
+	_zoom:1;
+	position:relative;
+}
+.wx-msg .wx-msg-list.onHover {
+	background-color:#f6f6f6;
+}
+.wx-msg .wx-msg-list .wx-msg-operation {
+	position:absolute;
+	right:10px;
+	top:10px;
+	width:120px;
+}
+.wx-msg .wx-msg-list .wx-msg-info {
+	padding-right:130px;
+}
+.wx-msg .wx-msg-list .wx-msg-info .wx-msg-time {
+	width:120px;
+	float:right;
+	font-size:14px;
+	color:#666;
+	padding-top:10px;
+}
+.wx-msg .wx-msg-list .wx-msg-info .wx-msg-status {
+	width:80px;
+	float:right;
+	font-size:14px;
+	color:#A67C52;
+	padding-top:10px;
+}
+.wx-msg .wx-msg-list .wx-msg-info .wx-msg-user {
+	position:relative;
+	margin-right:200px;
+	padding:10px;
+}
+.wx-msg-user .wx-msg-user-pic, .wx-msg-user .wx-msg-user-info {
+	float:left;
+}
+.wx-msg-user .wx-msg-user-info {
+	padding-left:10px;
+}
+.wx-msg-reply-box {
+	border:1px solid #DCDCDC;
+}
+.wx-msg-reply-box .wx-msg-reply-area {
+	padding:10px;
+}
+.wx-msg-reply-box .wx-msg-reply-area .txtArea {
+	width:100%;
+	border:0;
+	height:80px;
+	font-size:14px;
+}
+.wx-msg-reply-box .wordTotal {
+	padding:0 10px;
+	background-color:#F5F6F6;
+	height:30px;
+	text-align:right;
+	font-size:14px;
+	line-height:30px;
+	border-top:1px solid #DCDCDC;
+}
+.wx-msg-reply-btn {
+	padding:10px;
+	text-align:left
+}
+.wx-dialog-remark-box {
+	background-color:#fff;
+	padding:20px;
+}
+.txt-wxRemark {
+	width:200px;
+}
+.wx-dialog-remark-item {
+	padding:10px 0;
+	height:40px;
+}
+.wx-dialog-remark-btn {
+	padding:10px 0;
+	height:30px;
+}
+.wx-talk {
+	background-color:#E9E9E9;
+	padding:0 10px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #D1D1D1;
+}
+.wx-talk-box {
+	margin-top:-1px;
+}
+.wx-mini-tab-wrap {
+	border:1px solid #D1D1D1;
+}
+.wx-mini-tab {
+}
+.wx-mini-tab ul {
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+	background-color:#F5F6F6;
+	border-bottom:1px solid #D4D5D5;
+}
+.wx-mini-tab ul li {
+	float:left;
+	background-color:#F5F6F6;
+	padding:0 20px;
+}
+.wx-mini-tab ul li a {
+	color:#000;
+}
+.wx-mini-tab ul .cur {
+	background-color:#D4D5D5;
+	font-weight:bold;
+}
+.wx-mini-tab ul .cur a {
+}
+.wx-mini-tab-wrap .wx-msg-reply-box {
+	border:none;
+}
+.wx-mini-tab-wrap .wx-mini-tab-msg .wx-msg-reply-box .wordTotal {
+	border-bottom:1px solid #d1d1d1;
+}
+.wx-mini-tab-msg-title {
+	border-bottom:1px solid #ddd;
+	line-height:30px;
+	height:30px;
+	padding:5px 10px;
+}
+.wx-msg-reply-wrap {
+	padding-left:100px;
+	padding-top:10px;
+	background-color:#fff;
+}
+.wx-msg .wx-msg-list.onHover .wx-msg-reply {
+	background-color:#fff;
+}
+.wx-msg-reply {
+	border-top:1px solid #ddd;
+}
+.wx-mini-tab-con {
+	background:#fff
+}
+.sessionTime{ text-align:right}
+.sessionTime span{ display:inline-block; padding:0 5px; height:23px; line-height:23px; color:#fff; background:#ccc; font-size:12px; text-align:center;border-radius: 5px;margin-right: 155px; }
+.sessionTimeL{text-align:left}
+.sessionTimeL span{display:inline-block; padding:0 5px;  height:23px; line-height:23px; color:#fff; background:#ccc; font-size:12px; text-align:center;border-radius: 5px;margin-left: 155px;}
+.message{ padding-top:10px;}
+.myselfBox,.clientBox{ margin-bottom:35px;}
+.clientPic p,.myselfPic p{ text-align:center;width: 56px;}
+
+
+.teletextPic,.teletextText{ float:left}
+.teletextPic img{  height: 50px;
+    margin-left: 0;
+    width: inherit;}
+.teletextText p{ line-height:25px; font-size:12px; margin-left:5px;}
+.teletextText p.teletextTitle{ font-size:14px;}
+.teletextTitle a{ font-family:"Microsoft YaHei","微软雅黑",Helvetica,"黑体",Arial,Tahoma; color:#2e7dc6}

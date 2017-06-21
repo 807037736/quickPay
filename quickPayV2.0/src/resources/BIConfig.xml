@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<biconfig>
+  <!-- 数据库类型 -->
+<DataBaseType>ORACLE</DataBaseType>
+  <!--cognos 服务地址  -->
+<!--<cognos-url>http://58.1.32.125:9300/p2pd/servlet/dispatch</cognos-url>-->
+<cognos-url>http://58.1.39.156:9300/p2pd/servlet/dispatch</cognos-url>
+  <!-- cognos ui 网关 -->
+<cognos-uigateway>/p2pd/servlet/dispatch</cognos-uigateway>
+  <!--biweb 首页地址  -->
+<biweb-index-url>http://58.1.30.12:8080/khyx/main.jsp</biweb-index-url>
+
+<CRNenv-path>/portal/CRNenv_dev.xml</CRNenv-path>
+
+  <!-- 系统license -->
+<license>FVABFBSGOV-03v6c87i49s575-w6nwz6zyzzzxxzxz-6580225230</license>
+</biconfig>

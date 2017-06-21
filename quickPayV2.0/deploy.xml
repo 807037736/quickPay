@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<project name="AntStudy" default="init" basedir=".">
+	  <property name="dest.dir" value="E:/temp/webapp"/>
+	 <property name="war.dir" value="E:/temp"/>
+	  <property name="src.dir" value="D:/lamp_project/workspace/szpiccouter/webapp"/>
+	  <target name="init" depends="deploy">
+	  </target>
+	  <target name="deploy">
+	  	 <!-- 拷贝根目录下页面文件 -->
+	  	  <copy todir="${dest.dir}">
+	  	  	<fileset dir="${src.dir}">
+	  	  	  <include name="*.jsp"/>
+	  	  	  <include name="*.js"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝common -->
+	  	  <copy todir="${dest.dir}/common">
+	  	  	<fileset dir="${src.dir}/common">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝images -->
+	  	  <copy todir="${dest.dir}/images">
+	  	  	<fileset dir="${src.dir}/images">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/*.jsp -->
+	  	  <copy todir="${dest.dir}/pages">
+	  	  	<fileset dir="${src.dir}/pages">
+	  	  	  <include name="*.jsp"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/common -->
+	  	  <copy todir="${dest.dir}/pages/common">
+	  	  	<fileset dir="${src.dir}/pages/common">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/ifm -->
+	  	  <copy todir="${dest.dir}/pages/ifm">
+	  	  	<fileset dir="${src.dir}/pages/ifm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/image -->
+	  	  <copy todir="${dest.dir}/pages/image">
+	  	  	<fileset dir="${src.dir}/pages/image">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/images -->
+	  	  <copy todir="${dest.dir}/pages/images">
+	  	  	<fileset dir="${src.dir}/pages/images">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/login_images -->
+	  	  <copy todir="${dest.dir}/pages/login_images">
+	  	  	<fileset dir="${src.dir}/pages/login_images">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	
+	  	  
+	  	  <!-- 拷贝pages/portal -->
+	  	  <copy todir="${dest.dir}/pages/portal">
+	  	  	<fileset dir="${src.dir}/pages/portal">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/tm -->
+	  	  <copy todir="${dest.dir}/pages/tm">
+	  	  	<fileset dir="${src.dir}/pages/tm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/tool -->
+	  	  <copy todir="${dest.dir}/pages/tool">
+	  	  	<fileset dir="${src.dir}/pages/tool">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/um -->
+	  	  <copy todir="${dest.dir}/pages/um">
+	  	  	<fileset dir="${src.dir}/pages/um">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝pages/fdr -->
+	  	  <copy todir="${dest.dir}/pages/fdr">
+	  	  	<fileset dir="${src.dir}/pages/fdr">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝style -->
+	  	  <copy todir="${dest.dir}/style">
+	  	  	<fileset dir="${src.dir}/style">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝template -->
+	  	  <copy todir="${dest.dir}/template">
+	  	  	<fileset dir="${src.dir}/template">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝test -->
+	  	  <copy todir="${dest.dir}/test">
+	  	  	<fileset dir="${src.dir}/test">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝uploadFiles -->
+	  	  <copy todir="${dest.dir}/uploadFiles">
+	  	  	<fileset dir="${src.dir}/uploadFiles">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝widgets -->
+	  	  <copy todir="${dest.dir}/widgets">
+	  	  	<fileset dir="${src.dir}/widgets">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/*.xml -->
+	  	  <copy todir="${dest.dir}/WEB-INF">
+	  	  	<fileset dir="${src.dir}/WEB-INF">
+	  	  	  <include name="*.xml"/>
+	  	  	  <exclude name="weblogic.xml" />
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	 <!-- 拷贝WEB-INF/lib -->
+	  	  <copy todir="${dest.dir}/WEB-INF/lib">
+	  	  	<fileset dir="${src.dir}/WEB-INF/lib">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/sysxml -->
+	  	  <copy todir="${dest.dir}/WEB-INF/sysxml">
+	  	  	<fileset dir="${src.dir}/WEB-INF/sysxml">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/tlds -->
+	  	  <copy todir="${dest.dir}/WEB-INF/tlds">
+	  	  	<fileset dir="${src.dir}/WEB-INF/tlds">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/cache -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes">
+	  	  	  <include name="*.xml"/>
+	  	  	  <include name="*.properties"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/cache -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/cache">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/cache">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/common -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/common">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/common">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/config -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/config">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/config">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/i18n -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/i18n">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/i18n">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/ins -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/ins">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/ins">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/spring -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/spring">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/spring">
+	  	  	  <include name="*.xml"/>
+	  	  	  <exclude name="applicationContext-cxf.xml" />
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/spring/components -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/spring/components">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/spring/components">
+	  	  	  <include name="*.xml"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  <!-- 拷贝WEB-INF/classes/spring/cxf -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/spring/cxf">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/spring/cxf">
+	  	  	  <include name="weather.xml"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/struts/ifm -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/ifm">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/ifm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/misc -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/misc">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/misc">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/portal -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/portal">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/portal">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/tm -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/tm">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/tm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/tool -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/tool">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/tool">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/um -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/um">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/um">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	   <!-- 拷贝WEB-INF/classes/struts/weather -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/struts/weather">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/struts/weather">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/template -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/template">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/template">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/util -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/util">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/util">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/webservice -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/webservice">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/webservice">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/common -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/common">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/common">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	 <!-- 拷贝WEB-INF/classes/com/picc/ifm -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/ifm">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/ifm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/platform -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/platform">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/platform">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/portal -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/portal">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/portal">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/tm -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/tm">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/tm">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/tool -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/tool">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/tool">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/um -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/um">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/um">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝WEB-INF/classes/com/picc/weather -->
+	  	  <copy todir="${dest.dir}/WEB-INF/classes/com/picc/weather">
+	  	  	<fileset dir="${src.dir}/WEB-INF/classes/com/picc/weather">
+	  	  	  <include name="**/*"/>
+	  	  	</fileset>
+	  	  </copy>
+	  	  
+	  	  <!-- 拷贝webapp/deploy 专门用于替代weblogic.xml applicationContext-cxf.xml -->
+	  	  <delete file="${dest.dir}/WEB-INF/weblogic.xml"/>
+	  	  <delete file="${dest.dir}/WEB-INF/classes/spring/applicationContext-cxf.xml"/>
+	  	  <delete file="${war.dir}/weather.war"/>
+	  	  
+	  	  <copy tofile="${dest.dir}/WEB-INF/weblogic.xml" file="${src.dir}/deploy/weblogic-weather.xml"/>
+	  	  <copy tofile="${dest.dir}/WEB-INF/classes/spring/applicationContext-cxf.xml" file="${src.dir}/deploy/cxf-weather.xml"/>
+	  	  
+	  	  
+	  	  <war warfile="${war.dir}/weather.war">  
+             
+            <fileset dir="${dest.dir}"/>  
+      </war> 
+      
+	  </target>
+</project>

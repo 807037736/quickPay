@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tm>
+	<!-- 公司名义接口定义 该配置与Tm_t_systemconfig配置项代码对应 -->
+	<InterfaceNeedSerial>szsms,zbsms</InterfaceNeedSerial>
+	<Interface_Comp>
+		<!-- 短信SP号配置代码 -->
+		<InterfaceSP>Company_SmsInterface_SP</InterfaceSP>
+		<!-- 短信接口名称配置代码 -->
+		<InterfaceName>Company_SmsInterface</InterfaceName>
+		<!-- 短信序列名称配置代码 -->
+		<InterfaceSeq>Company_SmsSeqName</InterfaceSeq>
+		<!-- 短信序列长度配置代码 -->
+		<SerialLength>Company_SmsInterface_SerialLength</SerialLength>
+	</Interface_Comp>
+	<!-- 个人名义接口定义 该配置与Tm_t_systemconfig配置项代码对应 -->
+	<Interface_Indi>
+		<!-- 短信SP号配置代码 -->
+		<InterfaceSP>Indi_SmsInterface_SP</InterfaceSP>
+		<!-- 短信接口名称配置代码 -->
+		<InterfaceName>Indi_SmsInterface</InterfaceName>
+		<!-- 短信序列名称配置代码 -->
+		<InterfaceSeq>Indi_SmsSeqName</InterfaceSeq>
+		<!-- 短信序列长度配置代码 -->
+		<SerialLength>Indi_SmsInterface_SerialLength</SerialLength>
+	</Interface_Indi>
+	<!-- 同一天同一手机发送短信限制开关 -->
+	<SmsDayControl>SmsDayControl</SmsDayControl>
+
+	<!-- 回执轮询线程池大小 -->
+	<FetchReportThreadSize>100</FetchReportThreadSize>
+	<!-- 回复轮询线程池大小 -->
+	<FetchReplyThreadSize>100</FetchReplyThreadSize>
+	<!-- 轮询分页结果大小，默认为10000 -->
+	<PageResultCount>10000</PageResultCount>
+	<!-- 查询回执时间窗口大小，天数 -->
+	<getReportDateLength>3</getReportDateLength>
+	<!-- 查询回复时间窗口大小，天数 -->
+	<getReplyDateLength>5</getReplyDateLength>
+	<!-- 查询中间表时间窗口大小，天数 -->
+	<getMidToSendDateLength>3</getMidToSendDateLength>
+	<!-- 短信回复回调流程方式  1-内部调用  2 WebService -->
+	<SMSReplyCallBackMethod>1</SMSReplyCallBackMethod>
+	<!-- SendMessage历史记录N天转储 -->
+	<TransSendHisIntervalDays>100</TransSendHisIntervalDays>
+	
+	<!-- Flex历史记录N天转储 -->
+	<TransFlexHisIntervalDays>10</TransFlexHisIntervalDays>
+
+	<!-- 转储使用存储过程( 0-java方式  1-表示调用存储过程)-->
+	<TransDataMethodType>1</TransDataMethodType>
+	<TransDataMethod>SP_TRANSDATA</TransDataMethod>
+	<!-- 总公司短信接口配置 -->
+	<ZBInterface>
+		<!-- 短信平台机构代码转换配置 -->
+		<ComCodeTranslate>
+		<!-- 短信平台要求的转换 -->
+			<!-- 总公司 -->
+			<Company00000000>00000000</Company00000000>
+			<!-- 北京市分公司 -->
+			<Company11000000>11000000</Company11000000>
+			<!-- 天津市分公司 -->
+			<Company12000000>12000000</Company12000000>
+			<!-- 河北省分公司 -->
+			<Company13000000>13000000</Company13000000>
+			<!-- 山西省分公司 -->
+			<Company14000000>14000000</Company14000000>
+			<!-- 内蒙古自治区分公司 -->
+			<Company15000000>15000000</Company15000000>
+			<!-- 辽宁省分公司 -->
+			<Company21000000>21000000</Company21000000>
+			<!-- 大连市分公司 -->
+			<Company21020000>71000000</Company21020000>
+			<!-- 吉林省分公司 -->
+			<Company22000000>22000000</Company22000000>
+			<!-- 黑龙江省分公司 -->
+			<Company23000000>23000000</Company23000000>
+			<!-- 上海市分公司 -->
+			<Company31000000>31000000</Company31000000>
+			<!-- 江苏省分公司 -->
+			<Company32000000>32000000</Company32000000>
+			<!-- 浙江省分公司 -->
+			<Company33000000>33000000</Company33000000>
+			<!-- 杭州市分公司 -->
+			<Company33010000>77000000</Company33010000>
+			<!-- 宁波市分公司 -->
+			<Company33020000>72000000</Company33020000>
+			<!-- 安徽省分公司 -->
+			<Company34000000>34000000</Company34000000>
+			<!-- 福建省分公司 -->
+			<Company35000000>35000000</Company35000000>
+			<!-- 厦门市分公司 -->
+			<Company35020000>73000000</Company35020000>
+			<!-- 江西省分公司 -->
+			<Company36000000>36000000</Company36000000>
+			<!-- 山东省分公司 -->
+			<Company37000000>37000000</Company37000000>
+			<!-- 青岛市分公司 -->
+			<Company37020000>74000000</Company37020000>
+			<!-- 河南省分公司 -->
+			<Company41000000>41000000</Company41000000>
+			<!-- 湖北省分公司 -->
+			<Company42000000>42000000</Company42000000>
+			<!-- 湖南省分公司 -->
+			<Company43000000>43000000</Company43000000>
+			<!-- 广东省分公司 -->
+			<Company44000000>44000000</Company44000000>
+			<!-- 广州市分公司 -->
+			<Company44010000>76000000</Company44010000>
+			<!-- 深圳市分公司 -->
+			<Company44030000>75000000</Company44030000>
+			<!-- 广西分公司 -->
+			<Company45000000>45000000</Company45000000>
+			<!-- 海南省分公司 -->
+			<Company46000000>46000000</Company46000000>
+			<!-- 重庆市分公司 -->
+			<Company50000000>50000000</Company50000000>
+			<!-- 四川省分公司 -->
+			<Company51000000>51000000</Company51000000>
+			<!-- 贵州省分公司 -->
+			<Company52000000>52000000</Company52000000>
+			<!-- 云南省分公司 -->
+			<Company53000000>53000000</Company53000000>
+			<!-- 西藏分公司 -->
+			<Company54000000>54000000</Company54000000>
+			<!-- 陕西省分公司 -->
+			<Company61000000>61000000</Company61000000>
+			<!-- 甘肃省分公司 -->
+			<Company62000000>62000000</Company62000000>
+			<!-- 青海省分公司 -->
+			<Company63000000>63000000</Company63000000>
+			<!-- 宁夏回族自治区分公司 -->
+			<Company64000000>64000000</Company64000000>
+			<!-- 新疆维吾尔自治区分公司 -->
+			<Company65000000>65000000</Company65000000>
+		</ComCodeTranslate>
+	</ZBInterface>
+</tm>

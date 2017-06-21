@@ -1,0 +1,59 @@
+<!-- 网销导入 -->
+  <div class="itemList mt_15">
+    <p><span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>clientName1</p>
+    <p><span>证件类型：</span>idNoType1</p>
+    <p><span>证件号码：</span>idNo1</p>
+
+	<input type="hidden" name="countNo" id="acctNo_2" value="acctNo2">
+    <input type="hidden" id="acctBankName_2" name="acctBankName" value="acctBankName2">
+  </div>
+  <ul class="formul mt_12"  id="accountMessage" >
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+        <select id="provinceCode" name="provinceCode" onchange="provinceChangeForAddress(this);" onfocus="removeError();" class="fake_slt r">
+			<option value=''>开户行所在省</option>       
+ 		</select>
+		</div>
+        </label>
+      </li>  
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+          <select id="cityCode" name="cityCode" onfocus="removeError();" onchange="cityChangeForBank(this);"  class="fake_slt r">
+			<option value="">开户行所在城市</option>
+          </select>
+		</div>
+        </label>
+      </li>
+     
+
+      <li>
+        <label class="fake_sltWrap">
+		<div >
+         description
+         <input type="hidden"  id="bankCategory"  name="bankCategory" value="bankCategory2">
+		</div>
+        </label>
+      </li>
+
+
+
+
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+        <select id="bankCode" name="bankCode" onfocus="removeError();" class="fake_slt r"  style="text-align: right">
+           <option value="">开户行</option>
+          </select>
+		</div>
+        </label>
+      </li>
+      <li>
+        <div>
+         hacctNo
+		</div>
+      </li>
+  </ul>
+
+ 

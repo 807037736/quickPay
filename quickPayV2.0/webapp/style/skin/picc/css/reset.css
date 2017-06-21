@@ -1,0 +1,30 @@
+/*
+Author: Kevin Xiao
+*/
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+figure,body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {margin:0;padding:0;font-size:100%;}
+body,button,input,select,textarea {font:12px/1.5 \5b8b\4f53,"Microsoft YaHei","微软雅黑",tahoma,arial,simsun,sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-size: 100%;}
+address,cite,dfn,em,var {font-style: normal;}
+code,kbd,pre,samp {font-family: courier new,courier,monospace;}
+small{font-size: 12px;}
+ul,ol{list-style: none;}
+a {text-decoration: none;outline:none;}
+a:hover{text-decoration: underline;}
+sup{vertical-align: text-top;}
+sub{vertical-align: text-bottom;}
+legend{color: #000;}
+fieldset,img {border: 0;}
+table{	border-collapse: collapse;border-spacing: 0;}
+fieldset,img {border: none;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style: normal;font-weight: normal;}
+button {cursor:pointer;border:none;}
+.none {display:none;}
+a {color:#666;text-decoration:none;}
+a:hover {color:#E4370C;text-decoration:none;}
+body {color:#000;background:#fff;}
+.clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clear {zoom:1;}
+.word-break{word-break:break-all;word-wrap:break-word;overflow:hidden;}
+

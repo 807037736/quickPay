@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qpticpicturegroup" extends="default" namespace="/qp/qpticpicturegroup">
+
+		<action name="query" class="com.picc.qp.web.QpTICPictureGroupAction" method="query"/>
+		
+		<action name="weixin" class="com.picc.qp.web.QpTICPictureGroupAction" method="weixin"/>
+		
+		<!-- 当事人上传图片 -->
+		<action name="getPictureWeixin" class="com.picc.qp.web.QpTICPictureGroupAction" method="getPictureWeixin"/>
+		
+		<action name="updatePictureGroup" class="com.picc.qp.web.QpTICPictureGroupAction" method="updatePictureGroup"/>
+		
+		<!-- 查勘员批量上传图片 -->
+		<action name="getPictureWeixinSurvry" class="com.picc.qp.web.QpTICPictureGroupAction" method="getPictureWeixinSurvry" />
+		
+		<!-- 查勘员上传图片成功跳转界面 -->
+		<action name="getPictureWeixinSuccess" class="com.picc.qp.web.QpTICPictureGroupAction" method="getPictureWeixinSuccess" >
+			<result name="success">
+				/pages/bangdingSuccess.jsp
+			</result>
+		</action>
+						
+		<action name="queryForDraw" class="com.picc.qp.web.QpTICPictureGroupAction" method="queryForDraw">
+		    <result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupDraw.jsp
+			</result>
+		</action>
+		
+		<action name="queryForDrawSelect" class="com.picc.qp.web.QpTICPictureGroupAction" method="queryForDrawSelect" />
+
+		<action name="delete" class="com.picc.qp.web.QpTICPictureGroupAction" method="delete"/>
+		
+				<action name="uploadPictureGroup" class="com.picc.qp.web.QpTICPictureGroupAction" method="uploadPictureGroup"/>
+		
+				<action name="viewPictureGroup" class="com.picc.qp.web.QpTICPictureGroupAction" method="viewPictureGroup" />
+				<action name="viewPictureGroupPC" class="com.picc.qp.web.QpTICPictureGroupAction" method="viewPictureGroupPC">
+							<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupView.jsp
+			</result>
+			</action>
+				
+		<!-- 微信当事人上传图片 -->		
+		<action name="prepareUploadPictureGroup" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareUploadPictureGroup">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupUploadWX.jsp
+			</result>
+		</action>
+		<!-- 微信查勘员上传图片 -->
+		
+		<action name="prepareSurveyQuery" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareSurveyQuery">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupUploadWXSurvey.jsp
+			</result>
+		</action>
+		<action name="prepareSurveyView" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareSurveyView">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupUploadWXSurvey.jsp
+			</result>
+		</action>
+		<action name="prepareSurveyUploadPictureGroup" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareSurveyUploadPictureGroup">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupUploadWXSurvey.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQuery" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupQueryHistory.jsp
+			</result>
+			<result name="zhuce">
+				/pages/qp/weixin/wxregist.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.qp.web.QpTICPictureGroupAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTICPictureGroupAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.qp.web.QpTICPictureGroupAction" method="view">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupEdit.jsp
+			</result>
+		</action>
+		<action name="prepareDraw" class="com.picc.qp.web.QpTICPictureGroupAction" method="prepareDraw">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpTICPictureGroupDraw.jsp
+			</result>
+		</action>
+	</package>
+</struts>

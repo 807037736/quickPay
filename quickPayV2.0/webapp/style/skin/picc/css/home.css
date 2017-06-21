@@ -1,0 +1,12 @@
+/*
+Author: xcy
+*/
+
+html,body {height:100%;overflow:hidden;}
+body {padding:10px 10px 10px 0;}
+#home {height:100%;background-color: #f9f9f9;}
+#welcome {width: 100%;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+padding-top:100px;}

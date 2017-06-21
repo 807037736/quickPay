@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*
+ * css index.html
+ * Author: Jiny;
+ * Time 2014/08/13
+ */
+
+.jmain-wrap {
+	padding: 15px;
+}
+.jmain-con {
+	border: 2px solid #e4e3e3;
+	border-radius: 20px;
+	background-color: #fff;
+}
+.jbanner {
+	padding: 20px 20px 30px 20px;
+}
+.jbanner-wrap {
+	width: 100%;
+	position: relative;
+}
+.jbanner img {
+	width: 100%;
+	display: block;
+}
+
+.jbann-tip {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 58px;
+	line-height: 58px;
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-size: 20px;
+	/*font-family: "fzlth";*/
+	text-indent: 28px;
+}
+.jinfo {
+	padding: 20px 30px 20px 52px;
+	height: 58px;
+	line-height: 58px;
+	border-top: 1px solid #d7d7d7;
+	font-size: 18px;
+	color: #5b5b5b;
+	/*font-family: "fzlth";*/
+}
+.jinfo i {
+	display: inline-block;
+	width: 58px;
+	height: 58px;
+	float: right;
+	background-repeat: no-repeat;
+}
+.jinfo-icon1 {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon1_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon1_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon1_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon1_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon1_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon1_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon1_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon1_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon1_2x.png) 2x);
+}
+.jinfo-icon2 {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon2_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon2_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon2_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon2_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon2_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon2_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon2_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon2_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon2_2x.png) 2x);
+}
+.jinfo-icon3 {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon3_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon3_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon3_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon3_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon3_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon3_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon3_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon3_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon3_2x.png) 2x);
+}
+.jinfo-icon4 {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon4_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon4_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon4_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon4_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon4_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon4_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon4_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon4_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon4_2x.png) 2x);
+}

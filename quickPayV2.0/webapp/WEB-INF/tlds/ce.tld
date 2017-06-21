@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+ <tlib-version>1.0</tlib-version>
+ <jsp-version>1.2</jsp-version>
+ <short-name>Application CE Tag Library</short-name>
+ <uri>/WEB-INF/tlds/ce.tld</uri>
+ <description>This tag library contains functionality specific to the PICC
+		CLAIM Application.</description>
+ <!-- radio tag begin -->
+ <tag>
+  <name>radio</name>
+  <tag-class>com.picc.common.tag.ce.RadioTag</tag-class>
+  <body-content>JSP</body-content>
+  <description>Render a radio element</description>
+  <attribute>
+   <name>accesskey</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html accesskey attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>cssClass</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css class to use for element</description>
+  </attribute>
+  <attribute>
+   <name>cssStyle</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css style definitions for element ro use</description>
+  </attribute>
+  <attribute>
+   <name>disabled</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html disabled attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>id</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>id for referencing element. For UI and form tags it will be used as HTML id attribute</description>
+  </attribute>
+  <attribute>
+   <name>name</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The name to set for element</description>
+  </attribute>
+  <attribute>
+   <name>onblur</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onblur attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onchange</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onchange attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>ondblclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html ondblclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onfocus</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onfocus attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeydown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeydown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeypress</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeypress attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeyup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeyup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousedown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousedown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousemove</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousemove attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseout</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseout attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseover</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseover attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onselect</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onselect attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>required</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>If set to true, the rendered element will indicate that input is required</description>
+  </attribute>
+  <attribute>
+   <name>size</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Size of the element box (# of elements to show)</description>
+  </attribute>
+  <attribute>
+   <name>tabindex</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html tabindex attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>title</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html title attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>tooltip</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the tooltip of this particular component</description>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Preset the value of input element.</description>
+  </attribute>
+  <attribute>
+   <name>list</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Iterable source to populate from. If the list is a Map (key, value), the Map key will become the option 'value' parameter and the Map value will become the option body.</description>
+  </attribute>
+ </tag>
+ <!-- radio tag end 
+ select tag begin -->
+ <tag>
+  <name>select</name>
+  <tag-class>com.picc.common.tag.ce.SelectTag</tag-class>
+  <body-content>JSP</body-content>
+  <description>Render a Select element</description>
+  <attribute>
+   <name>accesskey</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html accesskey attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>cssClass</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css class to use for element</description>
+  </attribute>
+  <attribute>
+   <name>cssStyle</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css style definitions for element ro use</description>
+  </attribute>
+  <attribute>
+   <name>disabled</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html disabled attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>id</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>id for referencing element. For UI and form tags it will be used as HTML id attribute</description>
+  </attribute>
+  <attribute>
+   <name>name</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The name to set for element</description>
+  </attribute>
+  <attribute>
+   <name>onblur</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onblur attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onchange</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onchange attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>ondblclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html ondblclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onfocus</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onfocus attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeydown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeydown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeypress</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeypress attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeyup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeyup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousedown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousedown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousemove</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousemove attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseout</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseout attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseover</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseover attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onselect</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onselect attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>required</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>If set to true, the rendered element will indicate that input is required</description>
+  </attribute>
+  <attribute>
+   <name>size</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Size of the element box (# of elements to show)</description>
+  </attribute>
+  <attribute>
+   <name>tabindex</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html tabindex attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>title</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html title attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>tooltip</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the tooltip of this particular component</description>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Preset the value of input element.</description>
+  </attribute>
+  <attribute>
+   <name>list</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Iterable source to populate from. If the list is a Map (key, value), the Map key will become the option 'value' parameter and the Map value will become the option body.</description>
+  </attribute>
+  <attribute>
+   <name>multiple</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Creates a multiple select. The tag will pre-select multiple values if the values are passed as an Array (of appropriate types) via the value attribute. Passing a Collection may work too? Haven't tested this.</description>
+  </attribute>
+  <attribute>
+   <name>headValue</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <!-- select tag end 
+ checkboxlist tag begin -->
+ <tag>
+  <name>checkboxlist</name>
+  <tag-class>com.picc.common.tag.ce.CheckboxListTag</tag-class>
+  <body-content>JSP</body-content>
+  <description>Render a checkbox element</description>
+  <attribute>
+   <name>accesskey</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html accesskey attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>cssClass</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css class to use for element</description>
+  </attribute>
+  <attribute>
+   <name>cssStyle</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css style definitions for element ro use</description>
+  </attribute>
+  <attribute>
+   <name>disabled</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html disabled attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>id</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>id for referencing element. For UI and form tags it will be used as HTML id attribute</description>
+  </attribute>
+  <attribute>
+   <name>name</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The name to set for element</description>
+  </attribute>
+  <attribute>
+   <name>onblur</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onblur attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onchange</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onchange attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>ondblclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html ondblclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onfocus</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onfocus attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeydown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeydown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeypress</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeypress attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeyup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeyup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousedown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousedown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousemove</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousemove attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseout</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseout attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseover</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseover attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onselect</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onselect attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>required</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>If set to true, the rendered element will indicate that input is required</description>
+  </attribute>
+  <attribute>
+   <name>size</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Size of the element box (# of elements to show)</description>
+  </attribute>
+  <attribute>
+   <name>tabindex</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html tabindex attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>title</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html title attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>tooltip</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the tooltip of this particular component</description>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Preset the value of input element.</description>
+  </attribute>
+  <attribute>
+   <name>list</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Iterable source to populate from. If the list is a Map (key, value), the Map key will become the option 'value' parameter and the Map value will become the option body.</description>
+  </attribute>
+ </tag>
+ <!-- checkboxlist tag end 
+ codetag tag begin -->
+ <tag>
+  <name>codetag</name>
+  <tag-class>com.picc.common.tag.ce.CodeTag</tag-class>
+  <attribute>
+   <name>codeType</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>代码类型</description>
+  </attribute>
+  <attribute>
+   <name>codeCode</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>代码值</description>
+  </attribute>
+  <attribute>
+   <name>language</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>语言</description>
+  </attribute>
+  <attribute>
+   <name>riskCode</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>险种代码</description>
+  </attribute>
+ </tag>
+ <!-- codetag tag end 
+ codeselect tag begin -->
+ <tag>
+  <name>codeselect</name>
+  <tag-class>com.picc.common.tag.ce.CodeSelectTag</tag-class>
+  <body-content>JSP</body-content>
+  <description>Render a Select element</description>
+  <attribute>
+   <name>accesskey</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html accesskey attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>cssClass</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css class to use for element</description>
+  </attribute>
+  <attribute>
+   <name>cssStyle</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The css style definitions for element ro use</description>
+  </attribute>
+  <attribute>
+   <name>disabled</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html disabled attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>id</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>id for referencing element. For UI and form tags it will be used as HTML id attribute</description>
+  </attribute>
+  <attribute>
+   <name>name</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>The name to set for element</description>
+  </attribute>
+  <attribute>
+   <name>onblur</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onblur attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onchange</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onchange attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>ondblclick</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html ondblclick attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onfocus</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onfocus attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeydown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeydown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeypress</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeypress attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onkeyup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onkeyup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousedown</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousedown attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmousemove</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmousemove attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseout</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseout attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseover</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseover attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onmouseup</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onmouseup attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>onselect</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html onselect attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>required</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>If set to true, the rendered element will indicate that input is required</description>
+  </attribute>
+  <attribute>
+   <name>size</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Size of the element box (# of elements to show)</description>
+  </attribute>
+  <attribute>
+   <name>tabindex</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html tabindex attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>title</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html title attribute on rendered html element</description>
+  </attribute>
+  <attribute>
+   <name>tooltip</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the tooltip of this particular component</description>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Preset the value of input element.</description>
+  </attribute>
+  <attribute>
+   <name>codeType</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>代码类型</description>
+  </attribute>
+  <attribute>
+   <name>riskCode</name>
+   <required>false</required>
+   <rtexprvalue>true</rtexprvalue>
+   <description>险种代码</description>
+  </attribute>
+  <attribute>
+   <name>language</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>语种,C:中文/E:英文,默认C</description>
+  </attribute>
+  <attribute>
+   <name>useDms</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>是否使用三代数据字典:true,false,默认false</description>
+  </attribute>
+  <attribute>
+   <name>emptyOption</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Whether or not to add an empty (--) option after the header option</description>
+  </attribute>
+  <attribute>
+   <name>withCode</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Whether or not to show "value - name" in option</description>
+  </attribute>
+  <attribute>
+   <name>ignoreValue</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>ignore value</description>
+  </attribute>
+  <attribute>
+   <name>multiple</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Creates a multiple select. The tag will pre-select multiple values if the values are passed as an Array (of appropriate types) via the value attribute. Passing a Collection may work too? Haven't tested this.</description>
+  </attribute>
+  <attribute>
+   <name>editable</name>
+   <rtexprvalue>true</rtexprvalue>
+   <description>Set the html editable attribute on rendered html element</description>
+  </attribute>
+ </tag>
+ <!-- codeselect tag end -->
+</taglib>

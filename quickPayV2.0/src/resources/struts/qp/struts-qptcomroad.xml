@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qptcomroad" extends="default" namespace="/qp/qptcomroad">
+
+		<action name="query" class="com.picc.qp.web.QpTCOMRoadAction" method="query"/>
+
+		<action name="delete" class="com.picc.qp.web.QpTCOMRoadAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.qp.web.QpTCOMRoadAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qptcomroad/QpTCOMRoadQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTCOMRoadAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qptcomroad/QpTCOMRoadEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTCOMRoadAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qptcomroad/QpTCOMRoadEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.qp.web.QpTCOMRoadAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTCOMRoadAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.qp.web.QpTCOMRoadAction" method="view">
+			<result name="success">
+				/pages/qp/qptcomroad/QpTCOMRoadEdit.jsp
+			</result>
+		</action>
+	</package>
+</struts>

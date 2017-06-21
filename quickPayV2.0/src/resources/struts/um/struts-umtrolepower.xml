@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtrolepower" extends="default" namespace="/um/umtrolepower">
+
+		<action name="query" class="com.picc.um.web.UmTRolePowerAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTRolePowerAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTRolePowerAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtrolepower/UmTRolePowerQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTRolePowerAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtrolepower/UmTRolePowerEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTRolePowerAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtrolepower/UmTRolePowerEdit.jsp
+			</result>
+		</action>
+		
+		<!-- 多行录入添加字典权限信息 -->
+		<action name="prepareAddDictionary" class="com.picc.um.web.UmTRolePowerAction" method="prepareAddDictionary">
+			<result name="success">
+				/pages/um/umtrolepower/UmTRoleAddDictionary.jsp
+			</result>
+		</action>
+		
+		<action name="add" class="com.picc.um.web.UmTRolePowerAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTRolePowerAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTRolePowerAction" method="view">
+			<result name="success">
+				/pages/um/umtrolepower/UmTRolePowerEdit.jsp
+			</result>
+		</action>
+
+		<action name="rowEdit" class="com.picc.um.web.UmTRolePowerAction" method="rowEdit" />
+	</package>
+</struts>

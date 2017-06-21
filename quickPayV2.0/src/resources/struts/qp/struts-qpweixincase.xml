@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="weixin/qpweixincase" extends="default" namespace="/weixin/qpweixincase">
+		
+		<!-- <action name="prepareQuery" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpweixincase/QpWeixinCase.jsp
+			</result>
+		</action>
+		
+		<action name="query" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="query" /> -->
+		<!-- 微信案件任务回滚 -->
+		<action name="roolbackWxCase" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="roolbackWxCase"/>
+		<!-- 微信案件任务查询 -->
+		<action name="queryWxTask" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="queryWxTask"/>
+		<!-- 进入微信案件任务界面 -->
+		<action name="prepareQueryWxTask" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQueryWxTask">
+			<result name="success">
+				/pages/qp/qpweixincase/QpWeixinCaseTask.jsp
+			</result>
+			<result name="hunanca_login">
+				/pages/qp/qpweixincase/hunanca_login.jsp
+			</result>
+			
+		</action>
+		
+		<action name="caLogin" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="caLogin">
+			<result name="success">
+				/pages/qp/qpweixincase/QpWeixinCaseTask.jsp
+			</result>
+			<result name="fail">
+				/pages/qp/qpweixincase/ca_login_fail.jsp
+			</result>
+			
+		</action>
+		<!-- 进入交警定责界面 -->
+		<action name="prepareQueryCase" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQueryCase" >
+			<result name="success">
+				/pages/qp/qpweixincase/QpWeixinCaseConfirm.jsp
+			</result>
+		</action>
+		<!-- 交警定责提交 -->                                                                                                                            		
+		<action name="prepareQueryCaseConfirm" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQueryCaseConfirm" />
+		<!-- 定责撤销提交 -->                                                                                                                            		
+		<action name="prepareQueryCaseUndo" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQueryCaseUndo" />
+		<!-- 领取前，任务状态判断 --> 
+		<action name="querySingleWxTask" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="querySingleWxTask" />
+		<!-- 分页查询 --> 
+		<action name="queryFinishWxTask" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="queryFinishWxTask" />
+		<!-- 跳转完成任务查询页面 --> 
+		<action name="prepareQueryFinishWxTask" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="prepareQueryFinishWxTask" >
+			<result name="success">
+				/pages/qp/qpweixincase/QpWeixinCaseFinishTask.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="weixin/rc" extends="default" namespace="/weixin/rc">
+		<!-- 责任认定书查询界面 -->
+		<action name="ResponsibilityConfirmationQuery" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="ResponsibilityConfirmationQuery" >
+			<result name="success">
+				/pages/qp/qpweixincase/ResponsibilityConfirmation/ResponsibilityConfirmationQuery.jsp
+			</result>
+		</action>
+		
+		<!-- 责任认定书下载 -->
+		<action name="ResponsibilityConfirmationDown" class="com.picc.qp.weixinweb.QpWeixinCaseAction" method="ResponsibilityConfirmationDown" >
+			<result name="success" >
+				/pages/qp/qpweixincase/ResponsibilityConfirmation/ResponsibilityConfirmationQuery.jsp
+			</result>
+		</action>
+	</package>
+</struts>

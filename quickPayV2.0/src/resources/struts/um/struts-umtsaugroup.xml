@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtsaugroup" extends="default" namespace="/um/umtsaugroup">
+
+		<action name="query" class="com.picc.um.web.UmTSaugroupAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTSaugroupAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTSaugroupAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtsaugroup/UmTSaugroupQuery.jsp
+			</result>
+		</action>
+		<action name="prepareQueryOuter" class="com.picc.um.web.UmTSaugroupAction" method="prepareQueryOuter">
+			<result name="success">
+				/pages/um/umtsaugroup/TeamQuery.jsp
+			</result>
+		</action>
+		<action name="prepareUpdate" class="com.picc.um.web.UmTSaugroupAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtsaugroup/UmTSaugroupEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTSaugroupAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtsaugroup/UmTSaugroupEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTSaugroupAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTSaugroupAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTSaugroupAction" method="view">
+			<result name="success">
+				/pages/um/umtsaugroup/UmTSaugroupEdit.jsp
+			</result>
+		</action>
+	</package>
+</struts>

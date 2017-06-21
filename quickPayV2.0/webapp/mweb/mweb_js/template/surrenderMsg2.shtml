@@ -1,0 +1,6 @@
+<!--支付宝账户模板      -->
+<p><span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>clientName</p>
+<p><span>支付宝id：</span>countNo</p>
+<p><span>退费金额：</span>totalsumc</p>
+
+ 

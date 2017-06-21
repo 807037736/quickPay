@@ -1,0 +1,16 @@
+<!--网上银行   存在原缴费账户         E终端存在原缴费账户 -->
+  <div class="itemList mt_15">
+    <p><span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>clientName1</p>
+    <p><span>证件类型：</span>idNoType1</p>
+    <p><span>证件号码：</span>idNo1</p>
+    <p id="hacctBankName_id" ><span>开户银行：</span>hAcctBankName2</p>
+    <p id="hacctNo_id" ><span>银行账号：</span>hAcctNo2</p>
+   	<input type="hidden" name="acctNo" id="acctNo_2" value="acctNo2">
+    <input type="hidden" id="bankCode_2" name="bankCode" value="acctBankCode2">
+    <input type="hidden" id="acctBankName_2" name="acctBankName" value="acctBankName2">
+    <input type="hidden" id="bankCode_2" name="bankCode" value="acctBankCode2">
+
+  </div>
+  
+
+ 

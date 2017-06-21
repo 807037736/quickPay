@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtuserpower" extends="default" namespace="/um/umtuserpower">
+
+		<action name="query" class="com.picc.um.web.UmTUserPowerAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTUserPowerAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTUserPowerAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/datapower/umtuserpower/UmTUserPowerQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserPowerAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/datapower/umtuserpower/UmTUserPowerEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTUserPowerAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/datapower/umtuserpower/UmTUserPowerEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTUserPowerAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTUserPowerAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUserPowerAction" method="view">
+			<result name="success">
+				/pages/um/datapower/umtuserpower/UmTUserPowerEdit.jsp
+			</result>
+		</action>
+		
+		
+		<action name="addUserPower" class="com.picc.um.web.UmTUserPowerAction" method="addUserPower">
+			<result name="success">
+				/pages/um/datapower/umtuserpower/UmTUserPowerAdd.jsp
+			</result>
+		</action>
+		
+		<action name="rowEdit" class="com.picc.um.web.UmTUserPowerAction" method="rowEdit" />
+		
+	</package>
+</struts>

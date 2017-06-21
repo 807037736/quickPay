@@ -1,0 +1,57 @@
+* {
+	padding:0px;
+	margin:0
+}
+body {
+}
+.clear {
+	clear:both
+}
+.textTable {
+	border-collapse: collapse;
+	border-spacing: 0;
+	 margin: 10px;
+    width: 98%;
+}
+.textTable th {
+	background:#FCF2F2;
+	text-align:right;
+	padding-right:5px;
+	width:150px;
+}
+.textTable th, .textTable td {
+	border:1px solid #bbb;
+	font-size:12px;
+	padding:5px;
+}
+.textTable select {
+	padding:5px;
+	width:200px;
+}
+.textTable textarea {
+	 height: 130px;
+    padding: 5px;
+    width: 300px;
+}
+.textTable .textPic, .textTable .textSay, .textTable .textVideo,.textMsg,.textpicture {
+	display:none
+}
+
+.textTable .textBox {
+	padding:5px;
+	border:1px solid #bbb;
+	width:202px;
+}
+.textTable .textBox img {
+	width:200px;
+}
+.textTable .textBox p {
+	margin-bottom:10px;
+}
+.textTable .disOpen,.textTable .plugins,.textVideo .plugins{ display:none}
+.textTable .manyPic .pd,.textSay .pd,.textVideo .pd,.textpicture .pd{ padding:15px 25px}
+.textTable .manyPic p a,.textSay p a,.textVideo p a,.textPic .pd a{ color:#0000FF; text-decoration:none}
+.textTable .manyPic p a:hover,.textSay p a:hover,.textVideo p a:hover,.textPic .pd a:hover{ text-decoration:underline}
+.textTable input{ height:25px; line-height:25px; padding-left:3px;}
+.textPic .pd{padding: 15px 25px;}
+.thisLink{ padding-left:20px; padding-top:10px;}

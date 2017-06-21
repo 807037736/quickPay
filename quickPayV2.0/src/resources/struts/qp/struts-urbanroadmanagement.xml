@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/urbanroadmanagement" extends="default" namespace="/qp/urbanroadmanagement">
+
+		<action name="nullMethodToPage" class="com.picc.qp.web.UrbanRoadManagementAction" method="nullMethodToPage">
+			<result name="success">
+				/pages/qp/UrbanRoadManagement/UrbanRoadManagement.jsp
+			</result>
+		</action>
+		<action name="queryUrbanRoad" class="com.picc.qp.web.UrbanRoadManagementAction" method="queryUrbanRoad">
+			<result name="success">
+				
+			</result>
+		</action>
+		<action name="queryChildrenJson" class="com.picc.qp.web.UrbanRoadManagementAction" method="queryChildrenJson">
+			<result name="success">
+				
+			</result>
+		</action>
+		<action name="appendNode" class="com.picc.qp.web.UrbanRoadManagementAction" method="appendNode">
+			<result name="success">								
+			
+			</result>
+		</action>
+		<action name="nullMethod" class="com.picc.qp.web.UrbanRoadManagementAction" method="nullMethod">
+			<result name="success">								
+				/pages/qp/UrbanRoadManagement/AppendNode.jsp
+			</result>
+		</action>
+		
+		<action name="prompt" class="com.picc.qp.web.UrbanRoadManagementAction" method="prompt">
+			<result name="success">								
+				/pages/qp/UrbanRoadManagement/Prompt.jsp
+			</result>
+		</action>
+		<action name="deleteNode" class="com.picc.qp.web.UrbanRoadManagementAction" method="deleteNode">
+			<result name="success">								
+				
+			</result>
+		</action>
+		<action name="prepareEdit" class="com.picc.qp.web.UrbanRoadManagementAction" method="prepareEdit">
+			<result name="success">								
+				/pages/qp/UrbanRoadManagement/AppendNode.jsp
+			</result>
+		</action>
+		<action name="updateNode" class="com.picc.qp.web.UrbanRoadManagementAction" method="updateNode">
+			<result name="success">								
+				
+			</result>
+		</action>
+	</package>
+</struts>

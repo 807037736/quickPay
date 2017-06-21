@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtuserrole" extends="default" namespace="/um/umtuserrole">
+
+		<action name="query" class="com.picc.um.web.UmTUserRoleAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTUserRoleAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTUserRoleAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtuserrole/UmTUserRoleQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserRoleAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtuserrole/UmTUserRoleEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTUserRoleAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtuserrole/UmTUserRoleEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTUserRoleAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTUserRoleAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUserRoleAction" method="view">
+			<result name="success">
+				/pages/um/umtuserrole/UmTUserRoleEdit.jsp
+			</result>
+		</action>
+		
+		<action name="preparedAddUserRole" class="com.picc.um.web.UmTUserRoleAction" method="preparedAddUserRole">
+			<result name="success">
+				/pages/um/umtuserrole/UmTUserRoleAdd.jsp
+			</result>
+		</action>
+		<!-- 根据session机构获取角色列表 -->
+		<action name="getRoleListByComCode" class="com.picc.um.web.UmTUserRoleAction" method="getRoleListByComCode" />
+
+		<!-- 根据界面操作给用户设定角色信息 -->
+		<action name="addRoleToUser" class="com.picc.um.web.UmTUserRoleAction" method="addRoleToUser" />
+	</package>
+</struts>

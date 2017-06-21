@@ -1,0 +1,7 @@
+<!--网上银行  E终端  存在原缴费账户模板      -->
+<p><span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>clientName</p>
+<p><span>银行账号：</span>countNo</p>
+<p><span>开&nbsp;&nbsp;户&nbsp;&nbsp;行：</span>acctBankName</p>
+<p><span>退费金额：</span>totalsumc</p>
+
+ 

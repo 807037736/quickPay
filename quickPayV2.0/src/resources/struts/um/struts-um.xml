@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 用户管理 -->
+	<include file="struts/um/struts-umtuser.xml" />
+	<include file="struts/um/struts-umtaccount.xml" />
+	<include file="struts/um/struts-umtdevice.xml" />
+	<include file="struts/um/struts-umtuserhistory.xml" />
+	
+	
+	<!-- 角色管理start -->
+	<include file="struts/um/struts-umtrole.xml" />
+	<include file="struts/um/struts-umtrolecom.xml" />
+	<include file="struts/um/struts-umtuserrole.xml" />
+	<!-- 角色管理end -->
+	
+	<!-- 自定义角色管理 -->
+	<include file="struts/um/struts-umtgroup.xml"></include>
+	<include file="struts/um/struts-umtgroupcom.xml"></include>
+	<include file="struts/um/struts-umtusergroup.xml"></include>
+
+	
+	<!-- 功能管理start -->
+	<include file="struts/um/struts-umttask.xml" />
+	<include file="struts/um/struts-umtmethodtask.xml" />
+	<include file="struts/um/struts-umtusertask.xml"></include>
+	<!-- 功能管理end -->
+	
+	
+	<include file="struts/um/struts-umtmenu.xml"/>    <include file="struts/um/struts-umtmenu.xml"/>
+
+	
+	<!-- 数据权限 -->
+	<include file="struts/um/struts-umtdictionary.xml" />
+	<include file="struts/um/struts-umtdictionarydetail.xml" />
+	<include file="struts/um/struts-umtuserpower.xml" />
+	
+	<!-- 团队管理 -->
+	<include file="struts/um/struts-umtsaugroup.xml" />
+	<include file="struts/um/struts-umtsauuser.xml" />
+	
+	<!-- 日志管理 -->
+	<include file="struts/um/struts-logtinfo.xml"></include>
+	
+	<!--  缓存管理 -->
+	<include file="struts/um/struts-cache.xml"></include>
+	
+	<!-- Cognos管理 -->
+	<include file="struts/um/struts-cognos.xml"></include>
+	
+	<!-- 访问白名单管理 -->
+	<include file="struts/um/struts-umtwhitelist.xml" />
+	
+	<!-- 角色与数据权限的对应关联 -->
+	<include file="struts/um/struts-umtrolepower.xml" />
+	
+	<!-- 角色维度功能伸缩 -->
+	<include file="struts/um/struts-umtroledime.xml" />
+	
+	<!-- 用户绑定功能 -->
+	<include file="struts/um/struts-umtuserbind.xml" />
+</struts>
+

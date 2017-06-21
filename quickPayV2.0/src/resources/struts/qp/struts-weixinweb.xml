@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="weixin/case" extends="default" namespace="/weixin/case">
+		<!-- 自定义登录拦截器 -->
+		<interceptors>
+			<interceptor name="weixinLoginInterceptor" class="com.picc.qp.interceptor.WeixinLoginInterceptor">
+			</interceptor>
+		</interceptors>
+		<!-- 全局处理结果,注册页面 -->
+		<global-results>
+			<result name="zhuce" type="redirect" >
+			/weixin/regist/personCenter.do?param=${param}
+			</result>
+		</global-results>
+		
+		<!-- 事故历史 -->
+		<action name="casehistory" class="com.picc.qp.weixinweb.CaseAction" method="casehistory">
+			<result name="success">
+				/pages/qp/weixin/casehistory.jsp
+			</result>
+			<interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="weixinLoginInterceptor"/>
+		</action>
+		<!-- 事故详情 -->
+		<action name="casedetail" class="com.picc.qp.weixinweb.CaseAction" method="casedetail">
+			<result name="success">
+				/pages/qp/weixin/casedetail.jsp
+			</result>
+		</action>
+		<!-- 查看定责图片 -->
+		<action name="casesurveypic" class="com.picc.qp.weixinweb.CaseAction" method="casesurveypic">
+			<result name="success">
+				/pages/qp/weixin/casePic.jsp
+			</result>
+		</action>
+		<!-- 查看当事人上传图片 -->
+		<action name="caseaccpic" class="com.picc.qp.weixinweb.CaseAction" method="caseaccpic">
+		</action>
+		
+		<action name="carRemind" class="com.picc.qp.weixinweb.TwoAction" method="carRemind">
+			<result name="success">
+				/pages/qp/weixin/carRemaind.jsp
+			</result>
+		</action>
+		<!-- 基本信息 -->
+		<action name="basicInfo" class="com.picc.qp.weixinweb.TwoAction" method="basicInfo">
+			<result name="success">
+				/pages/qp/weixin/basicInfo.jsp
+			</result>
+		</action>
+		<!-- 保存基本信息 -->
+		<action name="saveBasicInfo" class="com.picc.qp.weixinweb.TwoAction" method="saveBasicInfo" />
+		
+		
+		<action name="caseIn" class="com.picc.qp.weixinweb.CaseAction" method="caseIn">
+			<result name="success">
+				/pages/qp/weixin/case/CaseIn.jsp
+			</result>
+		</action>
+		
+		<action name="twoPage" class="com.picc.qp.weixinweb.CaseAction" method="twoPage">
+			<result name="success">
+				/pages/qp/weixin/case/CaseTwoPage.jsp
+			</result>
+		</action>
+		
+		<action name="threePage" class="com.picc.qp.weixinweb.CaseAction" method="threePage">
+			<result name="success">
+				/pages/qp/weixin/case/CaseThreePage.jsp
+			</result>
+		</action>
+		
+		<!-- 当事人信息录入页面 -->
+		<action name="prepareAccidentEdit" class="com.picc.qp.weixinweb.CaseAction" method="prepareAccidentEdit">
+			<result name="success">
+				/pages/qp/weixin/case/accidentEdit.jsp
+			</result>
+		</action>
+		
+		<!-- 保存当事人 -->
+		<action name="saveAccident" class="com.picc.qp.weixinweb.CaseAction" method="saveAccident">
+		</action>
+		
+		<!-- 案件处理状态 -->
+		<action name="hasPoliceDone" class="com.picc.qp.weixinweb.CaseAction" method="hasPoliceDone">
+		</action>
+		
+		<!-- 验证码确认页面 -->
+		<action name="toVerifCode" class="com.picc.qp.weixinweb.CaseAction" method="toVerifCode">
+			<result name="success">
+				/pages/qp/weixin/case/verifCode.jsp
+			</result>
+		</action>
+		
+		<!-- 发送定责验证码 -->
+		<action name="sendDingzeCode" class="com.picc.qp.weixinweb.CaseAction" method="sendDingzeCode">
+		</action>
+		
+		<!-- 校验定责验证码 -->
+		<action name="prepareFinish" class="com.picc.qp.weixinweb.CaseAction" method="prepareFinish">
+		</action>
+		
+		<!-- 协议书 -->
+		<action name="toFinish" class="com.picc.qp.weixinweb.CaseAction" method="toFinish">
+			<result name="success">
+				/pages/qp/weixin/case/finishView.jsp
+			</result>
+		</action>
+		
+		<!-- 定责完成 -->
+		<action name="finish" class="com.picc.qp.weixinweb.CaseAction" method="finish">
+			<result name="success">
+				/pages/qp/weixin/case/finish.jsp
+			</result>
+		</action>
+                   
+                   
+         <!-- 微信查勘员上传图片 -->
+		<action name="prepareSurveyQuery" class="com.picc.qp.weixinweb.TwoAction" method="prepareSurveyQuery">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpWeinxinSurveyQuery.jsp
+			</result>
+			<interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="weixinLoginInterceptor"/>
+		</action>
+		<action name="prepareSurveyView" class="com.picc.qp.weixinweb.TwoAction" method="prepareSurveyView">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpWeinxinSurveyQuery.jsp
+			</result>
+		</action>
+		<action name="prepareSurveyUploadPictureGroup" class="com.picc.qp.weixinweb.TwoAction" method="prepareSurveyUploadPictureGroup">
+			<result name="success">
+				/pages/qp/qpticpicturegroup/QpWeinxinSurveyUpload.jsp
+<!-- 		/pages/qp/qpticpicturegroup/QpTICPictureGroupUploadWXSurvey.jsp -->
+			</result>
+		</action>
+		
+		<!-- 查勘员批量上传图片 -->
+		<action name="getPictureWeixinSurvry" class="com.picc.qp.weixinweb.TwoAction" method="getPictureWeixinSurvry" />
+		
+		<!-- 查勘员上传图片成功跳转界面 -->
+		<action name="getPictureWeixinSuccess" class="com.picc.qp.weixinweb.TwoAction" method="getPictureWeixinSuccess" >
+			<result name="success">
+				/pages/bangdingSuccess.jsp
+			</result>
+		</action>   
+		
+		<!-- 微信自助定责当事人上传图片流程 -->
+		<!-- 当事人上传图片 -->
+		<action name="getPictureWeixin" class="com.picc.qp.weixinweb.TwoAction" method="getPictureWeixin"/>
+		
+		<action name="updatePictureGroup" class="com.picc.qp.weixinweb.TwoAction" method="updatePictureGroup"/>
+		
+		<!-- 微信当事人上传图片  自助定责 -->		
+		<action name="prepareUploadPictureGroup" class="com.picc.qp.weixinweb.TwoAction" method="prepareUploadPictureGroup">
+			<result name="success">
+				/pages/qp/weixin/wxAccidentUpload2.jsp
+			</result>
+		</action>
+		
+		<!-- wx上传图片获取权限 -->
+		<action name="weixin" class="com.picc.qp.weixinweb.TwoAction" method="weixin"/>
+		   
+	    <!-- 继续操作 -->
+		<action name="continueTo" class="com.picc.qp.weixinweb.CaseAction" method="continueTo">
+			<result name="success">
+				/pages/qp/weixin/case/continue.jsp
+			</result>
+			<interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="weixinLoginInterceptor"/>
+		</action>
+		
+		<!-- demo -->
+		<action name="demo" class="com.picc.qp.weixinweb.CaseAction" method="demo">
+			<result name="success">
+				/pages/qp/weixin/case/demo.jsp
+			</result>
+		</action>  
+		<!-- 初始化案件同步到一路通列表 -->
+		<action name="initEGovermentCase" class="com.picc.qp.weixinweb.CaseAction" method="initEGovermentCase">
+		</action>  
+		                                                                                                                              		
+	</package>
+</struts>

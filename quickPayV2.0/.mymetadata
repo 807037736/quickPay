@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="quickPayV2.0"
+  id="myeclipse.1463020558911"
+  context-root="/quickPay"
+  j2ee-spec="5.0"
+  archive="quickPayV2.0.war">
+  <attributes>
+    <attribute name="webrootdir" value="webapp" />
+  </attributes>
+</project-module>
+

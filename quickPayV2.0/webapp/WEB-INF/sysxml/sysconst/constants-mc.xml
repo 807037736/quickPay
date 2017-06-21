@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<MC>
+	<!-- 客户相关配置 -->
+	<CUSTOMERVIEWTYPECODE>CustV001</CUSTOMERVIEWTYPECODE>
+	<CLUEVIEWTYPECODE>ClueV002</CLUEVIEWTYPECODE>
+	<MAINTOUCHTYPECODE>CustV003</MAINTOUCHTYPECODE>
+		<!-- 转储使用存储过程( 0-java方式  1-表示调用存储过程)-->
+	<TransDataMethodType>1</TransDataMethodType>
+	<TransDataMethod>SP_TRANSDATA</TransDataMethod>
+	<!-- 导入历史记录N天清除 -->
+	<DeleteHisIntervalDays>30</DeleteHisIntervalDays>
+	<!-- 客户导入Id -->
+	<CustImpMouldId>M000000001</CustImpMouldId>
+	<!-- 线索导入Id -->
+	<ClueImpMouldId>M000000002</ClueImpMouldId>
+	<!-- 拆分默认页数据量 -->
+	<BreakpageSize>2000</BreakpageSize>
+</MC>

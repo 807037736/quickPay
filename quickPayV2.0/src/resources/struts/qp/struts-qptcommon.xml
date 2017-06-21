@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qptcomcity" extends="default" namespace="/qp/qptcommon">
+		<action name="getProvinceList" class="com.picc.qp.web.QpTCommonAction" method="getProvinceList"/>
+		<action name="getCityList" class="com.picc.qp.web.QpTCommonAction" method="getCityList"/>
+		<action name="getDistrictList" class="com.picc.qp.web.QpTCommonAction" method="getDistrictList"/>
+		<action name="getRoadList" class="com.picc.qp.web.QpTCommonAction" method="getRoadList"/>
+		<action name="getLawList" class="com.picc.qp.web.QpTCommonAction" method="getLawList"/>
+		<action name="getQpTTPLawByPK" class="com.picc.qp.web.QpTCommonAction" method="getQpTTPLawByPK"/>
+		<action name="getTeamList" class="com.picc.qp.web.QpTCommonAction" method="getTeamList"/>
+	</package>
+</struts>

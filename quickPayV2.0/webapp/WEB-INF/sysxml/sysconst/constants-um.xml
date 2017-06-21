@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<um>
+	<!-- 功能类型start -->
+	<MENU>menu</MENU> <!-- 菜单 -->
+	<PORTAL>portal</PORTAL> <!-- 门户 -->
+	<BUTTON>button</BUTTON> <!-- 按钮 -->
+	<!-- 功能类型end -->
+	
+	<!-- 日志类型strat -->
+	<LOGIN>10</LOGIN>
+	<USER_EDIT>11</USER_EDIT>
+	<ACC_EDIT>12</ACC_EDIT>
+	<TASK_QUERY>20</TASK_QUERY>
+	<!-- 日志类型end-->
+	
+	<!-- Cognos后台资源封装类 -->
+	<COGNOS_CRN>CRNConnect</COGNOS_CRN>
+	<COGNOS_ERR>cognos_err_msg</COGNOS_ERR>
+	
+	
+	<!-- 角色-数据权限配置 -->
+	<USERCODE>usercode</USERCODE>
+	<USERCODEDESC>配置到业务员自己名下</USERCODEDESC>
+	<ZHIGS>zhigs</ZHIGS>
+	<ZHIGSDESC>配置到支公司管理员</ZHIGSDESC>
+	<FENGS>fengs</FENGS>
+	<FENGSDESC>配置到分公司管理员</FENGSDESC>
+	<MONOPOLY>monopoly</MONOPOLY>
+	<MONOPOLYDESC>配置到业务员所在的车行列表</MONOPOLYDESC>
+	<FENGSZHIGS>fengszhigs</FENGSZHIGS>
+	<FENGSZHIGSDESC>配置至分公司支公司管理员名下,根据机构动态处理</FENGSZHIGSDESC>
+	
+	
+	<!-- 总部机构 -->
+	<ZGSCOMID>00000000</ZGSCOMID>
+	
+	<!-- um_t_roletask  scope -->
+	<COMMON>comm</COMMON>
+	<CITY>city</CITY>
+	
+	<!-- um_t_roledime  dimesioncode -->
+	<DIME_COMCODE>comcode</DIME_COMCODE>
+	
+	<!-- um_t_roledime operatetype -->
+	<DIME_OPERATETYPE_ADD>add</DIME_OPERATETYPE_ADD>
+	<DIME_OPERATETYPE_SUB>sub</DIME_OPERATETYPE_SUB>
+	
+	
+	<!-- 总公司Comcode -->
+	<HEAD_COMID>00000000</HEAD_COMID>
+	<!-- 是否是总公司用户 -->
+	<IS_HEAD_OFFICE>isHeadOffice</IS_HEAD_OFFICE>
+
+	
+</um>
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qpttpcase" extends="default" namespace="/qp/qpttpcase">
+	
+	    <action name="prepareShowIMap" class="com.picc.qp.web.QpTTPCaseAction" method="prepareShowIMap">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTICCaseShowIMap.jsp
+			</result>
+	    </action>
+
+		<action name="query" class="com.picc.qp.web.QpTTPCaseAction" method="query"/>
+		
+		<action name="delete" class="com.picc.qp.web.QpTTPCaseAction" method="delete"/>
+		
+		<action name="deleteByCreater" class="com.picc.qp.web.QpTTPCaseAction" method="deleteByCreater"/>
+		
+		<action name="prepareQuery" class="com.picc.qp.web.QpTTPCaseAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQuery2" class="com.picc.qp.web.QpTTPCaseAction" method="prepareQuery2">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareViewQuery" class="com.picc.qp.web.QpTTPCaseAction" method="prepareViewQuery">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseViewQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareAccountQuery" class="com.picc.qp.web.QpTTPCaseAction" method="prepareAccountQuery">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseAccounts.jsp
+			</result>
+		</action>
+		
+		<action name="queryAssessment" class="com.picc.qp.web.QpTTPCaseAction" method="queryAssessment"/>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTTPCaseAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTTPCaseAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseEdit.jsp
+			</result>
+		</action>
+		
+		
+		<action name="saveCase" class="com.picc.qp.web.QpTTPCaseAction" method="saveCase"/>
+		
+		<action name="add" class="com.picc.qp.web.QpTTPCaseAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTTPCaseAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.qp.web.QpTTPCaseAction" method="view">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseEdit.jsp
+			</result>
+		</action>
+		
+		<!-- 打印案件处理记录表 -->
+		<action name="printPersonCaseDetailPreview" class="com.picc.qp.web.QpTTPCaseAction" method="printPersonCaseDetailPreview">
+			<result name="success" type="stream">
+				<param name="contentType">application/pdf</param>  
+                <param name="inputName">pdfStream</param>  
+                <param name="bufferSize">1024</param>  
+			</result>
+		</action>
+		
+		<action name="printPreview" class="com.picc.qp.web.QpTTPCaseAction" method="printPreview">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPPrintPreview.jsp
+			</result>
+			<result name="gsh_success" type="redirect">
+				/printTemplate/gsjj_report_sc.html
+			</result>
+			<result name="gsp_success" type="stream">
+				<param name="contentType">application/pdf</param>  
+                <!-- 指定提供InputStream的filed name -->  
+                <param name="inputName">pdfStream</param>  
+                <param name="bufferSize">1024</param>  
+			</result>
+			<result name="wxh_success" type="redirect">
+				/printTemplate/wxjj_report_sc.html
+			</result>
+			<result name="wxp_success" type="stream">
+				<param name="contentType">application/pdf</param>  
+                <!-- 指定提供InputStream的filed name -->  
+                <param name="inputName">pdfStream</param>  
+                <param name="bufferSize">1024</param>  
+			</result>
+		</action>
+		<action name="printPreview2" class="com.picc.qp.web.QpTTPCaseAction" method="printPreview2">
+			<result name="success" type="stream">
+				<param name="contentType">application/pdf</param>  
+                <param name="inputName">pdfStream</param>  
+                <param name="bufferSize">1024</param>  
+			</result>
+		</action>
+		<action name="downloadCase" class="com.picc.qp.web.QpTTPCaseAction" method="downloadCase"/>
+		<action name="accountsExpExcel" class="com.picc.qp.web.QpTTPCaseAction" method="accountsExpExcel"/>
+		
+		<action name="updateQpTTPCasePic" class="com.picc.qp.web.QpTTPCaseAction" method="updateQpTTPCasePic"/>
+	</package>
+	
+	
+	<package name="qp/qpttpcasestat" extends="default" namespace="/qp/qpttpcasestat">
+	    <action name="prepareQuery" class="com.picc.qp.web.QpTTPCaseStatAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpttpcasestat/QpTTPCaseStatQuery.jsp
+			</result>
+		</action>
+		<action name="doingTaskPrepareQuery" class="com.picc.qp.web.QpTTPCaseStatAction" method="doingTaskPrepareQuery">
+			<result name="success">
+				/pages/qp/qpttpcasestat/QpDoingTTPCaseStatQuery.jsp
+			</result>
+		</action>
+		<action name="query" class="com.picc.qp.web.QpTTPCaseStatAction" method="query"/>
+		<action name="getFieldList" class="com.picc.qp.web.QpTTPCaseStatAction" method="getFieldList"/>
+		<action name="expExcel" class="com.picc.qp.web.QpTTPCaseStatAction" method="expExcel"/>
+		<action name="doingTaskQuery" class="com.picc.qp.web.QpTTPCaseStatAction" method="doingTaskQuery"/>
+		<action name="getDoingTaskFieldList" class="com.picc.qp.web.QpTTPCaseStatAction" method="getDoingTaskFieldList"/>
+	</package>
+	
+	<package name="qp/qpttpresponsible" extends="default" namespace="/qp/qpttpresponsible">
+	    <action name="prepareQuery" class="com.picc.qp.web.QpTTPResponsibleAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpttpresponsible/QpTTPResponsibleQuery.jsp
+			</result>
+		</action>
+		<action name="query" class="com.picc.qp.web.QpTTPResponsibleAction" method="query"/>
+	    <action name="exportResponsibleExcel" class="com.picc.qp.web.QpTTPResponsibleAction" method="exportResponsibleExcel"/>
+	</package>
+</struts>

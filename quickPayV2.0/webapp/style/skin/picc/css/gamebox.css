@@ -1,0 +1,32 @@
+
+/*begin dingdantanchuceng*/
+.homeGameListLayer{margin:10px auto;width:910px;border:1px #ccc solid;font-size:12px;padding-bottom:20px;height:auto;overflow:hidden;background-color:white;position:absolute;left:0;top:20px;}
+.homeGameListLayerTop{height:40px;width:910px;font-family:Arial,sans-serif;background:url(../images/gameListTitleBg.gif) repeat-x center top;}
+.homeGameListLayerTop ul{background:white url('../images/option_line.gif') repeat-x 0 32px;height:40px;}
+.homeGameListLayerTop li{float:left;line-height:32px;font-size:14px;font-weight:bold;text-align:center;color:#333;cursor:pointer;}
+.homeGameListLayerTop .list2_On{width:98px;height:40px;background:url(../images/gameListHome.gif) no-repeat;color:#fff;background-color:transparent;}
+.homeGameListLayerTop .list_On{width:30px;height:40px;background:url(../images/gameListOn.gif) no-repeat;color:#fff;background-color:transparent;}
+.homeGameListLayerTop .list_Off{width:26px;border-left:1px #ccc solid;}
+.homeGameListLayerTop .list2_Off{width:98px;}
+.homeGameListLayerBox{width:890px;padding:10px;text-align:left;display:table;min-height:210px;_height:210px;}
+.homeGameListLayerBottom li{float:left;width:62px;height:24px;line-height:24px;background:url(../images/gameListBottom.gif) no-repeat;margin-right:10px;text-align:center;color:#06C;cursor:pointer;}
+.homeGameListLayerBottom li a{display:block;}
+.homeGameListLayer .Bar{height:52px;width:910px;background:url(../images/index_layerv21.gif) repeat-x 0 1px;border-bottom:1px silver solid;color:#3374B4;}
+.homeGameListLayer .Bar ul{width:905px;float:left;text-align:left;height:auto;}
+.homeGameListLayer .Bar ul li.lable{line-height:24px;text-indent:10px;width:500px;float:left;height:24px;}
+.homeGameListLayer .Bar ul li.close{line-height:24px;text-indent:10px;width:390px;float:left;text-align:right;height:24px;}
+.homeGameListLayer .Bar ul li.layerv20{line-height:30px;height:30px;text-indent:20px;width:120px;background:url(../images/index_layerv20.gif) no-repeat 10px 6px;float:left;letter-spacing:2px;}
+.MerchandiseListLayer{clear:both;width:720px;z-index:9999;left:90px;top:25px;position:absolute;}
+.MerchandiseList{width:720px;}
+.MerchandiseListLayer .Bar{width:720px;}
+.MerchandiseListLayer .Bar ul{width:720px;}
+.MerchandiseListLayer .Bar ul li.lable{width:500px;}
+.MerchandiseListLayer .Bar ul li.close{width:202px;}
+.MerchandiseListLayer .Bar ul li.layerv20{width:120px;}
+
+.gameSearchList .titM {padding:10px;overflow:hidden;_zoom:1;background-color:#fff;}
+.gameSearchList .titM .gamelis {overflow:hidden;_zoom:1;}
+.gameSearchList .titM .gamelis li {float:left;width:86px;color:#666;cursor:pointer;padding:2px;display:inline}
+.gameSearchList .titM .gamelis .cur {background:#E9F8FF;color:#ff6600;}
+	/*end dingdantanchuceng*/
+

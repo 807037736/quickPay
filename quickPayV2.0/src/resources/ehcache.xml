@@ -1,0 +1,169 @@
+<ehcache>
+
+	<diskStore path="java.io.tmpdir"/>
+
+	<defaultCache
+		maxElementsInMemory="10000"
+		eternal="false"
+		overflowToDisk="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120" />
+		
+	<!-- 
+		ROLE-URL VALID FOREVER
+	-->
+	<cache name="UM_T_URLROLE" 
+		maxElementsInMemory="10000" 
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	
+	<!-- 
+		ROLE-DIME VALID FOREVER
+	-->
+	<cache name="UM_T_ROLEDIME" 
+		maxElementsInMemory="10000" 
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />	
+	
+		
+	<!-- 
+		WhiteList VALID FOREVER
+	 -->
+	<cache name="UM_T_WHITELIST"
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<!--
+		 One Day InValid 
+		 User-Role Mapping
+	-->
+	<cache name="UM_T_USERROLE" 
+		maxElementsInMemory="10000" 
+		timeToIdleSeconds="86400"
+		timeToLiveSeconds="86400"
+		eternal="false"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<!-- 
+		One Day InValid
+		User-URL Mapping
+	-->
+	<cache name="UM_T_USERURL" 
+		maxElementsInMemory="10000" 
+		timeToIdleSeconds="86400"
+		timeToLiveSeconds="86400"
+		eternal="false"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+		<!-- 
+		One Day InValid
+		User-URL Mapping
+	-->
+	<cache name="UM_T_USERMENU" 
+		maxElementsInMemory="10000" 
+		timeToIdleSeconds="86400"
+		timeToLiveSeconds="86400"
+		eternal="false"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	<!-- 
+		WhiteList VALID FOREVER
+	 -->
+	<cache name="COMPONENTVIEW"
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	<!-- Cognos -->
+	<cache name="COGNOS_CONFIG" 
+		maxElementsInMemory="10000" 
+		timeToIdleSeconds="86400"
+		timeToLiveSeconds="86400"
+		eternal="false"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	
+	<!-- Interface Cache -->
+	<cache name="INTERFACEMANAGE" 
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	<!-- LOG_T_TYPE Cache -->
+	<cache name="LOG_T_TYPE" 
+		maxElementsInMemory="10000" 
+		timeToIdleSeconds="86400"
+		timeToLiveSeconds="86400"
+		eternal="false"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	<!-- SMS Config Cache -->
+	<cache name="SMSSERVICE" 
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+	<!-- System Config Cache -->
+	<cache name="TM_T_SYSTEMCONFIG" 
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+		
+		
+	<!-- weixin group Cache -->
+	<cache name="wxgroup" 
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+	<!-- weixin activity-->
+	<cache name="activityCache" 
+		maxElementsInMemory="1000"
+		eternal="true"									
+		overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+</ehcache>

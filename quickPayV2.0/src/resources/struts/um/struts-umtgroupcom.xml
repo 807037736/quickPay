@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtgroupcom" extends="default" namespace="/um/umtgroupcom">
+
+		<action name="query" class="com.picc.um.web.UmTGroupComAction" method="query"/>
+		
+		<action name="queryByGroupId" class="com.picc.um.web.UmTGroupComAction" method="queryByGroupId"/>
+		
+		<action name="queryGroupComByComCode" class="com.picc.um.web.UmTGroupComAction" method="queryGroupComByComCode"/>
+		
+		<action name="query4sGroupComByComCode" class="com.picc.um.web.UmTGroupComAction" method="query4sGroupComByComCode"/>
+		
+		<action name="queryGroupAnd4sCombo" class="com.picc.um.web.UmTGroupComAction" method="queryGroupAnd4sCombo"/>
+		
+		<action name="queryCom4sCombo" class="com.picc.um.web.UmTGroupComAction" method="queryCom4sCombo"/>
+
+		<action name="delete" class="com.picc.um.web.UmTGroupComAction" method="delete"/>
+		
+		<action name="add" class="com.picc.um.web.UmTGroupComAction" method="add"/>
+		<!-- 车行页面 -->
+		<action name="queryCom4sComboByComCode" class="com.picc.um.web.UmTGroupComAction" method="queryCom4sComboByComCode"/>
+		<!--
+		<action name="addGroupComList" class="com.picc.um.web.UmTGroupComAction" method="addGroupComList"/>		
+				
+		<action name="update" class="com.picc.um.web.UmTGROUPCOMAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		-->
+	</package>
+</struts>

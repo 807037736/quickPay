@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="dms" extends="default" namespace="/dms">
+		<action name="queryCodeInfo" class="com.picc.platform.dms.web.MCDNewCodeAction" method="queryCodeInfo"></action>
+		
+		<action name="query" class="com.picc.platform.dms.web.MCDNewCodeAction" method="query"/>
+
+		<action name="delete" class="com.picc.platform.dms.web.MCDNewCodeAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareQuery">
+			<result name="success">
+				/pages/platform/dms/MCDNewCodeQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareUpdate">
+			<result name="success">
+				/pages/platform/dms/MCDNewCodeEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareAdd">
+			<result name="success">
+				/pages/platform/dms/MCDNewCodeEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.platform.dms.web.MCDNewCodeAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.platform.dms.web.MCDNewCodeAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.platform.dms.web.MCDNewCodeAction" method="view">
+			<result name="success">
+				/pages/platform/dms/MCDNewCodeEdit.jsp
+			</result>
+		</action>
+		
+		<!-- codeType 的增改查 -->
+		<action name="queryAllType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="queryType"/>
+
+		<action name="deleteType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="deleteType"/>
+		
+		<action name="prepareQueryType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareQueryType">
+			<result name="success">
+				/pages/platform/dms/MCDTypeQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdateType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareUpdateType">
+			<result name="success">
+				/pages/platform/dms/MCDTypeEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAddType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="prepareAddType">
+			<result name="success">
+				/pages/platform/dms/MCDTypeEdit.jsp
+			</result>
+		</action>
+		<action name="addType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="addType">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="updateType" class="com.picc.platform.dms.web.MCDNewCodeAction" method="updateType">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+	</package>
+</struts>

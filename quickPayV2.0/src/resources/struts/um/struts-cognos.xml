@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/cognos" extends="default" namespace="/um/cognos">
+		<action name="findMenuByUser" class="com.picc.um.cognos.web.CognosAction"
+			method="findMenuByUser" />
+
+		<action name="postToCognos" class="com.picc.um.cognos.web.CognosAction"
+			method="postToCognos">
+			<result name="success">
+				/main.jsp
+			</result>
+		</action>
+
+		<action name="postRequest" class="com.picc.um.cognos.web.CognosAction"
+			method="postRequest" />
+
+		<action name="addCognosRole" class="com.picc.um.cognos.web.CognosAction"
+			method="addCognosRole" />
+			
+			
+		<action name="findAllMenu" class="com.picc.um.cognos.web.CognosAction" method="findAllMenu"/>
+		
+		<action name="addMenuToCognosRole" class="com.picc.um.cognos.web.CognosAction" method="addMenuToCognosRole"/>
+	
+		<action name="addCognosGroup" class="com.picc.um.cognos.web.CognosAction" method="addCognosGroup" />
+		<action name="addAllCognosGroup" class="com.picc.um.cognos.web.CognosAction" method="addAllCognosGroup" />
+		<action name="prepareAddCognosGroup" class="com.picc.um.cognos.web.CognosAction" method="prepareAddCognosGroup">
+			<result name="success">
+				/pages/um/datapower/cognosgroup/CognosGroup.jsp
+			</result>
+		</action>
+	
+	</package>
+</struts>

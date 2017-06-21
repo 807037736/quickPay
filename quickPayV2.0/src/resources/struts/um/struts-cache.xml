@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts> 
+	<package name="cache" extends="default" namespace="/cache">
+	
+		<!-- 查询操作 -->
+		<action name="prepareQuery" class="com.picc.um.web.CacheAction" method="prepareQuery">
+		<result name="success">
+				/pages/um/cache/CacheQuery.jsp
+			</result>
+		</action>
+		<action name="queryAll" class="com.picc.um.web.CacheAction" method="queryAll"/>
+		<action name="delete" class="com.picc.um.web.CacheAction" method="delete"/>
+		
+		<!-- 更新用户与功能之间的对应关系  -->
+		<action name="reloadUserTaskCache" class="com.picc.um.web.CacheAction" method="reloadUserTaskCache" />
+
+		<!-- 直接更新角色与功能之间的对应关系 -->		
+		<action name="reloadRoleTaskCache" class="com.picc.um.web.CacheAction" method="reloadRoleTaskCache" />
+		
+
+	</package>
+</struts>

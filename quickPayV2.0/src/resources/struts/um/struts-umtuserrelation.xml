@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtuserrelation" extends="default" namespace="/um/umtuserrelation">
+
+		<action name="prepareBinding" class="com.picc.um.web.UmTUserRelationAction" method="prepareBinding">
+			<result name="success">
+				/pages/binding.jsp
+			</result>
+		</action>
+		<action name="binding" class="com.picc.um.web.UmTUserRelationAction" method="binding">
+			<result name="success">
+				/pages/bindingSuccess.jsp
+			</result>
+		</action>
+		
+		<action name="query" class="com.picc.um.web.UmTUserRelationAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTUserRelationAction" method="delete"/>
+		<action name="verify" class="com.picc.um.web.UmTUserRelationAction" method="verify"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTUserRelationAction" method="prepareQuery">
+			<result name="success">
+				/pages/wx/umtuserrelation/UmTUserrelationQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserRelationAction" method="prepareUpdate">
+			<result name="success">
+				/pages/wx/umtuserrelation/UmTUserrelationEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTUserRelationAction" method="prepareAdd">
+			<result name="success">
+				/pages/wx/umtuserrelation/UmTUserrelationEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTUserRelationAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTUserRelationAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUserRelationAction" method="view">
+			<result name="success">
+				/pages/wx/umtuserrelation/UmTUserrelationEdit.jsp
+			</result>
+		</action>
+		<action name="prepareInnerBinding" class="com.picc.um.web.UmTUserRelationAction" method="prepareInnerBinding">
+			<result name="success">
+				/pages/wxadmin/wxuserbind/binding.jsp
+			</result>
+		</action>
+		<action name="innerBinding" class="com.picc.um.web.UmTUserRelationAction" method="innerBinding">
+			<result name="success">
+				/pages/wxadmin/wxuserbind/bindingSuccess.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtrolecom" extends="default" namespace="/um/umtrolecom">
+
+		<action name="query" class="com.picc.um.web.UmTRoleComAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTRoleComAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTRoleComAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/roleCom/UmTRoleComQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTRoleComAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/roleCom/UmTRoleComEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTRoleComAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/roleCom/UmTRoleComEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTRoleComAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTRoleComAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTRoleComAction" method="view">
+			<result name="success">
+				/pages/um/roleCom/UmTRoleComEdit.jsp
+			</result>
+		</action>
+	</package>
+</struts>

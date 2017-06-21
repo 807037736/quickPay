@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qpticaccident" extends="default" namespace="/qp/qpticaccident">
+
+		<action name="query" class="com.picc.qp.web.QpTICAccidentAction" method="query"/>
+
+		<action name="delete" class="com.picc.qp.web.QpTICAccidentAction" method="delete"/>
+		
+		<action name="deleteTICAccident" class="com.picc.qp.web.QpTICAccidentAction" method="deleteTICAccident"/>
+		
+		<action name="queryAcciDriverInfo" class="com.picc.qp.web.QpTICAccidentAction" method="queryAcciDriverInfo"/>
+		<action name="queryAcciDriverstat" class="com.picc.qp.web.QpTICAccidentAction" method="queryAcciDriverstat">
+ 			<result name="success">
+				/pages/qp/qpticaccident/QpTICAccidentStatQuery.jsp
+			</result>
+		</action>
+		<action name="prepareQuery" class="com.picc.qp.web.QpTICAccidentAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpticaccident/QpTICAccidentQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTICAccidentAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qpticaccident/QpTICAccidentEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTICAccidentAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qpticaccident/QpTICAccidentEdit.jsp
+			</result>
+		</action>
+		
+		<action name="prepareAssessorAdd" class="com.picc.qp.web.QpTICAccidentAction" method="prepareAssessorAdd">
+			<result name="success">
+				/pages/qp/qpticaccident/QpTICAssessorEdit.jsp
+			</result>
+		</action>
+		
+		<action name="saveCase" class="com.picc.qp.web.QpTICAccidentAction" method="saveCase"/>
+		
+		<action name="saveAssessorInfo" class="com.picc.qp.web.QpTICAccidentAction" method="saveAssessorInfo"/>
+		
+		<action name="add" class="com.picc.qp.web.QpTICAccidentAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTICAccidentAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.qp.web.QpTICAccidentAction" method="view">
+			<result name="success">
+				/pages/qp/qpticaccident/QpTICAccidentEdit.jsp
+			</result>
+		</action>
+		<action name="queryAcciIdBefore" class="com.picc.qp.web.QpTICAccidentAction" method="queryAcciIdBefore"/>
+		
+		<!-- 影像定损窗口 -->
+		<action name="viewPhotography" class="com.picc.qp.web.QpTICAccidentAction" method="viewPhotography">
+			<result name="success">
+				/pages/qp/qpphotography/photography.jsp
+			</result>
+		</action>
+	</package>
+</struts>

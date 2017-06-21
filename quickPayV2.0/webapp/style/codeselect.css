@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+/** 只读输入框样式 */
+input.readonly {
+	background-color: #f2f2f2;
+	border: 1px solid #CECECE;
+	border-radius:3px;
+	line-height: 25px;
+}
+span.time_between {
+	width:22px;
+	text-align:center;
+}
+/*标准代码管维护使用样式*/
+input.selectcode {
+   background-color: #FFFDF4;
+	border: 1px #BEBEBE solid;
+    color: #555;
+    width:100px;
+    border-radius:3px;
+    height: 25px;
+}
+/** 双击输入框样式 */
+/** 所有可以双击的code域的样式 */
+input.codeselect_code, input.codeselect_code_fill, input.input_code ,input.input_usercode{
+	background-color: #FFFDF4;
+	border: 1px #BEBEBE solid;
+	text-align: center;
+	color: #555;
+	width:80px;
+	height: 25px; 
+-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/** 双击带出的name输入域的样式 */
+input.codeselect_name, input.codeselect_name_fill, input.input_name,input.input_username{
+	background-color: #fff;
+	border: 1px #BEBEBE solid;
+	text-align: center;
+	color: #555;
+	width:148px;
+	height: 25px; 
+-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+/** 双击框中带出的名称属性输入域紧挨着双击域 */
+input.codeselect_code, input.input_code {
+	margin-right: -5; /* 1440*900 */
+	margin-right: -8; /* 1024*768 */
+}
+
+.codeselect_code:disabled,
+.codeselect_code.disabled{
+	background-color: #f2f2f2;
+	border: 1px #BEBEBE solid;
+	text-align: center;
+	color: #555;
+	width:80px;
+	height: 25px; 
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+.codeselect_name:disabled,
+.ccodeselect_name.disabled{
+	background-color: #f2f2f2;
+	border: 1px #BEBEBE solid;
+	text-align: center;
+	color: #555;
+	width:148px;
+	height: 25px; 
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}

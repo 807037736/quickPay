@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qptcomdistrict" extends="default" namespace="/qp/qptcomdistrict">
+
+		<action name="query" class="com.picc.qp.web.QpTCOMDistrictAction" method="query"/>
+
+		<action name="delete" class="com.picc.qp.web.QpTCOMDistrictAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.qp.web.QpTCOMDistrictAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qptcomdistrict/QpTCOMDistrictQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.qp.web.QpTCOMDistrictAction" method="prepareUpdate">
+			<result name="success">
+				/pages/qp/qptcomdistrict/QpTCOMDistrictEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.qp.web.QpTCOMDistrictAction" method="prepareAdd">
+			<result name="success">
+				/pages/qp/qptcomdistrict/QpTCOMDistrictEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.qp.web.QpTCOMDistrictAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.qp.web.QpTCOMDistrictAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.qp.web.QpTCOMDistrictAction" method="view">
+			<result name="success">
+				/pages/qp/qptcomdistrict/QpTCOMDistrictEdit.jsp
+			</result>
+		</action>
+	</package>
+</struts>

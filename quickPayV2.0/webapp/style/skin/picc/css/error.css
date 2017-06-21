@@ -1,0 +1,12 @@
+.error {border: 1px solid #bbb;background: #FFF; min-width:900px;}
+.error .errorTit {padding-left: 10px;
+line-height: 24px;
+height: 24px;
+font-weight: bold;
+border-bottom: 1px solid #ddd;
+padding: 10px;
+background: #f1f1f1;
+color: #222;
+font-size: 14px;}
+.error .errorM {padding-bottom:23px;color:green;line-height:24px;}
+.error .errorM .errorInfo {text-align:center;}

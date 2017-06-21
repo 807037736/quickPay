@@ -1,0 +1,614 @@
+@charset "utf-8";
+/*
+ * css global
+ * Author: Jiny;
+ * Time 2014/08/12
+ */
+
+/* 理赔申请 */
+.bind-btn {
+	padding: 15px 14px;
+}
+.bind-btn a {
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	background-color: #1e90d5;
+	border-radius: 22px;
+}
+
+.wx-title {
+	padding: 15px 0;
+	/*border-top: 1px solid #dedede;*/
+	font-size: 18px;
+	color: #5b5b5b;
+}
+
+.tab-btn li {
+	float: left;
+	width: 50%;
+	border-bottom: 2px solid #1e90d5;
+	height: 42px;
+	line-height: 42px;
+	color: #5b5b5b;
+	font-size: 15px;
+	text-align: center;
+	background-color: #d6d6d6;
+	cursor: pointer;
+}
+.tab-btn li:first-child {
+	border-top-left-radius: 3px;
+}
+.tab-btn li:last-child {
+	border-top-right-radius: 3px;
+}
+.tab-btn li.active {
+	background-color: #1e90d5;
+	color: #fff;
+}
+.tab-info {
+	background-color: #fff;
+	border: 1px solid #d6d6d6;
+	border-top: none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.tab-info-tip {
+	padding-left: 30px;
+	height: 43px;
+	line-height: 43px;
+	font-size: 15px;
+	color: #c2c2c2;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.tab-info-tip:before {
+	content: '';
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-repeat: no-repeat;
+	margin-top: 8px;
+	margin-right: 8px;
+	position: absolute;
+}
+
+.tip-icon1:before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_name_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_name_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_name_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_name_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_name_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_name_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_name_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_name_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_name_2x.png) 2x);
+}
+
+.tip-icon2:before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_certificate_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_certificate_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_certificate_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_certificate_2x.png) 2x);
+}
+.tip-icon3:before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_certificate_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_id_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_id_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_id_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_id_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_id_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_id_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_id_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_id_2x.png) 2x);
+}
+.tip-icon4:before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_date_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_date_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_date_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_date_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_date_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_date_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_date_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_date_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_date_2x.png) 2x);
+}
+.check-btn a {
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #1e90d5;
+	text-align: center;
+	border-radius: 3px;
+}
+.check-btn a.no-active {
+	background-color: #ccc;
+}
+
+.inp-ctrl {
+	height: 23px;
+	padding: 10px 10px 10px 33px;
+	line-height: 23px;
+	display: block;
+	font-family: "Microsoft YaHei";
+	color: #5b5b5b;
+}
+
+.j-select {
+	position: relative;
+}
+.j-select::before {
+	content: '';
+	width: 16px;
+	height: 10px;
+	position: absolute;
+	top: 17px;
+	right: 27px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.j-select::before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/arrow_down_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/arrow_down_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/arrow_down_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/arrow_down_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/arrow_down_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/arrow_down_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/arrow_down_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/arrow_down_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/arrow_down_2x.png) 2x);
+}
+.j-select-list {
+	position: absolute;
+	top: 43px;
+	left: -1px;
+	background-color: #fff;
+	width: 100%;
+	z-index: 100;
+	border: 1px solid #ccc;
+	display: none;
+}
+.j-select-list li {
+	padding-left: 33px;
+	color: #a0a0a0;
+	line-height: 25px;
+}
+.j-select-list li:hover {
+	background-color: #1e90d5;
+	color: #fff;
+	cursor: default;
+}
+.j-select span {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 10px 0px 10px 33px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	line-height: 23px;
+	color: #5b5b5b;
+}
+
+.xb-select {
+	margin-top: 12px;
+}
+.xb-select input {
+	display: none;
+}
+.xb-select span {
+	display: inline-block;
+	position: relative;
+	height: 29px;
+	width: 106px;
+	background-color: #dbdbdb;
+	line-height: 29px;
+	border-radius: 4px;
+	font-size: 14px;
+	text-align: center;
+	color: #aeaeae;
+}
+.xb-select span::before, .xb-select span::after {
+	content: '女';
+	width: 53px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.xb-select span::before
+{
+	content: '男';
+	left: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.select-girl span::after {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.xb-select span::before, .select-girl span::after {
+	background-color: #1e90d5;
+	color: #fff;
+	
+}
+.select-girl span::before {
+	background: none;
+	color: #aeaeae;
+}
+
+/* 申请须知 */
+.request-info-wrap {
+	padding: 14px;
+}
+.request-info {
+	border: 1px solid #ccc;
+	padding: 30px 25px 20px 25px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+/* 搜索结果 */
+.result-title {
+	line-height: 20px;
+	margin-top: 15px;
+	position: relative;
+	vertical-align: middle;
+	padding-left: 40px;
+}
+.result-title::before {
+	content: '';
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	background-repeat: no-repeat;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+.result-title::before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_search_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_search_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_search_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_search_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_search_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_search_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_search_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_search_1x.png) 1x,url(../../mweb_images/selfClaim_images/icons/icon_search_2x.png) 2x);
+}
+
+.result-list {
+	padding: 0 19px;
+}
+.result-list li, .upload-box {
+	border: 1px solid #e1e1e1;
+	background-color: #fff;
+	margin-top: 10px;
+	padding: 0 10px;
+	border-radius: 4px;
+}
+
+.result-list li h2, .upload-box h2 {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-bottom: 1px dashed #e1e1e1;
+	position: relative;
+}
+.result-list li h2::after, .upload-box h2::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 15px;
+	top: 10px;
+	right: 0;
+	background-repeat: no-repeat;
+}
+/*.result-list li h2::after, */.arrowr-place::after {
+	background-image: url(../../mweb_images/selfClaim_images/icons/arrow_right_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/arrow_right_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/arrow_right_2x.png) 2x);
+	background-image: -webkit-moz-set(url(../../mweb_images/selfClaim_images/icons/arrow_right_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/arrow_right_2x.png) 2x);
+	background-image: -webkit-o-set(url(../../mweb_images/selfClaim_images/icons/arrow_right_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/arrow_right_2x.png) 2x);
+	background-image: -webkit-ms-set(url(../../mweb_images/selfClaim_images/icons/arrow_right_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/arrow_right_2x.png) 2x);
+}
+.result-list li p {
+	line-height: 30px;
+}
+
+/* 理赔信息录入 */
+.setin-title {
+  margin: 12px 0;
+}
+.setin-list li {
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.setinp-ctrl {
+  border-radius: 4px;
+  padding: 15px 10px;
+  display: block;
+  color: #5b5b5b;
+  font-family: "微软雅黑";
+  font-size: 15px; 
+}
+.arrowr-place {
+  position: relative;
+}
+.arrowr-place::after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  width: 10px;
+  height: 15px;
+  background-repeat: no-repeat;
+}
+select.setinp-ctrl {
+  padding: 14px 15px;
+}
+
+.setin-list label {
+  display: block;
+  padding-top: 15px;
+  padding-right: 35px;
+  line-height: 20px;
+}
+.no-pl {
+  padding-left: 0;
+}
+.dis-box span {
+  color: #c2c2c2;
+}
+.dis-box i {
+color: red;
+padding-right: 3px;
+}
+
+/* 声明须知 */
+.statement-wrap {
+	width: 260px;
+	margin: 0 auto;
+	padding: 13px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-top: 50px;
+}
+.statement-wrap h2 {
+	padding-bottom: 6px;
+	border-bottom: 1px solid #1e90d5;
+}
+.statement-wrap p {
+	padding: 10px;
+	line-height: 25px;
+	color: #4a4a4a;
+	font-size: 15px;
+}
+.state-sure {
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	background-color: #1e90d5;
+	color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+/* 未找到搜索结果 */
+.for-no-result {
+	padding: 70px 10px;
+}
+.for-no-result p {
+	font-size: 16px;
+	line-height: 43px;
+	color: #5b5b5b;
+	text-align: center;
+	position: relative;
+	padding-top: 178px;
+}
+.for-no-result p::before {
+	content: '';
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	top: 0;
+	left: 50%;
+	margin-left: -64px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.for-no-result p::before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_nomessage_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_nomessage_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_nomessage_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_nomessage_2x.png) 2x);
+}
+
+/* 资料上传 */
+.upload-box p {
+	line-height: 30px;
+}
+.upload-box-in {
+	
+}
+.toggle-list i {
+	color: red;
+	padding-right: 3px;
+}
+
+.upload-box2 h2 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.img-num-tip {
+color: red;
+font-size: 12px;
+padding-left: 10px;
+display: none;
+}
+
+.upload-box2 h2 a {
+	float: right;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-position: 0px 0;
+	background-repeat: no-repeat;
+}
+.upload-box2 h2 a {
+	background-image: url(../../mweb_images/selfClaim_images/icons/ico_add_normal_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_normal_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_normal_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_normal_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_normal_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_normal_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_normal_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_normal_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_normal_2x.png) 2x);
+}
+.upload-box2 h2 a:hover {
+	background-image: url(../../mweb_images/selfClaim_images/icons/ico_add_press_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_press_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_press_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_press_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_press_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_press_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_press_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/ico_add_press_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/ico_add_press_2x.png) 2x);
+}
+.for-upload-result {
+	margin-top: 50px;
+}
+.for-upload-result p {
+	font-size: 16px;
+	line-height: 25px;
+	color: #5b5b5b;
+	text-align: center;
+	position: relative;
+	padding-top: 178px;
+}
+.for-upload-result p::before {
+	content: '';
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	top: 0;
+	left: 50%;
+	margin-left: -64px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.for-upload-result p::before {
+	background-image: url(../../mweb_images/selfClaim_images/icons/icon_successful_1x.png);
+	background-image: -webkit-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_successful_2x.png) 2x);
+	background-image: -moz-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_successful_2x.png) 2x);
+	background-image: -o-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_successful_2x.png) 2x);
+	background-image: -ms-image-set(url(../../mweb_images/selfClaim_images/icons/icon_nomessage_1x.png) 1x, url(../../mweb_images/selfClaim_images/icons/icon_successful_2x.png) 2x);
+}
+
+.upload-confirm {
+	display: block;
+	margin-top: 50px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #1e90d5;
+	text-align: center;
+	border-radius: 3px;
+}
+
+/* 新加图片预览 */
+.preview-list {
+	margin-top: 5px;
+	border-bottom: 1px solid #e1e1e1;
+	display: none;
+
+}
+.preview-list li {
+	float: left;
+	width: 22%;
+	margin-right: 4%;
+	cursor: pointer;
+	margin-bottom: 5px;
+	position: relative;
+}
+.preview-list li:nth-child(4n) {
+	margin-right: 0;
+}
+.preview-list li img {
+	width: 100%;
+	display: block;
+}
+.preview-list li input {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.preview-list li i {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	right: 2px;
+	bottom: 2px;
+	background-size: 100% auto;
+}
+.preview-list li.succ i {
+	background-image: url(../../mweb_images/selfClaim_images/icons/upload_succ_icon.png);
+}
+
+
+/* 理赔信息确认 */
+ul.besure-list {
+  padding: 0;
+}
+.xg-btn, .qr-btn {
+  width: 45%;
+  
+  text-align: center;
+  border-radius: 4px;
+
+  font-size: 18px; 
+}
+.xg-btn {
+  float: left;
+  height: 42px;
+  line-height: 42px;
+  border: 1px solid #1e90d5;
+  color: #1e90d5;
+}
+.qr-btn {
+  height: 44px;
+  float: right;
+  line-height: 44px;
+  background-color: #1e90d5;
+  color: #fff;
+}
+
+/* 09-17 上传资料图片预览 */
+.img-view-wrap img {
+	width: 100%;
+}
+.img-view-btns {
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 1px dashed #ccc;
+	text-align: center;
+}
+
+.img-view-btns a {
+	display: inline-block;
+	width: 100px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #1e90d5;
+	color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.wait-wrap {
+	height: 200px;
+	text-align: center;
+	margin-top: 100px;
+}
+.img-loading {
+	margin-top: 35px;
+}

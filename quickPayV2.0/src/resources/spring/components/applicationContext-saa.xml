@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+                http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+default-autowire="byName" default-lazy-init="true">
+	<!--  SAA权限相关 action-->
+    <!-- <bean id="saaTaskAction"
+		class="ins.platform.saa.web.SaaTaskAction" scope="prototype" />
+		
+	<bean id="saaGradeAction"
+		class="ins.platform.saa.web.SaaGradeAction" scope="prototype" />
+		
+	<bean id="saaUserPowerAction"
+		class="ins.platform.saa.web.SaaUserPowerAction" scope="prototype" />
+		
+	<bean id="saaPowerExportAction"
+		class="ins.platform.saa.web.SaaPowerExportAction" scope="prototype" /> -->
+	
+	<!--SAA权限相关service-->
+	<!-- <bean id="saaPowerService"
+		class="ins.platform.saa.service.spring.SaaPowerServiceSpringImpl" />
+		
+	<bean id="saaPowerConfigService"
+		class="ins.platform.saa.service.spring.SaaPowerConfigServiceSpringImpl" />
+	
+	<bean id="saaTaskService"
+		class="ins.platform.saa.service.spring.SaaTaskServiceSpringImpl" />
+	
+	<bean id="saaGradeService"
+		class="ins.platform.saa.service.spring.SaaGradeServiceSpringImpl" />
+	
+	 <bean id="saaUserPowerService"
+		class="ins.platform.saa.service.spring.SaaUserPowerServiceSpringImpl" />
+	
+	<bean id="saaUserGradeService"
+		class="ins.platform.saa.service.spring.SaaUserGradeServiceSpringImpl"/>
+		
+	<bean id="saaPowerSupportService"
+		class="ins.platform.saa.service.spring.SaaPowerSupportServiceSpringImpl"/>
+	
+	<bean id="saaPowerExportService"
+		class="ins.platform.saa.service.spring.SaaPowerExportServiceSpringImpl"/> -->
+</beans> 

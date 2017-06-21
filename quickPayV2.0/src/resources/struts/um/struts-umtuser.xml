@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtuser" extends="default" namespace="/um/umtuser">
+
+		<action name="query" class="com.picc.um.web.UmTUserAction" method="query"/>
+
+        <action name="queryOuter" class="com.picc.um.web.UmTUserAction" method="queryOuter"/>
+		<action name="delete" class="com.picc.um.web.UmTUserAction" method="delete"/>
+		<action name="save" class="com.picc.um.web.UmTUserAction" method="save"/>
+		<!-- 用户送修码配置 -->
+		<action name="prepareUserMonopolyQuery" class="com.picc.um.web.UmTUserAction" method="prepareUserMonopolyQuery">
+			<result name="success">
+				/pages/um/usermonopoly/UmTUserQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUserMonopoly" class="com.picc.um.web.UmTUserAction" method="prepareUserMonopolyQuery">
+			<result name="success">
+				/pages/um/usermonopoly/UserMonopoly.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTUserAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/user/UmTUserQuery.jsp
+			</result>
+		</action>
+		<action name="prepareConfig" class="com.picc.um.web.UmTUserAction" method="prepareConfig">
+			<result name="success">
+				/pages/um/userpowerconfig/UserPowerConfig.jsp
+			</result>
+		</action>
+		<action name="prepareQueryOuter" class="com.picc.um.web.UmTUserAction" method="prepareQueryOuter">
+			<result name="success">
+				/pages/um/user/UserQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/user/UmTUserEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTUserAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/user/UmTUserEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTUserAction" method="add">
+		</action>
+		<action name="update" class="com.picc.um.web.UmTUserAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUserAction" method="view">
+			<result name="success">
+				/pages/um/user/UmTUserEdit.jsp
+			</result>
+		</action>
+		
+		<action name="resetPassWord" class="com.picc.um.web.UmTUserAction" method="resetPassWord">
+			<result name="success">
+				/updatePassword.jsp
+			</result>
+		</action>
+		<action name="sendvCode" class="com.picc.um.web.UmTUserAction" method="sendvCode"/>
+		<action name="updatePassWord" class="com.picc.um.web.UmTUserAction" method="updatePassWord"/>	
+		<!-- 个人信息-->
+		<action name="prepareMyInfo" class="com.picc.um.web.UmTUserAction" method="prepareMyInfo"/>
+		<!-- 修改个人爱好-->
+		<action name="updateUserInterests" class="com.picc.um.web.UmTUserAction" method="updateUserInterests"/>
+		<!-- 修改Email-->
+		<action name="updateUserEmail" class="com.picc.um.web.UmTUserAction" method="updateUserEmail"/>
+		<!-- 修改个人手机-->
+		<action name="updateUserMobile" class="com.picc.um.web.UmTUserAction" method="updateUserMobile"/>
+		<!-- 修改个人密码-->
+		<action name="prepareResetPassword" class="com.picc.um.web.UmTUserAction" method="prepareResetPassword">
+			<result name="success">
+				/pages/um/user/updatePassword.jsp
+			</result>
+		</action>
+		
+		<action name="resetUserPassWord" class="com.picc.um.web.UmTUserAction" method="resetUserPassWord"/>
+		<!-- 发送验证码-->
+		<action name="sendSMSvCode" class="com.picc.um.web.UmTUserAction" method="sendSMSvCode"/>
+		<action name="findUserMcbc" class="com.picc.um.web.UmTUserAction" method="findUserMcbc">
+			<result name="success">
+				/pages/um/user/QueryUserInfo.jsp
+			</result>
+		</action>
+		<!-- 保存头像-->
+		<action name="saveUserImage" class="com.picc.um.web.UmTUserAction" method="saveUserImage">
+		<!-- <param name="savePath">/pages/uploadfiles</param> -->
+		
+		<interceptor-ref name="fileUpload">
+                
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>                
+                <param name="maximumSize">600000</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+</struts>

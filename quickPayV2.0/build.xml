@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="The Technology Team" default="dist" basedir=".">
+	<!-- 环境变量 -->
+	<property file="build.properties" />
+
+	<!-- 源文件路径 -->
+	<property name="source.home" value="${basedir}/src/java" />
+	<!-- 资源文件路径 -->
+	<property name="resource.home" value="${basedir}/src/resources" />
+	<!-- 目标包路径  -->
+	<property name="dist.home" value="${basedir}/dist" />
+	<!-- 编译生成文件路径 -->
+	<property name="build.home" value="${basedir}/webapp/WEB-INF/classes" />
+	<!-- Jar包路径  -->
+	<property name="jar.home" value="${basedir}/webapp/WEB-INF/lib" />
+	<!-- 其他Jar包路径  -->
+	<property name="misc-jar.home" value="${basedir}/misc/lib" />
+
+	<!-- 版本构建时间 -->
+	<tstamp>
+		<format property="version.date" pattern="yyyy-MM-dd HH:mm:ss" />
+	</tstamp>
+
+	<!-- 编译路径 -->
+	<path id="classpath.build">
+		<fileset dir="${jar.home}">
+			<patternset>
+				<include name="*.jar" />
+				<exclude name="${app.code}*.jar" />
+			</patternset>
+		</fileset>
+		<fileset dir="${misc-jar.home}">
+			<patternset>
+				<include name="*.jar" />
+			</patternset>
+		</fileset>
+	</path>
+
+	<target name="help">
+		<echo message="" />
+		<echo message="" />
+		<echo message="${app.name}构建说明" />
+		<echo message="-------------------------------------------------------------" />
+		<echo message="可用的目标有:" />
+		<echo message="-------------------------------------------------------------" />
+		<echo message="   help  --> 提供使用这个构建工具的帮助" />
+		<echo message="   dist  --> 打包项目(默认)" />
+		<echo message="-------------------------------------------------------------" />
+	</target>
+
+
+	<target name="init">
+		<delete dir="${build.home}" />
+		<mkdir dir="${build.home}" />
+		<mkdir dir="${dist.home}" />
+		<copy todir="${build.home}" filtering="false">
+			<fileset dir="${source.home}">
+			</fileset>
+			<fileset dir="${resource.home}">
+			</fileset>
+		</copy>
+	</target>
+
+	<!--编译文件生成Jar包 -->
+	<target name="dist" depends="init">
+		<javac srcdir="${build.home}" encoding="UTF-8" source="${jdk.version}" target="${jdk.version}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" destdir="${build.home}" classpathref="classpath.build">
+		</javac>
+		<war destfile="${dist.home}/${app.code}.war" basedir="webapp" webxml="webapp/WEB-INF/web.xml">
+			<exclude name="**/.svn" />
+			<exclude name="**/*.java" />
+		</war>
+		<echo message="Success build ${app.name} for All" />
+	</target>
+
+</project>

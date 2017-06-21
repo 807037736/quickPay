@@ -1,0 +1,468 @@
+.caseDetail {
+    background-color: #ffffff;
+    margin: 20px 15px 0px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding:0 14px;
+}
+table tr{
+    border-bottom: 1px solid #ececec;
+}
+table tr:last-child{
+    border-bottom: 0;
+}
+.caseRes tr{
+    border-bottom: 0;
+    height: 35px;
+}
+.caseDetail.caseRes:not(:first-child) {
+    margin-top: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+.caseName.caseResponse{
+    width: 12%;
+}
+table {
+    margin: 0;
+    color: #333333;
+    width: 100%;
+}
+
+tr {
+    height: 44px;
+}
+.caseName {
+    width: 36%;
+}
+.basicInfo-caseName{
+    width: 30%;
+}
+.caseName-success{
+    width: 30%;
+}
+.caseName.caseRes {
+    width: 30%;
+}
+
+.caseResTd {
+    width: 65%;
+}
+.caseResTd-caseNo {
+    width: 32%;
+}
+
+.tipText {
+    color: #b9b9b9;
+}
+
+.tipText > img {
+    width: 10px;
+    float: right;
+}
+
+.btn {
+    margin: 20% 27.5px 30px;
+    background: #ff9600;
+    border-radius: 5px;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.btn img {
+    width: 15px;
+    height: 16px;
+    margin: -3px 0px 0px 6px;
+}
+
+.caseInfo {
+    font-size: 1.4rem;
+    margin: 20px 15px 7px;
+}
+
+.caseDetail-info, .caseInfo-person-detail {
+    margin-top: 0px;
+}
+
+.caseInfo-person {
+    margin-top: 5px;
+}
+
+.caseInfo-person-first {
+    margin-top: 15px;
+}
+
+.caseInfo:before {
+    content: "|";
+    color: #ff9600;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin-right: 6px;
+}
+
+.caseInfo-person-detail:last-child {
+    margin-bottom: 30px;
+}
+.basicInfo-input{
+    width: 100%;
+    border: 0px;
+    font-size: 1.5rem;
+    color: #333333;
+}
+button {
+    border-radius: 5px;
+    padding: 5px 5px;
+    border: 1px #ff9600 solid;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #ff9600;
+    float: right;
+}
+
+.surveyUploadDiv {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 2.5%;
+}
+
+.surveyUploadDiv img {
+    width: 100%;
+    height: 100px;
+    margin-left: 0;
+}
+
+.surveyUploadDiv img:nth-child(2) {
+    margin: 0px 1.5px;
+}
+
+.caseRes img {
+    width: 34px;
+    margin: 2px 0 8px;
+}
+.caseResTextDetail img{
+    width: 24px;
+}
+
+.caseResTextDetail, .caseResUpload {
+    color: #ff9600;
+    font-size: 1.2rem;
+    text-align: center;
+    border-left:1px dashed #ececec ;
+    width: 100px;
+}
+
+.caseResUpload {
+    text-align: center;
+    padding-left: 14px;
+}
+
+.caseResUpload img {
+    margin-right: 7px;
+    margin-bottom: 8px;
+}
+
+.caseResTextDetail div {
+    margin: 5px 0 12px;
+}
+
+.noCaseRecordDiv {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: #2d2d2d;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    margin: -100px 0 0 -60px;
+}
+
+.noCaseRecordDiv img {
+    width: 130px;
+    margin: 0 0 10px 5px;
+}
+
+.inputNo {
+    border-radius: 5px;
+    border: 0;
+    height: 35px;
+    font-size: 1.3rem;
+    width: 70%;
+}
+.picLink{
+    display: block;
+    width: 30%;
+    padding: 0;
+    margin: 0 0 2.5% 2.5%;
+    float: left;
+}
+.img-search {
+    width: 19px;
+    float: right;
+    margin: 9px 19px;
+}
+
+.onePhotoShowDiv {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.imgShowDiv{
+    width: 100%;
+    height: 480px;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    line-height: 480px;
+    margin-top: -240px;
+}
+.showImg{
+    max-height: 90%;
+    max-width: 100%;
+}
+.photoShowDiv {
+    display: block;
+}
+
+.photoShowDivHide {
+    display: none;
+}
+.lastPic {
+    float: right;
+    position: absolute;
+    z-index: 1000;
+    left: 20px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px -20px 0 0;
+}
+.nextPic {
+    float: right;
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+}
+.bannerDiv{
+    width: 100%;
+    margin: 0;
+}
+.banner {
+    width: 100%;
+}
+/*个人中心*/
+.info-item{
+    margin:20px 15px 0px 15px;
+    font-size:1.5rem;
+    color:#333;
+    border-radius:5px;
+    background:#fff;
+    padding:0px 14px;
+}
+.info-item h3{
+    text-align:center;
+    font-size:1.6rem;
+    color:#666;
+    height:43px;
+    line-height:43px;
+    border-bottom:1px solid #ececec;
+}
+.item-box li{
+    border-bottom:1px solid #ececec;
+    line-height:43px;
+    height:43px;
+    padding:0px 25px 0px 80px;
+    position:relative;
+}
+.item-box input{
+    border:none;
+    font-size:1.5rem;
+    width:100%;
+    background:#fff;
+}
+.item-box label{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+.item-box img{
+    width:10px;
+    height:17px;
+}
+.item-box .delete,.item-box .personInfo-choose{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+.item-box .delete{
+    display:none;
+}
+.item-box .delete img{
+    width:15px;
+    height:15px;
+}
+.personInfo {
+    text-align: center;
+}
+.delImg{
+    width: 15px;
+}
+.personInfo-input {
+    border: 0;
+    width: 85%;
+    height: 98%;
+    font-size: 1.5rem;
+}
+li.vilidateNo{
+    border-bottom:0;
+}
+li.vilidateNo input {
+    width: 60%;
+}
+.vilidateNo .delete{
+    float: left;
+    right: 100px;
+}
+.vilidateNoBtn {
+    margin-top: 8px;
+    position: absolute;
+    right: 0px;
+}
+.vilidateNoBtn-time {
+    margin-top: 8px;
+    position: absolute;
+    right: 0px;
+    background: #cccccc;
+    border-color: #cccccc;
+    width: 88px;
+    color: #999999;
+    font-size: 1.4rem;
+}
+
+table.personalCenter tr {
+    border-bottom: 1px solid #ececec;
+}
+table.personalCenter tr:last-child {
+    border-bottom: 0;
+}
+
+/*提示信息*/
+.wornMessage {
+    height: 35px;
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -22px 0 0 -100px;
+    width: 200px;
+    line-height: 35px;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.8;
+}
+input::-webkit-input-placeholder{
+    color: #cccccc;
+}
+/*注册成功*/
+.registerSuccessTip {
+    width: 100%;
+    text-align: center;
+    font-size: 2.1rem;
+    margin-top: 20px;
+    color: #ff9600;
+    font-weight: bolder;
+}
+/*基本信息弹出框*/
+.modal-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:20;
+    background-color:black;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity:0.8;
+    display:none;
+}
+.choose-box{
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:22;
+    width:100%;
+    height:268px;
+    background:#fff;
+    color:#333;
+    text-align:center;
+    font-size:1.5rem;
+	overflow:auto;
+    display:none;
+}
+.choose-box h3{
+    height:47px;
+    line-height:47px;
+    border-bottom:1px solid #ececec;
+    text-align:right;
+    position:relative;
+    padding:0px;
+}
+.choose-box h3 span,.choose-box h3 a{
+    display: block;
+    float: left;
+    padding: 0 15px;
+    border: 0;
+    margin: 0;
+}
+.choose-box h3 a{
+    color:#ff7800;
+    float: right;
+}
+.choose-box span img{
+    width:15px;
+    height:15px;
+}
+.choose-box li{
+    height:43px;
+    line-height:43px;
+    border-bottom:1px solid #ececec;
+}
+.choose-box .active{
+    color:#ff7800;
+}
+.registerSuccessDiv{
+    margin-bottom: 15px;
+}
+.bannerDiv{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 375px){
+    .caseResTextDetail{
+        padding-left: 14px;
+    }
+}

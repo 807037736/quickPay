@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtusergroup" extends="default" namespace="/um/umtusergroup">
+
+		<!-- <action name="query" class="com.picc.um.web.UmTUserGroupAction" method="query"/> -->
+
+		<action name="delete" class="com.picc.um.web.UmTUserGroupAction" method="delete"/>
+		
+		<action name="del4sUser" class="com.picc.um.web.UmTUserGroupAction" method="del4sUser"/>
+		
+		<action name="queryUserByCom" class="com.picc.um.web.UmTUserGroupAction" method="queryUserByCom"/>
+		
+		<action name="queryByGroupIdAndCom" class="com.picc.um.web.UmTUserGroupAction" method="queryByGroupIdAndCom"/>
+		
+		<action name="queryUserPageByComCode" class="com.picc.um.web.UmTUserGroupAction" method="queryUserPageByComCode"/>
+		
+		<!-- <action name="add" class="com.picc.um.web.UmTUserGroupAction" method="add"/> -->
+		
+		<action name="addUserGroupList" class="com.picc.um.web.UmTUserGroupAction" method="addUserGroupList"/>
+		
+		<action name="addUserGroupIdList" class="com.picc.um.web.UmTUserGroupAction" method="addUserGroupIdList"/>
+		 
+		<action name="query4sUserByComCode" class="com.picc.um.web.UmTUserGroupAction" method="query4sUserByComCode"/>
+		
+		<action name="query4sByGroupIdAndComCode" class="com.picc.um.web.UmTUserGroupAction" method="query4sByGroupIdAndComCode"/>
+		<!-- 某车行关联的人 -->
+		<action name="query4sByUserCode" class="com.picc.um.web.UmTUserGroupAction" method="query4sByUserCode"/>
+		<!-- 设置团队经理 -->
+		<action name="updateLeader" class="com.picc.um.web.UmTUserGroupAction" method="updateLeader"/>
+		<!--
+		<action name="update" class="com.picc.um.web.UmTUSERGROUPAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUSERGROUPAction" method="view">
+			<result name="success">
+				/pages/um//umtusergroup/UmTUSERGROUPEdit.jsp
+			</result>
+		</action> -->
+	</package>
+</struts>

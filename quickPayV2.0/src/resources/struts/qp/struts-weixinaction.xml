@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 大湘网微信对接接口(不拦截登录) -->
+<struts>
+	<package name="weixin/common" extends="default" namespace="/weixin/common">
+		<!-- 获取省份数据 -->
+		<action name="getProvince" class="com.picc.qp.weixinweb.WeixinCommonAction" method="getProvince">
+		</action>
+		
+		<!-- 获取城市数据 -->
+		<action name="getCity" class="com.picc.qp.weixinweb.WeixinCommonAction" method="getCity">
+		</action>
+		
+		<!-- 获取区域数据 -->
+		<action name="getDist" class="com.picc.qp.weixinweb.WeixinCommonAction" method="getDist">
+		</action>
+		
+		<!-- 获取保险公司数据 -->
+		<action name="getCo" class="com.picc.qp.weixinweb.WeixinCommonAction" method="getCo">
+		</action>
+		
+		<!-- 上传图片 -->
+		<action name="uploadImg" class="com.picc.qp.weixinweb.WeixinCommonAction" method="uploadImg">
+		</action>
+		
+		<!-- 上传案件 -->
+		<action name="uploadCase" class="com.picc.qp.weixinweb.WeixinCommonAction" method="uploadCase">
+		</action>
+		
+	</package>
+</struts>

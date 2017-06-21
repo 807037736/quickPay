@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+form .error {
+
+}
+
+form label.error {
+	
+	color: red;
+		
+	font-size: 100%;
+	font-weight: bold;
+	
+	padding:3px 0px 0px 0px;
+}

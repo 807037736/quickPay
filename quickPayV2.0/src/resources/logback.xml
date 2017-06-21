@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user -->
+<!-- -->
+<!-- For professional support please see -->
+<!-- http://www.qos.ch/shop/products/professionalSupport -->
+<!-- -->
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.out</Target>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %5p %c{1}:%L - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Async-JdbcLogAppender" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="STDOUT" />
+	</appender>
+
+	<appender name="myAppender" class="com.picc.um.appender.LogAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %5p %c{1}:%L - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 
+	<appender name="RUNTIME"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>log/runtime.log</File>
+		<encoder>
+			<pattern>%d %t %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<maxIndex>5</maxIndex>
+			<FileNamePattern>runtime.log.%i</FileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>10MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+	 -->
+
+	
+	<appender name="P6SPY"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${catalina.home}/logs/quick_log/p6spy.log</File>
+		<encoder>
+			<pattern>%d %t %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<maxIndex>5</maxIndex>
+			<FileNamePattern>p6spy.log.%i</FileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>10MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+
+	<!-- 
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/test.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>log/tests.log.%i</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>3</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>10MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%-4relative %d [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	 -->
+	
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.home}/logs/quick_log/quick_%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-4relative %d [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	
+	
+	
+
+	<!-- Interface Call Appender -->
+	<!--  
+	<appender name="interfaceLogFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.home}/logs/quick_log/interfaces_%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{HH:mm:ss.SSS} %5p %c{1}:%L - %m%n</pattern>
+		</layout>
+	</appender>
+	-->
+
+
+	<!-- TM SMS Appender -->
+	<appender name="tmtraceLogger"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.home}/logs/quick_log/tmtrace.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>log/tmtrace.log.%i</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>3</maxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>10MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} -
+				%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+
+	<!-- <logger name="com.opensymphony.xwork2.interceptor.TimerInterceptor" 
+		additivity="false" level="INFO"> <appender-ref ref="Async-JdbcLogAppender" 
+		/> </logger> <logger name="ins.framework.log.RunTimeLogAdvice" additivity="false" 
+		level="WARN"> <appender-ref ref="RUNTIME" /> </logger> <logger name="p6spy" 
+		additivity="false" level="DEBUG"> <appender-ref ref="Async-JdbcLogAppender" 
+		/> </logger> <logger name="org.springframework" additivity="false" level="ERROR"> 
+		<appender-ref ref="Async-JdbcLogAppender" /> </logger> <logger name="com.picc" 
+		additivity="false" level="ERROR"> <appender-ref ref="Async-JdbcLogAppender" 
+		/> </logger> -->
+
+	<!-- <logger name="com.picc.test" additivity="false" level="INFO"> <appender-ref 
+		ref="STDOUT" /> <appender-ref ref="FILE" /> <appender-ref ref="DatabaseAppender" 
+		/> <appender-ref ref="myAppender" /> </logger> -->
+		
+	<logger name="com.picc" additivity="false" level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="myAppender" />
+	</logger>
+
+	<!-- Interface Call System -->
+	<!--  
+	<logger name="com.picc.ifm.service.spring" additivity="false"
+		level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="interfaceLogFile" />
+	</logger>
+     -->
+	<!-- tm sms System -->
+	<logger name="com.picc.tm" additivity="false" level="INFO">
+		<!-- <appender-ref ref="STDOUT" /> -->
+		<appender-ref ref="tmtraceLogger" />
+	</logger>
+
+	<!-- <logger name="org.springframework" additivity="false" level="INFO"> 
+		<appender-ref ref="Async-JdbcLogAppender" /> </logger> <logger name="org.hibernate" 
+		additivity="false" level="WARN"> <appender-ref ref="Async-JdbcLogAppender" 
+		/> </logger> -->
+	<!-- <logger name="org.springmodules.workflow.jbpm31" additivity="false" 
+		level="WARN"> <appender-ref ref="STDOUT" /> </logger> -->
+
+	<root level="WARN">
+		<appender-ref ref="Async-JdbcLogAppender" />
+	</root>
+
+</configuration>

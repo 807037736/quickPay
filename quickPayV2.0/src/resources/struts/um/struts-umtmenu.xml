@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtmenu" extends="default" namespace="/um/umtmenu">
+
+		<action name="query" class="com.picc.um.web.UmTMENUAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTMENUAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTMENUAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtmenu/UmTMENUQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareAll" class="com.picc.um.web.UmTMENUAction" method="prepareAll">
+			<result name="success">
+				/pages/MainFrame2.jsp
+			</result>
+		</action>
+		
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTMENUAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtmenu/UmTMENUEdit.jsp
+			</result>
+		</action>
+		
+		<action name="prepareAdd" class="com.picc.um.web.UmTMENUAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtmenu/UmTMENUEdit.jsp
+			</result>
+		</action>
+		
+		<action name="add" class="com.picc.um.web.UmTMENUAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		
+		<action name="update" class="com.picc.um.web.UmTMENUAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		
+		<action name="view" class="com.picc.um.web.UmTMENUAction" method="view">
+			<result name="success">
+				/pages/um/umtmenu/UmTMENUEdit.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtgroup" extends="default" namespace="/um/umtgroup">
+	
+		<!-- <action name="queryComTree" class="com.picc.platform.dms.web.CompanyAction" method="queryCompanyTree"/> -->
+		<!-- 更新机构树 -->
+		<action name="queryComTree" class="com.picc.common.web.TreeAction" method="query"/>
+
+		<action name="query" class="com.picc.um.web.UmTGroupAction" method="query"/>
+		
+		<action name="queryGroupCom4s" class="com.picc.um.web.UmTGroupAction" method="queryGroupCom4s"/>
+		
+		<!-- <action name="queryGroupCBox" class="com.picc.um.web.UmTGroupAction" method="queryGroupCBoxResult"/>
+
+		<action name="delete" class="com.picc.um.web.UmTGroupAction" method="delete"/> -->
+		
+		<action name="prepareUmGroupEdit" class="com.picc.um.web.UmTGroupAction" method="prepareUmGroupEdit">
+			<result name="success">
+				/pages/um/umtgroup/UmGroupEdit.jsp
+			</result>
+		</action>
+		
+		<action name="prepareManage" class="com.picc.um.web.UmTGroupAction" method="prepareManage">
+			<result name="success">
+				/pages/um/umtgroup/UmTGroupManage.jsp
+			</result>
+		</action>
+		
+		<action name="prepare4sManage" class="com.picc.um.web.UmTGroupAction" method="prepare4sManage">
+			<result name="success">
+				/pages/um/umtgroup/Com4sManage.jsp
+			</result>
+		</action>	
+		
+		<action name="prepare4sEdit" class="com.picc.um.web.UmTGroupAction" method="prepare4sEdit">
+			<result name="success">
+				/pages/um/umtgroup/Um4sEdit.jsp
+			</result>
+		</action>		
+		
+		<action name="add" class="com.picc.um.web.UmTGroupAction" method="add"/>
+
+		<action name="update" class="com.picc.um.web.UmTGroupAction" method="update"/>
+
+	</package>
+</struts>

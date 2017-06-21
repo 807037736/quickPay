@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.1.xsd">
+
+	<http auto-config="false" access-denied-page="/pages/Deny.jsp"
+		lowercase-comparisons="true" access-decision-manager-ref="accessDecisionManager">
+		<intercept-url pattern="/weixin/rc/*" filters="none" />
+		<intercept-url pattern="/weixin/case/**" filters="none" />
+		<intercept-url pattern="/weixin/regist/**" filters="none" />
+		<intercept-url pattern="/pages/AccessDenied.jsp*"
+			filters="none" />
+		<intercept-url pattern="/login.jsp*" filters="none" />
+		<intercept-url pattern="/preLogon.do*" filters="none" />
+		<intercept-url pattern="/forwordMainPage.do*" filters="none" />
+		<intercept-url pattern="/origin.jsp*" filters="none" />
+		<intercept-url pattern="/systemChoice.jsp*" filters="none" />
+		<intercept-url pattern="/logout.do" filters="none" />		
+		<intercept-url pattern="/images/**" filters="none" />
+		<!-- <intercept-url pattern="/systemChoice.do" filters="none" /> -->
+		<!-- <intercept-url pattern="/mainPage.do" filters="none" /> -->
+ 		<intercept-url pattern="/updatePassword.js*" filters="none" />
+		<intercept-url pattern="/common/**" filters="none" />
+		<intercept-url pattern="/pages/logo/**" filters="none" />
+		<intercept-url pattern="/pages/image/**" filters="none" />
+		<intercept-url pattern="/pages/images/**" filters="none" />
+		<intercept-url pattern="/pages/js/**" filters="none" />
+		<intercept-url pattern="/pages/style/**" filters="none" />
+		<intercept-url pattern="/pages/binding.jsp" filters="none" />
+		<intercept-url pattern="/pages/pa/**" filters="none" />
+		<intercept-url pattern="/wwadmin/**/**" filters="none" />
+		<intercept-url pattern="/style/**" filters="none" />
+		<intercept-url pattern="/widgets/**" filters="none" />
+		<!-- <intercept-url pattern="/weather/**" filters="none" /> -->
+		<!-- <intercept-url pattern="/prp/**" filters="none" /> -->
+		<intercept-url pattern="/webservice/*" filters="none" />
+		<intercept-url pattern="/dwr/*" filters="none" />
+		<intercept-url pattern="/um/umtuser/resetPassWord*" filters="none" />
+		<intercept-url pattern="/um/umtuser/sendvCode*" filters="none" />
+		<intercept-url pattern="/um/umtuser/updatePassWord*" filters="none" />
+		<intercept-url pattern="/um/umtuserrelation/prepareBinding*" filters="none" />
+		<intercept-url pattern="/um/umtuserrelation/binding*" filters="none" />
+		<intercept-url pattern="/tool/smssendvalidatecode/**" filters="none" />
+		
+        <intercept-url pattern="/nv/nvinfo/**" filters="none" />
+		<intercept-url pattern="/tm/tmtapplicationconfig/selectSerCode.do" filters="none" />
+		<intercept-url pattern="/um/umtuser/findUserMcbc*" filters="none" />
+		
+		<intercept-url pattern="/**.do**" access="ROLE_USER" />
+		<intercept-url pattern="/**.js**" access="ROLE_USER" />
+		
+		<!-- 校园保险 -->
+		<intercept-url pattern="/syn/**" filters="none" />
+		<intercept-url pattern="/pages/syn/**" filters="none" />
+		<intercept-url pattern="/qp/urbanroadmanagement/queryUrbanRoad.do" filters="none" />
+		<form-login login-page="/preLogon.do"/>
+		<logout invalidate-session="true" logout-url="/j_spring_security_logout"
+			logout-success-url="/preLogon.do" />
+	</http>
+
+	<!-- 决策器 -->
+	<beans:bean id="accessDecisionManager"
+		class="org.springframework.security.vote.AffirmativeBased">
+		<beans:property name="allowIfAllAbstainDecisions"
+			value="false" />
+		<beans:property name="decisionVoters">
+			<beans:list>
+				<beans:bean class="org.springframework.security.vote.RoleVoter">
+					<beans:property name="rolePrefix" value="" />
+				</beans:bean>
+				<beans:bean class="org.springframework.security.vote.AuthenticatedVoter" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<!-- 自定义认证管理器-->
+	
+	<beans:bean id="authenticationProcessingFilter"
+		class="com.picc.um.security.CustomAuthenticationProcessingFilter">
+		<custom-filter before="AUTHENTICATION_PROCESSING_FILTER" />
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+		<beans:property name="defaultTargetUrl" value="/" />
+		<beans:property name="authenticationFailureUrl" value="/preLogon.do?login_error=true" />
+	</beans:bean>
+	<authentication-manager alias="authenticationManager" />
+	
+	<beans:bean id="myUserDetailsService" class="com.picc.um.security.SecurityUserService" />
+
+	<authentication-provider user-service-ref="myUserDetailsService">
+		<password-encoder ref="userPasswordEncoder" />
+	</authentication-provider>
+	
+	<beans:bean id="userPasswordEncoder" class="com.picc.um.security.UserPasswordEncoder" />
+
+	<beans:bean id="securityInterceptorFilter"
+		class="com.picc.um.security.SecurityInterceptorFilter">
+		<custom-filter after="FILTER_SECURITY_INTERCEPTOR" />
+	</beans:bean>
+	
+	<beans:bean id="authenticationProcessingFilterEntryPoint"
+		class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+		<beans:property name="loginFormUrl" value="/preLogon.do" />
+		<beans:property name="forceHttps" value="false" />			
+	</beans:bean>
+
+	<!-- 用于自定义异常信息 -->
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<beans:property name="basename"
+			value="classpath:i18n/security/messages_zh_CN" />
+	</beans:bean>
+
+	<!-- 监听用户登录事件 -->
+	<beans:bean id="loginSuccessListener" class="com.picc.um.security.LoginSuccessListener" />
+
+</beans:beans>
+	

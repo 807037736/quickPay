@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtusertask" extends="default" namespace="/um/umtusertask">
+
+		<action name="query" class="com.picc.um.web.UmTUserTaskAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTUserTaskAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTUserTaskAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/umtusertask/UmTUserTaskQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTUserTaskAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/umtusertask/UmTUserTaskEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTUserTaskAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/umtusertask/UmTUserTaskEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTUserTaskAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTUserTaskAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTUserTaskAction" method="view">
+			<result name="success">
+				/pages/um/umtusertask/UmTUserTaskEdit.jsp
+			</result>
+		</action>
+		
+		<action name="addUserTask" class="com.picc.um.web.UmTUserTaskAction" method="addUserTask">
+			<result name="success">
+				/pages/um/umtusertask/UmTUserTaskAdd.jsp	
+			</result>
+		</action>
+		
+		
+		<action name="addTaskToUser" class="com.picc.um.web.UmTUserTaskAction" method="addTaskToUser" /> 
+		
+		<action name="addTask4User" class="com.picc.um.web.UmTUserTaskAction" method="addTask4User"></action>
+	</package>
+</struts>

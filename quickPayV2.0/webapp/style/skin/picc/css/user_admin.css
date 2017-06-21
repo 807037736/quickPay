@@ -1,0 +1,130 @@
+*{
+	padding:0px;
+	margin:0px;
+	font-size:12px;
+}
+.h8{
+	height:8px;
+	clear:both;
+	overflow:hidden;
+}
+.user_admin_bar{
+	clear:both;
+	padding:0px;
+	margin:0px;
+}
+
+.user_admin_bar h2{
+	clear:both;
+	height:38px;
+	padding-top:5px;
+	padding-left:30px;
+	border-bottom:1px solid #CCC;
+	overflow:hidden;
+}
+
+.user_admin_bar .user_buy,.user_admin_bar .user_sell{
+	width:44%;
+	padding-left:5%;
+	padding-top:20px;
+}
+.user_admin_bar .user_buy{
+	float:left;
+	border-right:1px solid #ccc;
+}
+.user_admin_bar .user_sell{
+	float:right;
+}
+
+.user_admin_bar .user_buy dl,.user_admin_bar .user_sell dl{
+	clear:both;
+	height:25px;
+	line-height:25px;
+}
+.user_admin_bar .user_buy dl dd,.user_admin_bar .user_sell dl dd{
+	clear:both;
+	height:25px;
+	line-height:25px;
+}
+.user_admin_bar .user_buy dl dd span,.user_admin_bar .user_sell dl dd span{
+	width:120px;
+	text-align:right;
+	display:block;
+	float:left;
+}
+.user_admin_bar .user_buy dl dd .text,.user_admin_bar .user_sell dl dd .text{
+	float:left;
+	width:150px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #CCC;
+}
+.user_admin_bar .user_buy dl dd b,.user_admin_bar .user_sell dl dd b{
+	float:left;
+	padding-left:8px;
+	padding-top:5px;
+}
+
+.user_admin_bar h3{
+	clear:both;
+	padding-top:8px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+	height:30px;
+	line-height:30px;
+}
+.user_admin_bar h3 span{
+	width:150px;
+	text-align:center;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	float:left;
+	margin-left:30px;
+	color:#333;
+	height:29px;
+	display:block;
+	font-size:13px;
+}
+.user_admin_bar .pingjia_title{
+	clear:both;
+	padding-top:10px;
+	height:30px;
+}
+.user_admin_bar .pingjia_title span{
+	display:block;
+	float:left;
+	text-align:center;
+}
+.user_admin_bar .span_01{
+	width:20%;
+}
+.user_admin_bar .span_02{
+	width:15%;
+}
+.user_admin_bar .span_03{
+	width:48%;
+}
+.user_admin_bar .span_04{
+	width:15%;
+}
+.user_admin_bar .pingjia_con{
+	clear:both;
+	padding:10px 0px;
+}
+
+.user_admin_bar .pingjia_con table{
+	clear:both;
+	width:98%;
+	line-height:22px;
+	text-align:center;
+	border:1px solid #CCC;
+	margin:0px auto;
+}
+
+.user_admin_bar .pingjia_con .b_b{
+	border-bottom:1px solid #ccc;
+}
+.user_admin_bar .pingjia_con .b_r{
+	border-right:1px solid #ccc;
+}

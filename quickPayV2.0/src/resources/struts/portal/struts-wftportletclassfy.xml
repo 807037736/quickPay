@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="portal" extends="default" namespace="/portal">
+
+		<action name="query" class="com.picc.portal.web.WfTPortletclassfyAction" method="query"/>
+
+		<action name="delete" class="com.picc.portal.web.WfTPortletclassfyAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.portal.web.WfTPortletclassfyAction" method="prepareQuery">
+			<result name="success">
+				/pages/portal/WfTPortletclassfyQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.portal.web.WfTPortletclassfyAction" method="prepareUpdate">
+			<result name="success">
+				/pages/portal/WfTPortletclassfyEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.portal.web.WfTPortletclassfyAction" method="prepareAdd">
+			<result name="success">
+				/pages/portal/WfTPortletclassfyEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.portal.web.WfTPortletclassfyAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.portal.web.WfTPortletclassfyAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.portal.web.WfTPortletclassfyAction" method="view">
+			<result name="success">
+				/pages/portal/WfTPortletclassfyEdit.jsp
+			</result>
+		</action>
+		<action name="display" class="com.picc.portal.web.WfTPortletclassfyAction" method="display">
+			<result name="success">
+				/pages/portal/display.jsp
+			</result>
+		</action>
+		<action name="savePortletPosition" class="com.picc.portal.web.WfTPortletinfoAction" method="savePortletPosition">
+			<result name="success">
+				/pages/portal/display.jsp
+			</result>
+		</action>
+		<action name="updateIsclosed" class="com.picc.portal.web.WfTPortletinfoAction" method="updateIsclosed"></action>
+		<!-- <action name="findWfTPortlettemplate" class="com.picc.portal.web.WfTPortlettemplateAction" method="findWfTPortlettemplate"></action> -->
+		<!-- <action name="saveTemplateCode" class="com.picc.portal.web.WfTPortlettemplateAction" method="saveTemplateCode"></action> -->
+		<action name="savePortletclassfy" class="com.picc.portal.web.WfTPortletclassfyAction" method="savePortletclassfy"></action>
+		<action name="getwfTPortletclassfyList" class="com.picc.portal.web.WfTPortletclassfyAction" method="getwfTPortletclassfyList"></action>	
+		<action name="findPortletClassfyAll" class="com.picc.portal.web.WfTPortletclassfyAction" method="findPortletClassfyAll"></action>
+		<action name="userAdd" class="com.picc.portal.web.WfTPortletclassfyAction" method="userAdd">
+			<result name="success">
+				/pages/portal/WfTPortletclassfy.jsp
+			</result>
+		</action>
+		<!-- <action name="finishAdd" class="com.picc.portal.web.WfTPortletinfoAction" method="finishAdd"></action> -->
+		
+		<action name="messageList" class="com.picc.portal.web.WfTPortletclassfyAction" method="messageList">
+			<result name="success">
+				/pages/portal/task/messageList.jsp
+			</result>
+		</action>
+		<action name="reservationTask" class="com.picc.portal.web.WfTPortletclassfyAction" method="reservationTask">
+			<result name="success">
+				/pages/portal/task/reservationTask.jsp
+			</result>
+		</action>
+		<action name="taskDealingToday" class="com.picc.portal.web.WfTPortletclassfyAction" method="taskDealingToday">
+			<result name="success">
+				/pages/portal/task/taskDealingToday.jsp
+			</result>
+		</action>
+		<action name="taskToDo" class="com.picc.portal.web.WfTPortletclassfyAction" method="taskToDo">
+			<result name="success">
+				/pages/portal/task/taskToDo.jsp
+			</result>
+		</action>
+		<action name="toClaimTask" class="com.picc.portal.web.WfTPortletclassfyAction" method="toClaimTask">
+			<result name="success">
+				/pages/portal/task/toClaimTask.jsp
+			</result>
+		</action>
+		<action name="portalTop" class="com.picc.portal.web.WfTPortletclassfyAction" method="portalTop">
+		</action>
+	</package>
+</struts>

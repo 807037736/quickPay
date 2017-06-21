@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts> 
+	<package name="aws" extends="default" namespace="/aws">
+	
+		<!-- 查询操作 -->
+		<action name="aws_query" class="com.picc.um.web.AwsAction" method="query" />
+		
+		<!-- 展现节点树 -->
+		<action name="aws_tree" class="com.picc.um.web.AwsAction" method="tree">
+			<result name="success">
+				/pages/aws/NodeSelect.jsp
+			</result>
+		</action>
+
+	</package>
+</struts>

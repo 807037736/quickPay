@@ -1,0 +1,521 @@
+* {
+	padding:0px;
+	margin:0
+}
+.clear {
+	clear:both
+}
+/**/
+#js_appmsg_editor .wxBox {
+	border:1px solid #cfcfcf;
+	font-size:14px;
+	width: 820px;
+	margin: 0 auto;
+}
+a {
+	color: #2e7dc6;
+	text-decoration: none;
+}
+a {
+	color: #2e7dc6;
+	text-decoration: none;
+}
+/*图文消息*/
+#js_appmsg_editor .inMsg {
+	width:780px;
+	padding:30px 20px
+}
+#js_appmsg_editor .inMsgL {
+	width:305px;
+	min-height:200px;
+	_height:200px;
+	border:1px solid #e3e3e3;
+	border-radius:3px
+}
+#js_appmsg_editor .inMsgL {
+	font-size:16px;
+	padding:15px;
+	float: left;
+}
+#js_appmsg_editor .inMsgArea {
+	width:290px;
+	height:160px;
+	margin: 15px auto 0px;
+}
+#js_appmsg_editor .inMsgArea img {
+	width:290px;
+	height:160px;
+}
+#js_appmsg_editor .media_edit_area {
+	display: table-cell;
+	float: left;
+	width: 430px;
+	margin-left:12px;
+	display:inline
+}
+#js_appmsg_editor .appmsg_editor {
+	position: relative;
+	padding-left: 12px;
+	width:90%
+}
+#js_appmsg_editor .appmsg_editor .inner {
+	padding: 20px;
+	border: 1px solid #d3d3d3;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: inset 0 1px 1px 0 #fff;
+	-moz-box-shadow: inset 0 1px 1px 0 #fff;
+	-webkit-box-shadow: inset 0 1px 1px 0 #fff;
+	min-height: 350px;
+}
+i, cite, em, var, address, dfn {
+	font-style: italic;
+}
+#js_appmsg_editor .appmsg_editor .arrow {
+	position: absolute;
+}
+#js_appmsg_editor .appmsg_editor .arrow_out {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-width: 12px;
+	border-style: dashed;
+	border-color: transparent;
+	border-left-width: 0;
+	border-right-color: #d3d3d3;
+	border-right-style: solid;
+	top: 44px;
+	left: 0;
+}
+#js_appmsg_editor .appmsg_editor .arrow_in {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-width: 12px;
+	border-style: dashed;
+	border-color: transparent;
+	border-left-width: 0;
+	border-right-color: #f8f8f8;
+	border-right-style: solid;
+	top: 44px;
+	left: 1px;
+}
+#js_appmsg_editor .appmsg_edit_item {
+	padding-bottom: 1em;
+}
+#js_appmsg_editor .appmsg_edit_item .frm_label {
+	display: block;
+	width: auto;
+	float: none;
+	margin-right: 0;
+	margin-bottom: 4px;
+	height:22px;
+}
+#js_appmsg_editor .frm_label {
+	float: left;
+	width: 5em;
+	margin-top: .3em;
+	margin-right: 1em;
+}
+#js_appmsg_editor .appmsg_edit_item .frm_input_box {
+	display: block;
+	width: auto;
+	height: auto;
+	min-height: 30px;
+	border-color: #d3d3d3;
+}
+#js_appmsg_editor .frm_input_box {
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	width: 300px;
+	font-size: 14px;
+	padding: 0 .8em;
+	border: 1px solid #b3b3b3;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #fff;
+}
+#js_appmsg_editor .frm_input {
+	height: 22px;
+	margin: 4px 0;
+}
+#js_appmsg_editor .frm_input, .frm_textarea {
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+}
+#js_appmsg_editor .appmsg_edit_item .title {
+	font-weight: 400;
+	font-style: normal;
+	float: left;
+}
+#js_appmsg_editor .icon18_common.upload_gray {
+	background: url("base_z.png") 0 -2266px no-repeat;
+	margin-top:-5px;
+	margin-right:6px;
+}
+#js_appmsg_editor .appmsg_edit_item .frm_input_box {
+	display: block;
+	width: auto;
+	height: auto;
+	min-height: 30px;
+	border-color: #d3d3d3;
+}
+#js_appmsg_editor .frm_input_box {
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	width: 300px;
+	font-size: 14px;
+	padding: 0 .8em;
+	border: 1px solid #b3b3b3;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #fff;
+}
+#js_appmsg_editor .appmsg_edit_item .frm_label {
+	display: block;
+	width: auto;
+	float: none;
+	margin-right: 0;
+	margin-bottom: 4px;
+}
+#js_appmsg_editor .frm_label {
+	float: left;
+	width: 5em;
+	margin-top: .3em;
+	margin-right: 1em;
+}
+user agent stylesheetlabel {
+	cursor: default;
+}
+#js_appmsg_editor .appmsg_edit_item .tips {
+	color: #a3a3a3;
+}
+#js_appmsg_editor .r {
+	float: right;
+}
+#js_appmsg_editor .frm_tips {
+	color: #a3a3a3;
+	padding-top:6px;
+}
+#js_appmsg_editor .frm_input_box a {
+	color:#222
+}
+a {
+	color: #2e7dc6;
+	text-decoration: none;
+}
+#js_appmsg_editor .switchover a:hover, .originalText a:hover {
+	text-decoration:underline
+}
+#js_appmsg_editor .appmsg_edit_item .frm_label {
+	display: block;
+	width: auto;
+	float: none;
+	margin-right: 0;
+	margin-bottom: 4px;
+}
+#js_appmsg_editor .appmsg_edit_item .frm_textarea_box {
+	display: block;
+	width: auto;
+	border-color: #d3d3d3;
+}
+#js_appmsg_editor .frm_textarea_box {
+	display: inline-block;
+	width: 300px;
+	padding-left: .8em;
+	font-size: 14px;
+	border: 1px solid #b3b3b3;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #fff;
+}
+#js_appmsg_editor .frm_textarea {
+	height: 100px;
+	padding-top: .4em;
+	padding-bottom: .4em;
+}
+#js_appmsg_editor .frm_input, .frm_textarea {
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+#js_appmsg_editor .appmsg_edit_item {
+	padding-bottom: 1em;
+}
+#js_appmsg_editor .dn {
+	display: none;
+}
+#js_appmsg_editor .saveStyle {
+	color: #a3a3a3;
+	font-weight: 400;
+}
+#js_appmsg_editor .switchover, .inBoxarea {
+	margin-bottom:10px;
+}
+#js_appmsg_editor .inLeft {
+	float:left
+}
+#js_appmsg_editor .inRight {
+	float:right
+}
+#js_appmsg_editor .inBoxarea p {
+	margin-bottom:5px;
+}
+#js_appmsg_editor .inPlugins img{ width:386px; height:367px}
+#js_appmsg_editor .wxTop li a{ padding:5px 20px; color:#222}
+#js_appmsg_editor .lines{ border-bottom:1px solid #e6e6e6; margin:0 20px;}
+#js_appmsg_editor .buttonOne,.buttonTwo {
+background-color: #ED481B;
+    border-color: #ED481B;
+color: #fff;
+}
+#js_appmsg_editor .inButtonT{ text-align:center; padding:20px;}
+#js_appmsg_editor .inButtonT a{display: inline-block;
+overflow: visible;
+padding: 0 36px;
+height: 30px;
+line-height: 30px;
+vertical-align: middle;
+text-align: center;
+text-decoration: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+font-size: 14px;
+border-width: 1px;
+border-style: solid;
+cursor: pointer;
+margin-left:20px;
+}
+#js_appmsg_editor .picMsgMoreIn .inMsgArea {
+	position:relative;
+}
+#js_appmsg_editor .picMsgMoreIn .inMsgArea span {
+	position:absolute;
+	bottom:0px;
+	background-color:#696767;
+	color:#fff;
+	font-size:14px;
+	padding: 7px 12px;
+	width:265px;
+}
+#js_appmsg_editor .picMsgMoreIn .inMsgL {
+	width:325px;
+	padding:0;
+	height: inherit;
+}
+#js_appmsg_editor .xcyAddList {
+	width:100%;
+	height:103px;
+	border-top:1px solid #D3D3D3;
+	border-bottom:1px solid #D3D3D3
+}
+#js_appmsg_editor .picMsgMoreIn .inMsgArea {
+	margin-bottom:15px;
+}
+#js_appmsg_editor .appmsg_thumb.default {
+	display: block;
+}
+#js_appmsg_editor .appmsg_thumb.default {
+	line-height: 78px;
+	font-size: 16px;
+}
+#js_appmsg_editor .appmsg_thumb {
+	display: none;
+}
+#js_appmsg_editor .appmsg_thumb.default {
+	display: block;
+	color: #c0c0c0;
+	text-align: center;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #ececec;
+	font-size: 22px;
+	font-size: 14px;
+	margin-top: 13px;
+	margin-right: 19px;
+	float: right;
+	width: 78px;
+	height: 78px;
+	margin-left: 14px;
+}
+#js_appmsg_editor .appmsg_thumb {
+	float: right;
+	width: 78px;
+	height: 78px;
+	margin-left: 14px;
+}
+#js_appmsg_editor .xcyAddList a {
+	color: #222;
+	font-size: 14px;
+	margin-top: 25px;
+	display: inline-block;
+	margin-left: 15px;
+	float:left
+}
+#js_appmsg_editor .appmsg_item .appmsg_edit_mask {
+	line-height: 102px;
+}
+#js_appmsg_editor .appmsg_edit_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(229, 229, 229, 0.85)!important;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#d9e5e5e5', endcolorstr = '#d9e5e5e5');
+	text-align: center;
+}
+#js_appmsg_editor .icon18_common.edit_gray {
+	background: url("base_z.png") 0 -2518px no-repeat;
+	margin-left:130px;
+	margin-top:40px;
+}
+#js_appmsg_editor .xcyAreas .icon18_common.edit_gray {
+	background: url("base_z.png") 0 -2518px no-repeat;
+	margin-left: 13px;
+	margin-top: 61px;
+}
+#js_appmsg_editor .xcyAreas .icon18_common.del_my {
+	background: url("base_z.png") 0 -2126px no-repeat;
+	margin-left: 13px;
+	margin-top: 61px;
+}
+#js_appmsg_editor .xcyAreas .icon18_common.del_my:hover {
+background: url("base_z.png") 0 -2154px no-repeat;
+	margin-left: 13px;
+	margin-top: 61px;
+}
+#js_appmsg_editor .appmsg_edit_mask a {
+	margin-left: 20px;
+	margin-right: 8px;
+}
+#js_appmsg_editor .icon18_common {
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 100px;
+	overflow: hidden;
+}
+a {
+	color: #2e7dc6;
+	text-decoration: none;
+}
+#js_appmsg_editor .icon18_common.del_gray {
+	background: url("base_z.png") 0 -2126px no-repeat;
+	margin-top:40px;
+}
+#js_appmsg_editor .xcyAddListCurrent {
+	width: 100%;
+	height: 103px;
+	position:relative
+}
+#js_appmsg_editor .delEide {
+	position: absolute;
+	top: 30px;
+	left: 131px;
+}
+#js_appmsg_editor .xxx {
+	display:block;
+}
+#js_appmsg_editor .icon18_common.del_gray:hover {
+	background: url("base_z.png") 0 -2154px no-repeat;
+}
+#js_appmsg_editor .icon18_common.edit_gray:hover {
+	background: url("base_z.png") 0 -2546px no-repeat;
+}
+#js_appmsg_editor .appmsg_add {
+	text-align: center;
+	padding: 12px 14px;
+	line-height: 72px;
+}
+#js_appmsg_editor .appmsg_add a {
+	display: block;
+	font-size: 0;
+	text-decoration: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 3px dotted #b8b8b8;
+	height: 72px;
+}
+#js_appmsg_editor .icon24_common.add_gray {
+	background: url("base_z.png") 0 -2965px no-repeat;
+}
+#js_appmsg_editor .icon24_common {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 100px;
+	overflow: hidden;
+}
+#js_appmsg_editor .cover_appmsg_item .appmsg_edit_mask {
+	line-height: 160px;
+}
+#js_appmsg_editor .appmsg_edit_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(229, 229, 229, 0.85)!important;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#d9e5e5e5', endcolorstr = '#d9e5e5e5');
+	text-align: center;
+}
+#js_appmsg_editor .xcyAreas {
+	width: 290px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(229, 229, 229, 0.85)!important;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#d9e5e5e5', endcolorstr = '#d9e5e5e5');
+	text-align: center;
+}
+#js_appmsg_editor .originalText span{ color:#36C; cursor:pointer}
+#js_appmsg_editor .xcyAddList img{
+display:block;
+color: #c0c0c0;
+text-align: center;
+font-weight: 400;
+font-style: normal;
+background-color: #ececec;
+font-size: 22px;
+font-size: 14px;
+margin-top: 13px;
+margin-right: 19px;
+float: right;
+width: 78px;
+height: 78px;
+margin-left: 14px;}

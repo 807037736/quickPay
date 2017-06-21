@@ -1,0 +1,314 @@
+.doc {height:100%;background:#fff;}
+.guildNav {height:auto;width:100%;z-index:2;}
+.guildNav .crumbs {height:27px;padding:10px 0 0 0;}
+.guildNav .crumbs .inCrumbs {height:27px;line-height:27px;padding:0 10px; min-width:300px;}
+.guildNav .crumbs .crumbsTit {border-bottom:2px solid #C31D1D;color:#333;}
+.guildNav .crumbs .crumbsTit strong {color:#ff6600;}
+.guildNav {width:100%;position:fixed;bottom:auto;top:0px;background: #fff;}
+body {background-attachment:scroll;padding-top:38px;background:#fff ;min-width:970px}
+* html,* html body{background-image:url(about:blank);background-attachment:fixed;}
+* html .guildNav {position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop));z-index:2;}
+iframe.overFast{display:inline-block;height:39px;overflow:hidden;position:absolute;top:0px;left:0px;z-index:-1;border:none;width:100%;}
+
+
+.main {height:100%;padding:10px;background:#fff;}
+
+#searchArea {}
+
+.searchMod {border: 1px solid #EAEAEA; margin-bottom: 10px; width: 98%; margin: 10px auto; padding: 5px 0;}
+.searchMod .tit {height:22px;background:url(../images/searchTit.png) repeat-x left top;}
+.searchMod .tit h3 {height:22px;line-height:21px;padding-left:10px;color:#388DC6;font-weight:bold;}
+.searchMod .titM {padding:10px;}
+
+.searchTable {width:100%;}
+.searchTable th,
+.searchTable td {border-bottom:2px solid #fff;}
+.searchTable td ,
+.searchTable th {padding:0px 10px;}
+.addMod {padding:5px;}
+.addModBtn {border:1px solid #fff;padding:5px;}
+.addTable {width:97%;}
+.addTable td,
+.addTable th {padding:4px 5px;line-height:24px;}
+
+.fTit {background:#EAF4FA;text-align:right;}
+.sel {font-size:12px;padding:2px;border-top:1px solid #808080;border-left:1px solid #808080;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;}
+.txt {font-size:12px;height:70px;width:136px;line-height:22px;border-top:1px solid #808080;border-left:1px solid #808080;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;padding:0 3px;}
+.txtArea {font-size:12px;border-top:1px solid #808080;border-left:1px solid #808080;border-right:1px solid #DADADA;border-bottom:1px solid #DADADA;height:80px;padding:3px;}
+.tCenter {text-align:center;}
+.tLeft {text-align:left;}
+.w80 {width:80px;}
+.w100 {width:100px;}
+.w120 {width:120px;}
+.w150 {width:150px;}
+.w250 {width:250px;}
+.w350 {width:350px;}
+.w450 {width:450px;}
+.w550 {width:550px;}
+.w650 {width:650px;}
+.w750 {width:750px;}
+
+.backBtn {}
+.backBtn .inbtns {background:url(../images/adminbtn.png) no-repeat 0 -135px;}
+.seaBtn {background:url(../images/adminbtn.png) no-repeat right 0;}
+.seaBtn .inbtns {background:url(../images/adminbtn.png) no-repeat 0 0;}
+.saveBtn {background:url(../images/adminbtn.png) no-repeat right 0;}
+.saveBtn .inbtns {background:url(../images/adminbtn.png) no-repeat 0 0;}
+.add {background:url(../images/adminbtn.png) no-repeat right -30px;}
+.add .inbtns {background:url(../images/adminbtn.png) no-repeat 0 -30px;}
+.del {background:url(../images/adminbtn.png) no-repeat right -55px;}
+.del .inbtns {background:url(../images/adminbtn.png) no-repeat 0 -55px;}
+.import {background:url(../images/adminbtn.png) no-repeat right -80px;}
+.import .inbtns {background:url(../images/adminbtn.png) no-repeat 0 -80px;}
+.export {background:url(../images/adminbtn.png) no-repeat right -110px;}
+.export .inbtns {background:url(../images/adminbtn.png) no-repeat 0 -110px;}
+
+
+.backBtn,
+.saveBtn,
+.seaBtn,
+.add,
+.del,
+.import,
+.export {display:inline-block;_display:inline;cursor:pointer;overflow:hidden;_zoom:1;text-decoration:none;vertical-align:middle;padding-right:3px;}
+.add:hover,
+.del:hover ,
+.import:hover,
+.export:hover{text-decoration:none;}
+
+
+.backBtn .inbtns,
+.saveBtn .inbtns,
+.seaBtn .inbtns,
+.add .inbtns,
+.del .inbtns,
+.import .inbtns,
+.export .inbtns {display:block;padding-left:3px;}
+
+
+.add .inbtns .btn,
+.del .inbtns .btn,
+.import .inbtns .btn,
+.export .inbtns .btn{display:block;overflow:visible;width:auto;_width:0px;height:21px;line-height:21px;margin:0 -2px;padding:0 5px;border:none;background:none;white-space:nowrap;text-decoration:none;}
+
+.backBtn .inbtns .btn,
+.saveBtn .inbtns .btn,
+.seaBtn .inbtns .btn{display:block;overflow:visible;width:auto;_width:0px;height:27px;line-height:27px;margin:0 -2px;padding:0 8px;border:none;background:none;white-space:nowrap;text-decoration:none;}
+
+.backBtn .inbtns .btn,
+.saveBtn .inbtns .btn,
+.seaBtn .inbtns .btn {color:#fff;font-weight:bold;font-size:14px;cursor:pointer;}
+.add .inbtns .btn,
+.import .inbtns .btn,
+.export .inbtns .btn{color:#fff;cursor:pointer;}
+
+.del .inbtns .btn{color: #fff;
+display: inline-block;
+font-weight: bold;
+padding: 0px 10px;
+height: 26px;
+line-height: 26px;
+font-size: 14px;
+cursor: pointer;
+}
+.backBtn .inbtns .btn{color:#f7f7f7;}
+.saveBtn {margin-right:30px;}
+.saveBtn,
+.backBtn {margin-top:5px; margin-left:10px;}
+
+#listBtn {padding:10px 5px 10px 5px;border:1px solid #ddd;margin-bottom:10px;}
+.listTable {}
+.totalData {background:#D9EAF6;height:26px;line-height:26px;}
+.totalData p {padding:0 10px;}
+.totalData p em {color:#ff6600;font-weight:bold;padding:0 5px;}
+
+.tableMod {border:1px solid #B5D6ED;padding:1px;table-layout:fixed;}
+.tableMod table {
+	width:100%;
+}
+
+.tabTh th {height:28px;color:#000;font-weight:bold;background:#DCECF7 url(../images/tableTh.png) repeat-x left top;border-left:1px solid #D8EAF6;border-bottom:1px solid #C9E1F2;}
+
+.tabBody td {line-height:24px;border-left:1px solid #D8EAF6;}
+.tableMod .tabTh th.t_chkNo,
+.tableMod .tabBody td.t_chkNo {width:30px;text-align:center;border-left:none;}
+
+
+.tableMod .tabTh th.t_menu,
+.tableMod .tabBody td.t_menu {border-left:none;}
+.tabNo {width:60px;text-align:center;}
+
+
+.tdEven {background:#FCF2F2;}
+.tdOver {background:#FAFAE3;}
+.fTit{background:#FCF2F2;}
+.searchTable .fTit{background:none;}
+.str {font-weight:bold;}
+.t_view,
+.t_edit,
+.t_del{color:#ff6600;}
+.t_op {width:120px;text-align:center;}
+.t_role {padding-left:10px;width:120px;}
+.t_menu {padding-left:10px;width:160px;}
+.t_url {padding-left:10px;}
+.t_roleStyle {text-align:center;}
+.t_No {width:50px;text-align:center;}
+.t_url { text-align:left;}
+.t_url_target {width:80px;text-align:center;}
+.t_pra {width:60px;text-align:center;}
+.praList {}
+.praList input {vertical-align:middle;margin-right:5px;}
+.praList label {margin-left:15px;}
+
+.t_role {width:120px;text-align:center;}
+.t_role_type {width:120px;text-align:center;}
+.t_role_obj {width:100px;text-align:center;}
+.t_time {width:80px;text-align:center;}
+.time {width:85px;cursor:pointer;background:url(../images/dateIco.png) no-repeat 70px center;}
+.TimeStart,
+.TimeEnd {}
+
+.display_none {display:none;}
+
+.TimeStart .timeImg,
+.TimeEnd .timeImg {left:-25px;position:relative;top:2px;*top:-2px;}
+
+.t_logUser_type {width:80px;text-align:center;}
+.t_logName {width:40px;text-align:center;}
+.t_logUser {width:100px;text-align:center;}
+.t_logIp {padding-left:10px;}
+.t_log_type {width:100px;text-align:center;}
+.t_product_checkbox {width:20px;text-align:center;}
+.t_product_state {width:60px;text-align:center;}
+.t_product_time {width:40px;text-align:center;}
+.t_product_sn {width:100px;text-align:center;}
+.t_product_title {width:150px;text-align:center;}
+.t_product_4text {width:40px;text-align:center;}
+.t_product_operation {width:30px;text-align:center;}
+.t_product_user {width:30px;text-align:center;}
+.t_product_count {width:40px;text-align:center;}
+.t_logRes {width:80px;text-align:center;}
+.t_logView {width:60px;text-align:center;}
+.suc {color:#666;}
+.fai {color:#FF3399;background:#FFCC99;padding:1px 4px;}
+
+
+.t_data_code {width:150px;text-align:center;}
+.t_data_Name {width:150px;text-align:center;}
+.t_data_Epx {width:100px;text-align:center;}
+.t_data_type {text-align:center;}
+.t_data_op {width:80px;text-align:center;}
+
+
+.t_user_name {width:100px;text-align:center;}
+.t_user_relName {width:120px;text-align:center;}
+.t_user_region {text-align:center;}
+.t_user_stat {width:60px;text-align:center;}
+.t_user_time {width:140px;text-align:center;}
+.t_user_edit_pra {width:70px;text-align:center;}
+.t_user_op {width:150px;text-align:center;}
+
+.chartMod {float:left;border:4px solid #B1D3EC;margin-right:10px;}
+
+.t_an_No {width:40px;text-align:center;border-left:none;}
+.t_an_Time {width:280px;text-align:center;}
+.t_an_Tel {padding-left:10px;}
+.t_an_Statu {width:80px;text-align:center;}
+
+#login {width:620px;margin:0 auto;}
+#login .form {padding:130px 100px 0 100px;height:230px;}
+.form .l {overflow:hidden;height:40px;}
+.form .l .n {float:left;width:120px;text-align:right;font-size:14px;font-weight:bold;color:#666;line-height:32px;}
+.form .l .v {float:left;padding-left:15px;}
+.form .l .txt ,
+.form .l .chkCode {font-size:14px;height:24px;line-height:24px;border:none;padding:4px 10px;}
+
+.chkCode {float:left;}
+.imgCode {margin:5px 10px;float:left;}
+.changeImg {color:#ff6600;margin-top:5px;float:left;}
+
+
+.none {display:none;}
+.tabMod {position:relative;width:100%;height:25px;background:url(../images/Tab.png) repeat-x left top;overflow:hidden;}
+.tabMod ul {position:absolute;left:0px;top:0px;height:25px;overflow:hidden;}
+.tabMod ul li {float:left;margin-right:5px;}
+.tabMod ul li a {display:inline-block;height:25px;padding-left:10px;background:url(../images/Tab.png) no-repeat left -25px;text-decoration:none;}
+.tabMod ul li a:hover {text-decoration:none;}
+.tabMod ul li a span {display:inline-block;height:25px;line-height:25px;padding-right:10px;background:url(../images/Tab.png) no-repeat right -25px;color:#fff;cursor:pointer;}
+.tabMod ul .current {}
+.tabMod ul .current a{background:url(../images/Tab.png) no-repeat left -50px;}
+.tabMod ul .current a span{background:url(../images/Tab.png) no-repeat right -50px;color:#004AA9;font-weight:bold;}
+.TabMain {}
+.tabModCon {padding:9px;border:1px solid #EAEAEA;border-top:none;overflow:hidden;_zoom:1;margin-bottom:10px;}
+
+#backchartArea {text-align:center;}
+#backchartArea .backchartMod {margin:10px auto;display:inline-block;border:4px solid #B1D3EC;overflow:auto;}
+
+.barTable {border:1px solid #dddddd;padding:1px;table-layout:fixed;}
+.barTable table {
+	width:100%;
+}
+/*xcy*/
+#listArea #DataAddArea .addTable{ width:95%}
+#listArea #DataAddArea .addTabfle th,#listArea #DataAddArea  .addTable td{padding: 5px 10px;
+line-height: 24px;
+border: 1px solid #ccc;}
+#listArea #DataAddArea .addMod{ border:none}
+.seaBtn,.add,.del{background: #ED481B;
+border: 1px solid #ED481B;
+border-radius:5px;}
+.seaBtn .inbtns,.add .inbtns,.del .inbtns{ background:none}
+.seaBtn .inbtns .btn,.searchTable .add .inbtns input{ color:#fff; padding:0 10px; display:inline-block; font-weight:bold }
+.add .inbtns .btn, .import .inbtns .btn, .export .inbtns .btn,del .btn{ color:#fff; display:inline-block; font-weight:bold ;padding: 0px 10px; height:26px; line-height:26px; font-size:14px;}
+.searchMod .tit{ background:#f1f1f1; height:30px; line-height:30px;}
+.searchMod .tit h3{height: 30px;
+line-height: 30px;
+padding-left: 10px;
+color: #388DC6;
+font-weight: bold;
+font-size: 14px;
+color: #222;}
+.tableMod,.tabTh{ border:none}
+.t_view, .t_edit, .t_del {
+color: #2e7dc6;
+}
+.tableStyle{color: #2e7dc6;
+border: none;
+background: none;cursor: pointer;}
+.searchTable input{ height:25px; line-height:25px;}
+.searchTable select,.addTable select{ height:28px; padding:5px; width:145px}
+.backBtn .inbtns{ background: #ED481B;
+border: 1px solid #ED481B;
+border-radius: 5px;
+padding:0 5px;
+color:#fff}
+.backBtn .inbtns a,.backBtn .inbtns .btn{ color:#fff}
+.saveBtn{ background:none}
+.saveBtn .inbtns{ background:#ED481B;border-radius: 5px;
+padding: 0 6px;}
+.add,.del{ margin-left:20px;}
+.addMod .addTable th,.addMod .addTable td{border: 1px solid #bbb;}
+.areaList{ width:93%}
+.addTable input{ width:260px; height:26px;}
+.addTable #matterId-btn{cursor: pointer;}
+
+/*xcy*/
+.addTable,.addTable td{ border:1px solid #bbb;padding: 10px;}
+.saveBtn, .backBtn{ margin-top:0px;}
+#searchArea .searchMod{ padding:0px;}
+.searchStyle label{ background: #FCF2F2;
+padding: 10px 15px;}
+#listBtn label{background: #FCF2F2;padding: 10px 15px;}
+.add, .del{ margin-left: 5px;}
+.tableStyle{ margin-top:10px;}
+
+/*
+	角色权限编辑
+*/
+.roleRightList {overflow:hidden;_zoom:1;}
+.roleRightList li {float:left;width:130px;}
+.roleRightList li input {border:none;}
+
+#wx-mini-tab-kefu {position:relative;}
+.wx-mini-tab-kefu-more {position:absolute;right:10px;top:3px;color:#CD3838;}
+.wx-mini-tab-kefu-more a {color:#CD3838;}

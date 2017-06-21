@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<commonConfig>
+
+	<!-- 与异常相关的配置：页面异常调试状态 -->
+	<!-- 此处true为开发模式，false为生产模式 -->
+	<!-- 
+	<parameter>
+		<name>Exception_Debug_Type</name>
+		<value>true</value>
+	</parameter>  
+	-->
+	
+</commonConfig>

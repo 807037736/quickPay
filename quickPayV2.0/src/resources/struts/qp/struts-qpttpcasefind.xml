@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="qp/qpttpcasefind" extends="default" namespace="/qp/qpttpcasefind">
+	     <action name="prepareQuery" class="com.picc.qp.web.QpTTPCaseFindAction" method="prepareQuery">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseFind.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQuery2" class="com.picc.qp.web.QpTTPCaseFindAction" method="prepareQuery2">
+			<result name="success">
+				/pages/qp/qpttpcase/QpTTPCaseFind.jsp
+			</result>
+		</action>
+		
+		<action name="query" class="com.picc.qp.web.QpTTPCaseFindAction" method="query"/>
+		
+	</package>
+</struts>

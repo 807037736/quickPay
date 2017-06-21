@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<sysconst>
+
+	<!-- 营销系统环境代码 -->
+	<ENVCODE>4403test</ENVCODE>
+	<!-- 客户拆分接口名称 -->
+	<CUSTBREAKSERVER>CustBreakServer</CUSTBREAKSERVER>
+	<!-- 客户拆分延迟时间 -->
+	<CUSTBREAKDELAYTIME>2</CUSTBREAKDELAYTIME>
+	<!-- 自动任务服务名称 -->
+	<AUTOTASKWEBSERVICE>AutoTaskWebService</AUTOTASKWEBSERVICE>
+
+	<!-- 有关树的常量start -->
+	<!-- 树的类型start -->
+	<COMPANY_TREE>0</COMPANY_TREE>
+	<COMPANY_USER_TREE>1</COMPANY_USER_TREE>
+	<ROLE_TREE>2</ROLE_TREE>
+	<!-- 树的类型end -->
+
+	<!-- add by liuyatao 2013-8-23 记录树节点的关闭或打开状态 -->
+	<OPEN>open</OPEN>
+	<CLOSE>closed</CLOSE>
+	<!-- 有关树的常量end -->
+
+	<!-- 有变化的Cognos参数值 -->
+	<COGNOSSPACE_MENU>/content/*</COGNOSSPACE_MENU>
+	<!-- 有效状态 -->
+	<VALID>1</VALID>
+	<INVALID>0</INVALID>
+	
+	<!-- 单列地市前四位代码 -->
+	<SINGLECITY>4403,3302,3502,3702,2102,3301,4401</SINGLECITY>
+
+</sysconst>

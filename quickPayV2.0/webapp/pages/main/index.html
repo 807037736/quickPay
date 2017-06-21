@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<link rel="stylesheet" href="css/normalize.css">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/metro-bootstrap.css">
+<link rel="stylesheet" href="css/iconFont.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="js/Slides-3/css/slides.css">	
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body class="metro">
+
+<!-- 图片轮播  start-->
+	<div class="container">
+	    <div id="slides">
+	      <a href="http://www.epicc.com.cn/wapapp/huodong/chexian/20150318/index.html#">
+	      <img src="../image/wap_banner.jpg"/></a>
+		  <a href="http://www.epicc.com.cn/wapapp/huodong/nvrenjie/20150308/index.html">
+		  <img src="../image/topOne.png"/></a>
+	    </div>
+	</div>
+ <!-- 图片轮播  end-->
+ 
+		<div class="container">
+			<div class="col-sm-4 col-xs-4">
+			<a href="market.jsp">
+				<div class="tile bg-amber">
+					<div class="tile-content icon">
+						<i class="icon-cart-2"></i>
+					</div>
+					<div class="tile-status">
+						<span class="label fg-white">保险商城</span>
+					</div>
+				</div>
+			</a>
+			</div>
+			<div class="col-sm-4 col-xs-4">
+			<a href="policy.jsp">
+				<div class="tile   bg-darkBlue">
+					<div class="tile-content icon">
+						<i class="icon-file-pdf"></i>
+					</div>
+					<div class="tile-status">
+						<span class="label fg-white">保单管理</span>
+					</div>
+				</div>
+		</a>
+			</div>
+			<div class="col-sm-4 col-xs-4">
+			<a href="claim.jsp">
+				<div class="tile   bg-lightRed">
+					<div class="tile-content icon">
+						<i class="icon-wrench"></i>
+					</div>
+					<div class="tile-status">
+						<span class="label fg-white">理赔服务</span>
+					</div>
+				</div>
+		</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-sm-4 col-xs-4">
+				<div class="tile   bg-amber" href="service.jsp">
+					<div class="tile-content icon">
+						<i class="icon-umbrella"></i>
+					</div>
+					<div class="tile-status">
+						<span class="label fg-white">生活服务</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-xs-8">
+			<a href="packet.jsp">
+				<div class="tile double bg-darkViolet">
+					<div class="tile-content icon">
+						<i class="icon-gift-2"></i>
+					</div>
+					<div class="tile-status">
+						<span class="label fg-white">我的礼包</span>
+					</div>
+
+				</div>
+		</a>
+			</div>
+
+		</div>
+	<div class="container">
+		<div class="col-sm-4 col-xs-4">
+		<a href="youhui.jsp">
+			<div class="tile   bg-cyan">
+				<div class="tile-content icon">
+					<i class="icon-accessibility"></i>
+				</div>
+				<div class="tile-status">
+					<span class="label fg-white">精彩活动</span>
+				</div>
+			</div>
+		</a>
+		</div>
+		<div class="col-sm-4 col-xs-4">
+			<a href="ketang.jsp">
+			<div class="tile   bg-red">
+				<div class="tile-content icon">
+					<i class="icon-book"></i>
+				</div>
+				<div class="tile-status">
+					<span class="label fg-white">保险学堂</span>
+				</div>
+			</div>
+		</a>
+		</div>
+		<div class="col-sm-4 col-xs-4">
+		<a href="preson.jsp">
+			<div class="tile   bg-amber">
+				<div class="tile-content icon">
+					<i class="icon-user"></i>
+				</div>
+				<div class="tile-status">
+					<span class="label fg-white">个人中心</span>
+				</div>
+			</div>
+		</a>
+		</div>
+	</div>
+
+<jsp:include page="./bottomback.jsp"></jsp:include>
+	
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery/jquery.widget.min.js"></script>
+	<script src="js/Slides-3/jquery.slides.min.js"></script>
+	<script src="js/metro/metro.min.js"></script>
+	<script>
+	/*图片轮播初始化*/
+    $(function() {
+      $('#slides').slidesjs({
+        width: 640,
+        height: 250,
+        navigation: false,
+        play: {
+          auto: true
+        }
+      });
+    });
+	
+    /*给div初始化事件*/
+	$(document).ready(function(){
+		$('.tile').unbind().bind('click', function() {
+			if($(this).attr("href")!=null){
+				window.location.href=$(this).attr("href");
+			}
+	    });
+	});
+	</script>
+</body>
+</html>

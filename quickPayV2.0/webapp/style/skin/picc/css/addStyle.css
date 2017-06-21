@@ -1,0 +1,63 @@
+*{ padding:0px; margin:0}
+.areaBox{  margin:10px auto;}
+.area{ border:1px solid #666666; width:200px;  border-radius:5px; background:url(images/area_03.jpg) repeat scroll; float:left;  margin-right:20px; display:inline; margin-bottom:20px;}
+.current{ border:1px solid #83bb78; box-shadow:0 0 3px #222;}
+.current .areaTitle{ background:#6bb05f; color:#fff}
+.areaTitle{ height:28px; background:#cdedc8; border-top-left-radius:5px;border-top-right-radius:5px; font-size:14px; font-family:'Î¢ÈíÑÅºÚ'; text-align:center; line-height:28px;}
+.arealogo{ height:126px;text-align: center;}
+.arealogo img{ width:95px; height:95px; border-radius:50px; margin-top:10px; border:3px solid #cdedc8}
+.current img{ width:95px; height:95px; border-radius:50px; margin-top:10px; border:3px solid #6bb05f}
+tr:nth-child(odd){
+	background:#ebebeb}
+.areaT table{ width:100%; border-collapse:collapse;font-size:11px; font-family:'Î¢ÈíÑÅºÚ';}
+.areaT table td,.areaT table th{ padding:5px;}
+.areaT table th{border-right: 1px solid #fff;}
+.operate{ background:url(../images/bar_03.jpg) no-repeat scroll; width:100%; height:30px; border-bottom-left-radius:5px;border-bottom-right-radius:5px; }
+.operate a{ cursor:pointer; display:inline-block;  height:30px; float:left; text-indent:-2000px}
+.operate span.current1{ background:url(../images/sub_11.jpg) no-repeat scroll; width:69px;border-bottom-left-radius:5px;}
+.operate span.current2{ background:url(../images/sub_12.jpg) no-repeat scroll; width:69px;}
+.operate span.current3{ background:url(../images/sub_13.jpg) no-repeat scroll; width:62px;border-bottom-right-radius:5px;}
+.message:hover{background:url(../images/sub_11.jpg) no-repeat scroll; width:69px;border-bottom-left-radius:5px;}
+.edit:hover{background:url(../images/sub_12.jpg) no-repeat scroll; width:69px;}
+.dele:hover{background:url(../images/sub_13.jpg) no-repeat scroll; width:62px;border-bottom-right-radius:5px;}
+.message{width:69px;border-bottom-left-radius:5px;}
+.edit{ width:69px;}
+.dele{width:62px;border-bottom-right-radius:5px;}
+.colormy{ background:#ebebeb}
+.wxSubTitle {
+	padding: 13px 10px;
+	border-bottom:1px solid #cfcfcf;
+}
+.wxSubTitle{text-align:right; padding-right:45px; margin-bottom:20px;}
+.wxbutton{color: #222;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+height: 27px;
+padding: 0 10px;
+text-align:center}
+.create_access {
+display: block;
+border: 3px dashed #b8b8b8;
+line-height: 150px;
+font-size: 0;
+text-align: center;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+.create_access a{padding:105px 40px; display:inline-block}
+.addarea{ width:200px; height:270px; float:left}
+.icon42_common.add_gray {
+background: url("../images/base_z.png") 0 -2999px no-repeat;
+}
+.icon42_common {
+width: 42px;
+height: 42px;
+vertical-align: middle;
+display: inline-block;
+line-height: 100px;
+overflow: hidden;
+}

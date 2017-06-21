@@ -1,0 +1,59 @@
+<!--其他渠道退保模板      -->
+  <div class="itemList mt_15">
+    <p><span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>clientName1</p>
+    <p><span>证件类型：</span>idNoType1</p>
+    <p><span>证件号码：</span>idNo1</p>
+  </div>
+  <ul class="formul mt_12">
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+        <select id="provinceCode" name="provinceCode" onchange="provinceChangeForAddress(this);" onfocus="removeError();" class="fake_slt r">
+			<option value=''>开户行所在省</option>       
+ 		</select>
+		</div>
+        </label>
+      </li>  
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+          <select id="cityCode" name="cityCode" onfocus="removeError();" onchange="cityChangeForBank(this);"  class="fake_slt r">
+			<option value="">开户行所在城市</option>
+          </select>
+		</div>
+        </label>
+      </li>
+     
+
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+        <select id="bankCategory" name="bankCategory" onfocus="removeError();" onchange="bankCategoryChange(this.value);" class="fake_slt r" >
+           <option value="">银行大类</option>
+          </select>
+		</div>
+        </label>
+      </li>
+
+      <li>
+        <label class="fake_sltWrap">
+		<div>
+        <select id="bankCode" name="bankCode" onfocus="removeError();" class="fake_slt r"  style="text-align: right">
+           <option value="">开户行</option>
+          </select>
+		</div>
+        </label>
+      </li>
+      <li>
+        <div class="iptWrap dbox">
+          <input class="ipt flexb r" id="countNo" name="countNo" type="text" placeholder="银行账号" onfocus="removeError();" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+        </div>
+      </li>
+      <li>
+        <div class="iptWrap dbox">
+          <input class="ipt flexb r" id="confirmCountNo" name="confirmCountNo" type="text" placeholder="确认账号" onfocus="removeError();" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+        </div>
+      </li>      
+  </ul>
+
+ 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtdictionary" extends="default" namespace="/um/umtdictionary">
+
+		<action name="query" class="com.picc.um.web.UmTDictionaryAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTDictionaryAction" method="delete"/>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTDictionaryAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/datapower/umtdictionary/UmTDictionaryQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTDictionaryAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/datapower/umtdictionary/UmTDictionaryEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTDictionaryAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/datapower/umtdictionary/UmTDictionaryEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTDictionaryAction" method="add">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="update" class="com.picc.um.web.UmTDictionaryAction" method="update">
+			<result name="success">/pages/Success.jsp</result>
+		</action>
+		<action name="view" class="com.picc.um.web.UmTDictionaryAction" method="view">
+			<result name="success">
+				/pages/um/datapower/umtdictionary/UmTDictionaryEdit.jsp
+			</result>
+		</action>
+		
+		<action name="comboValidQuery" class="com.picc.um.web.UmTDictionaryAction" method="comboValidQuery" />
+	</package>
+</struts>

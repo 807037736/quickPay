@@ -1,0 +1,78 @@
+#hd{background-color: #f3f3f3;}
+.guildNav .crumbs{ background:none}
+.searchTable .add .inbtns input,.searchTable .add .inbtns a{
+color: #fff;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+height:27px;
+line-height:27px;
+padding:0 10px
+}
+/*.add{background: url(../images/adminbtn.png) no-repeat right 0;}
+.add .inbtns{background: url(../images/adminbtn.png) no-repeat 0 0;}*/
+.tabTh th{ text-align: center;
+margin: 0 auto;
+background: #f1f1f1;
+border: 1px solid #d3d3d3;}
+.tabTh th.t_user_edit_pra{ width: inherit;}
+.tabBody td{ padding:5px 6px;border:1px solid #d3d3d3;}
+.tabTh{border: 1px solid #D8EAF6;}
+#page .page {
+text-align: left;
+padding: 15px 0;
+overflow: hidden;
+_zoom: 1;
+position: relative;
+float: left;
+}
+.backBtn,.inbtns{ background:none}
+.w100{ width:150px}
+.addTable td, .addTable th {
+padding: 5px 10px;
+line-height: 24px;
+}
+.tableIn th,.tableIn td{padding: 5px 10px;
+line-height: 24px;
+}
+.addMod{ border:none}
+.tableIn, .tableIn td {
+border:none;
+}
+.addMod table{ width:97%}
+.error .errorM .errorInfo {
+text-align: center;
+font-size: 20px;
+padding: 20px;
+font-weight: bold;
+color:green
+}
+.tableIn input{ width:140px;
+border: 1px solid #ddd;
+height: 25px;
+line-height: 25px;
+padding-left: 3px;}
+.tableIn textarea,.addTable textarea{ width:300px; height:100px; padding:4px;vertical-align: middle;}
+.addMod table{}
+#SiderBody,#wapFrame{}
+.textTable{ margin-right:20px; float:left}
+.tableIn input.textTableInput{width:auto;vertical-align: middle;height: inherit ;border£ºnone}
+.textTableSpan{vertical-align: middle;display: inline-block; padding-left:6px;}
+
+.ke-container{ border:none}
+.ke-toolbar {
+border: 1px solid #CCC;
+background-color: #F0F0EE;
+padding: 2px 5px;
+text-align: left;
+overflow: hidden;
+zoom: 1;
+width: 500px;
+}
+.ke-edit{display: block;
+height: 161px;
+width: 500px;
+padding: 2px 5px;
+border: 1px solid #bbb;}
+.ke-statusbar{ width:512px;}
+.tableIn td img,.addTable td img{ vertical-align: middle;}

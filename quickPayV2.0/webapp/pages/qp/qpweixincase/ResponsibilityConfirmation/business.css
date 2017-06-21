@@ -1,0 +1,60 @@
+ body{color:#666666;background:#e7f4fd url(bg_repeat.png) top repeat-x ;font-size:14px;}
+.businessbody{background:url(indbg.jpg) bottom center no-repeat ;font-size:14px;}
+.businessbody .header{background:url(header.jpg) no-repeat top center;height: 338px;}
+.businessbody .header .statusbar{  width: 1000px;margin: 0 auto;height: 50px;position: relative;top: 305px;}
+.businessbody .header .statusbar .leftbar{float:left;margin-left:15px;color:#0794FA;font-weight:bold;}
+.businessbody .header .statusbar .leftbar span{color:red;}
+.businessbody .header .statusbar .rightbar{float:right;margin-right:15px;}
+.businessbody .header .statusbar .rightbar a{margin-top: -2px;}
+
+.businessbody .content{width: 1000px;margin: 0 auto; margin-top:5px;position: relative;min-height:550px;}
+.businessbody .content .menulist{  width: 200px;float: left;background-color: #ccdef2;min-height:550px;}
+.businessbody .content .menulist li{height:50px;line-height:50px;text-align:center;color:#ffffff;background:#e4eaf7;}
+.businessbody .content .menulist li a{color:#0794FA;display:inline-block;line-height:50px;width: 100%;}
+.businessbody .content .menulist li a span{display:inline-block;width:20px;height:20px;background:url(bg.png) no-repeat;vertical-align: middle;margin-right: 15px;}
+.businessbody .content .menulist li a span.on{background-position: -10px -10px;}
+.businessbody .content .menulist li a span.off{background-position: -7px -43px;}
+.businessbody .content .menulist li.onselect{background-color:#6395de;}
+.businessbody .content .menulist li.onselect a span.on{background-position: -52px -10px;}
+.businessbody .content .menulist li.onselect a span.off{background-position: -51px -43px;}
+.businessbody .content .menulist li.onselect a{color:#ffffff;}
+
+.businessbody .content .businessdata{background-color:#f6f6f6;min-height:550px;padding:0px 15px 0px 15px;float:right;width:770px;}
+.businessbody .content .businessdata .title{height:50px;line-height:50px;border-bottom:solid 5px #38BAF0;}
+.businessbody .content .businessdata .title .lefttext{/* float:left; */}
+.businessbody .content .businessdata .title .number{float:right;}
+.businessbody .content .businessdata .title .number span{color:red;margin-left:8px;margin-right:8px;}
+.businessbody .content .businessdata .toolpanle{line-height: 40px;margin: 15px;}
+.businessbody .content .businessdata .toolpanle label{margin-right:45px;}
+.businessbody .content .businessdata .toolpanle label input{height:28px;width:180px;vertical-align: middle;  font-family:Microsoft YaHei;color:#666;border: solid 1px #dddddd;}
+.businessbody .content .businessdata .toolpanle label select{height:28px;width:180px;vertical-align: middle;  font-family: Microsoft YaHei;color:#666;}
+.businessbody .content .businessdata .toolpanle label .Wdate{cursor:pointer;}
+
+.businessbody .content .businessdata .datatabel{max-height:308px;overflow:auto;}
+.businessbody .content .businessdata table{width:100%;font-size:14px;border:solid 1px #cccccc;margin-top:5px;color:#696969;}
+.businessbody .content .businessdata table thead{background:#e4e4e4;color:#1C73D5;font-weight:bold;}
+.businessbody .content .businessdata table span.blue{color:#0564CF;font-size:14px;  vertical-align: middle;margin-right: 5px;}
+.businessbody .content .businessdata table thead a{color:#1C73D5;}
+.businessbody .content .businessdata table tr td{padding:5px;text-align:center;  border: solid 1px #cccccc;}
+.businessbody .content .businessdata table tbody{  font-size: 13px;  background: rgb(227, 242, 244);}
+.businessbody .content .businessdata table tbody tr td{height:34px;}
+.businessbody .content .businessdata table tbody tr td a{width:60px;}
+.businessbody .content .businessdata table tbody tr td span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;display: inline-block;}
+.businessbody .content .businessdata table tbody tr td span.name{width:170px;}
+.businessbody .content .businessdata table tbody tr td span.number{width:150px;}
+/* .businessbody .content .businessdata table tr:nth-child(2n){background-color:#F5F8F9;} 
+.businessbody .content .businessdata table tr:hover{background-color:#F9FAED;} */
+
+
+.businessbody .content .businessdata .countdata{text-align: right;margin-top:50px;margin-right:10px;}
+.businessbody .content .businessdata .countdata span{color:red;margin: 5px;}
+.businessbody .content .businessdata .countdata label{color:red;margin: 5px;}
+.businessbody .content .businessdata .countdata a{margin-top: -8px;}
+
+.paybox{width:335px;margin:30px auto;line-height:36px;font-size:15px;}
+.paybox .tips{font-size:12px;color:red;}
+.paybox .center{margin-top:20px;}
+.paybox .center a{padding:3px 12px;margin:10px;}
+
+
+

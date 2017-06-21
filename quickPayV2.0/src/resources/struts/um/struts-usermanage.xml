@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts> 
+	<package name="usermanage" extends="default" namespace="/usermanage">
+	
+		<!-- ########################权限字典Struts配置开始####################### -->
+		<!-- 准备查询 -->
+		<action name="dict_prepareQuery" class="com.picc.um.web.UmTDictAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/dictionary/DictionaryQuery.jsp
+			</result>
+		</action>
+		<!-- 查询信息 -->
+		<action name="dict_query" class="com.picc.um.web.UmTDictAction" method="query" />
+		<!-- 准备添加 -->
+		<action name="dict_prepareAdd" class="com.picc.um.web.UmTDictAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/dictionary/DictionaryEdit.jsp
+			</result>
+		</action>
+		<!-- 添加信息 -->
+		<action name="dict_add" class="com.picc.um.web.UmTDictAction" method="add" />
+		<!-- 准备修改信息 -->
+		<action name="dict_prepareUpdate" class="com.picc.um.web.UmTDictAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/dictionary/DictionaryEdit.jsp
+			</result>
+		</action>
+		<!-- 修改信息 -->
+		<action name="dict_update" class="com.picc.um.web.UmTDictAction" method="update" />
+		<!-- 注销信息 -->
+		<action name="dict_cancle" class="com.picc.um.web.UmTDictAction" method="cancle" />
+		<!-- 恢复信息 -->
+		<action name="dict_resume" class="com.picc.um.web.UmTDictAction" method="resume" />
+		<!-- 删除信息 -->
+		<action name="dict_delete" class="com.picc.um.web.UmTDictAction" method="delete" />
+		<!-- 查看信息 -->
+		<action name="dict_view" class="com.picc.um.web.UmTDictAction" method="view">
+			<result name="success">
+				/pages/um/dictionary/DictionaryEdit.jsp
+			</result>
+		</action>
+		<!-- ########################权限字典Struts配置结束####################### -->
+		
+		<!-- ########################权限字典明细Struts配置开始####################### -->
+		<action name="dictdetail_query" class="com.picc.um.web.UmTDictDetailAction" method="query" />
+		<!-- 准备添加 -->
+		<action name="dictdetail_preapreAdd" class="com.picc.um.web.UmTDictDetailAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/dictionarydetail/DictionaryDetailEdit.jsp
+			</result>
+		</action>
+		<!-- 添加信息 -->
+		<action name="dictdetail_add" class="com.picc.um.web.UmTDictDetailAction" method="add" />
+		
+		<action name="dictdetail_preapreUpdate" class="com.picc.um.web.UmTDictDetailAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/dictionarydetail/DictionaryDetailEdit.jsp
+			</result>
+		</action>
+		<!-- 添加信息 -->
+		<action name="dictdetail_update" class="com.picc.um.web.UmTDictDetailAction" method="update" />
+		<!-- ########################权限字典明细Struts配置结束####################### -->
+		
+		
+		
+		
+		<!-- ########################用户权限Struts配置结束####################### -->
+		<action name="dictdetail_query" class="com.picc.um.web.UmTDictDetailAction" method="query" />
+		
+		<!-- ########################用户权限Struts配置结束####################### -->
+		
+		
+	
+		<!-- ########################用户管理Struts配置开始####################### -->
+		<action name="outeruser_add" class="com.picc.um.web.UmTUserAction" method="add">
+			<result name="success">
+				/pages/um/common/success.jsp
+			</result>
+		</action>
+		<action name="user_query" class="com.picc.um.web.UmTUserAction" method="query" />
+		<!-- ########################用户管理Struts配置结束####################### -->
+	</package>
+</struts>

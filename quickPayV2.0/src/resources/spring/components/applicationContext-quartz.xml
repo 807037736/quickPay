@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+                http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- 必需设定为lazy-init="false",使得定时能够顺利启动 -->
+	<bean name="quartzScheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean"
+		lazy-init="false">
+		<property name="triggers">
+			<list>
+				<!-- 可配置多个定时任务，每个都可以不同 -->
+				<!-- <ref bean="clearCacheCronTrigger" />
+				<ref bean="setWxAccessToken" />
+				<ref bean="asyncTaskCronTrigger" />
+				<ref bean="asyncFailTaskCronTrigger" />
+				<ref bean="reportTrigger" />
+				<ref bean="reportUploadFileTrigger" />
+				<ref bean="reportFailTaskTrigger" /> -->
+			</list>
+		</property>
+		<property name="configLocation" value="classpath:config/quartz.properties" />
+	</bean>
+
+
+	<!-- 定时任务配置示例start -->
+	<!-- 如果要和其它服务器同步,则需要配置定时执行,本例为每1分钟执行一次 -->
+	<bean id="clearCacheCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="clearCacheJobDetail" />
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="clearCacheJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="timerClearCacheService" />
+		<property name="targetMethod" value="clearCache" />
+		<!-- 设置concurrent为false避免并发 -->
+		<!-- <property name="concurrent" value="false" /> -->
+	</bean>
+	<bean id="timerClearCacheService" class="com.picc.common.schedule.TimerClearCache" />
+	
+	<!-- 定时执行异步任务start -->
+	<bean id="asyncTaskCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="asyncTaskJobDetail" />
+		<!-- <property name="cronExpression" value="0/10 * * * * ?" /> -->
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="asyncFailTaskCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="asyncFailTaskJobDetail" />
+		<!-- <property name="cronExpression" value="0/10 * * * * ?" /> -->
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="asyncTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="asyncTaskService" />
+		<property name="targetMethod" value="executeAsyncTask" />
+		<!-- 设置concurrent为false避免并发 -->
+		
+		 <property name="concurrent" value="false" />
+		 <property name="arguments" value="uploadCaseToCSHandler"/>
+	</bean>
+	
+	<bean id="asyncFailTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="asyncTaskService" />
+		<property name="targetMethod" value="executeAsyncTask" />
+		<!-- 设置concurrent为false避免并发 -->
+		 <property name="concurrent" value="false" />
+		 <property name="arguments" value="uploadFailCaseToCSHandler"/>
+	</bean>
+	
+	<bean id="uploadCaseToCSHandler" class="com.picc.common.handler.UploadCaseToCSHandler" />
+	
+	<bean id="uploadFailCaseToCSHandler" class="com.picc.common.handler.UploadFailCaseToCSHandler" />
+	
+	<bean id="asyncTaskService" class="com.picc.common.schedule.AsyncTaskService" />
+	<!-- 定时执行异步任务end -->
+	
+	
+	<!-- 报案与单证上传定时任务 start -->
+	<!-- 报案 -->
+	<bean id="reportTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="reportDetail" />
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="reportDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="reportService" />
+		<property name="targetMethod" value="execute" />
+		<!-- 设置concurrent为false避免并发 -->
+		<!-- <property name="concurrent" value="false" /> -->
+	</bean>
+	<bean id="reportService" class="com.picc.report.quartz.ReportHandler" />
+	
+	<!-- 上传单证 -->
+	<bean id="reportUploadFileTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="reportUploadFileDetail" />
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="reportUploadFileDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="reportUploadFileService" />
+		<property name="targetMethod" value="execute" />
+		<!-- 设置concurrent为false避免并发 -->
+		<!-- <property name="concurrent" value="false" /> -->
+	</bean>
+	<bean id="reportUploadFileService" class="com.picc.report.quartz.ReportUpdateFileHandler" />
+	
+	<!-- 失败任务处理 -->
+	<bean id="reportFailTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="reportFailTaskDetail" />
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+	
+	<bean id="reportFailTaskDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="reportFailTaskService" />
+		<property name="targetMethod" value="execute" />
+		<!-- 设置concurrent为false避免并发 -->
+		<!-- <property name="concurrent" value="false" /> -->
+	</bean>
+	<bean id="reportFailTaskService" class="com.picc.report.quartz.ReportFailTaskHandler" />
+</beans>

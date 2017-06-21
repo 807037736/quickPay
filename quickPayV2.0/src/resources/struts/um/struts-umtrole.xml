@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="um/umtrole" extends="default" namespace="/um/umtrole">
+
+		<action name="query" class="com.picc.um.web.UmTRoleAction" method="query"/>
+
+		<action name="delete" class="com.picc.um.web.UmTRoleAction" method="delete"/>
+		
+		<action name="checkRoleCode" class="com.picc.um.web.UmTRoleAction" method="checkRoleCode"/>
+		
+		<action name="reset" class="com.picc.um.web.UmTRoleAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/role/UmTRoleView.jsp
+			</result>
+		</action>
+		
+		<action name="prepareQuery" class="com.picc.um.web.UmTRoleAction" method="prepareQuery">
+			<result name="success">
+				/pages/um/role/UmTRoleQuery.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdate" class="com.picc.um.web.UmTRoleAction" method="prepareUpdate">
+			<result name="success">
+				/pages/um/role/UmTRoleEdit.jsp
+			</result>
+		</action>
+		<action name="prepareAdd" class="com.picc.um.web.UmTRoleAction" method="prepareAdd">
+			<result name="success">
+				/pages/um/role/UmTRoleEdit.jsp
+			</result>
+		</action>
+		<action name="add" class="com.picc.um.web.UmTRoleAction" method="add" />
+		<action name="update" class="com.picc.um.web.UmTRoleAction" method="update" />
+		<action name="view" class="com.picc.um.web.UmTRoleAction" method="view">
+			<result name="success">
+				/pages/um/role/UmTRoleEdit.jsp
+			</result>
+		</action>
+		<action name="synCache" class="com.picc.um.web.UmTRoleAction" method="synCache" />
+	</package>
+</struts>
