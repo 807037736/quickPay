@@ -109,6 +109,7 @@ public class SaveCaseForeignImpl implements SaveCaseForeign {
 	@Autowired
 	private WxCaseService wxCaseService;
 	
+	
 
 	@Override
 	public String uploadImg(String json) {
