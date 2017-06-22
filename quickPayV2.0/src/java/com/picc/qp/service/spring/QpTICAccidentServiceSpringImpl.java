@@ -57,6 +57,9 @@ public class QpTICAccidentServiceSpringImpl implements IQpTICAccidentService{
 	@Autowired
 	private IQpTCommonService qpTCommonService;
 	
+	@Autowired                         
+	private QpTTPCaseServiceSpringImpl qpTTPCaseService;
+	
 	/**
 	 * 根据主键对象QpTICAccidentId获取QpTICAccident信息
 	 * @param QpTICAccidentId
@@ -413,9 +416,15 @@ public class QpTICAccidentServiceSpringImpl implements IQpTICAccidentService{
         sql.append("        g.chassisNumber chassisNumber                                                ");
         sql.append("   FROM qp_t_ic_accident g, qp_t_tp_case tpc                                   ");
         sql.append("  WHERE g.caseId = tpc.caseId AND g.validstatus = '1'                          ");
-        // 自动台账只能查看自己的数据
-        if(ToolsUtils.notEmpty(qpTTPCaseStatVO.getLossAssessorCode())) {
-        	sql.append("  AND  g.lossAssessorCode = '").append(qpTTPCaseStatVO.getLossAssessorCode()).append("'");
+        
+        //获得当前用户的信息
+        String userCode = qpTTPCaseStatVO.getLossAssessorCode();
+        if(ToolsUtils.notEmpty(userCode)) {
+        	Boolean manger = qpTTPCaseService.isManager(userCode);
+        	if(!manger&&ToolsUtils.notEmpty(userCode)){
+        		//当前用户不是管理员，获得当前用户的代码
+        		sql.append("  AND  g.lossAssessorCode = '").append(userCode).append("'");
+        	}
         }
         // 拼接条件参数
         if(ToolsUtils.notEmpty(qpTTPCaseStatVO.getEstimateLossTimeStart())) {

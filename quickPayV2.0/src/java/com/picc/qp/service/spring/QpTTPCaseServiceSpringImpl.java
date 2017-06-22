@@ -59,6 +59,7 @@ import com.picc.qp.service.facade.IQpTICCompanyService;
 import com.picc.qp.service.facade.IQpTTPCaseService;
 import com.picc.qp.service.facade.IQpTTPLawService;
 import com.picc.qp.service.facade.UserKeyService;
+import com.picc.qp.util.Constants;
 import com.picc.um.schema.model.UmTUser;
 import com.picc.um.service.facade.IUmTUserService;
 import com.report.bean.ClientBean;
@@ -653,8 +654,14 @@ public class QpTTPCaseServiceSpringImpl implements IQpTTPCaseService{
 	        
 		    exportSql.append("   FROM qp_t_ic_accident t, qp_t_tp_case g, qp_t_tp_fast_center c      ");
 		    exportSql.append("  WHERE    c.centerid = g.centerid  AND t.caseid = g.caseid  AND t.validstatus = '1'  ");
-		    // 自动台账只能查看自己的数据
-		    exportSql.append("  AND  t.lossAssessorCode = '").append(qpTTPCaseStatVO.getLossAssessorCode()).append("'");
+		    
+		    //判断是不是管理员用户
+		    String userCode = qpTTPCaseStatVO.getLossAssessorCode();
+		    boolean manager = isManager(userCode);
+		    if(!manager&&ToolsUtils.notEmpty(userCode)){
+		    	// 自动台账只能查看自己的数据
+		    	exportSql.append("  AND  t.lossAssessorCode = '").append(userCode).append("'");
+		    }
 		    
 			// 拼接参数
 			if(ToolsUtils.notEmpty(qpTTPCaseStatVO.getEstimateLossTimeStart())) {
@@ -1122,5 +1129,30 @@ public class QpTTPCaseServiceSpringImpl implements IQpTTPCaseService{
 			}
 		});
 		return result;
+	}
+	
+
+	/**
+	 * 从session中获取用户信息，查询用户角色
+	 * @return 
+	 * @throws Exception 
+	 */
+	public boolean isManager(String userCode) throws Exception {
+		
+		String role = null;
+		StringBuffer sql = new StringBuffer();
+		sql.append("select r.rolecname from um_t_user u join um_t_userrole u_r on u.usercode=u_r.usercode")
+			.append(" join um_t_role r on u_r.roleid=r.roleid where u.usercode= ?");
+		List<String> resultList = sysCommonDao.findBySql(sql.toString(), new Object[]{userCode});
+		
+		for (String str : resultList) {
+			if(Constants.SYS_MANAGER.equals(str)) role =str;
+		}
+		if(role!=null){
+			return true;
+		}else{
+			return false;
+		}
+		 
 	}
 }

@@ -8,6 +8,9 @@ import java.util.Map;
  *
  */
 public class Constants {
+	
+	// 管理员角色
+	public static String  SYS_MANAGER= "系统管理岗";
 
 	public  static HashMap<String,String> STAT_TYPE_MAP = null;
 	

@@ -1560,9 +1560,12 @@ public class QpTTPCaseAction extends Struts2Action{
 			rows = 20;
 		}
 		HttpServletResponse response = getResponse();
+		
 		//excel模板路径
 		String filePath =getServletContext().getRealPath("/") + "/template/QpTICAccidentAccountsTemp.xls";
-//		qpTTPCaseStatVO.setLossAssessorCode(getUserFromSession().getUserCode());
+		
+		//获取用户的信息
+		qpTTPCaseStatVO.setLossAssessorCode(getUserFromSession().getUserCode());
 		HSSFWorkbook wb = qpTTPCaseService.getAccountDownLoadWB(qpTTPCaseStatVO, filePath);
 		// 页面直接提示下载信息
 		response.setContentType("application/vnd.ms-excel");
@@ -1586,7 +1589,8 @@ public class QpTTPCaseAction extends Struts2Action{
 		}
 
 		try {
-//			qpTTPCaseStatVO.setLossAssessorCode(getUserFromSession().getUserCode());
+			// 自动台账只能查看自己的数据
+			qpTTPCaseStatVO.setLossAssessorCode(getUserFromSession().getUserCode());
 			Page resultPage = qpTICAccidentService.findQpTICAccidentPageBySql(qpTTPCaseStatVO, page, rows);
 			this.writeEasyUiData(resultPage);
 		} catch (Exception e) {
